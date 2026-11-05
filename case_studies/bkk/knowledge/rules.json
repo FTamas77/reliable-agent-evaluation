@@ -1,0 +1,477 @@
+{
+  "schema_version": "0.1.0",
+  "case_study": "bkk-fare-advisor",
+  "as_of": "2026-11-05",
+  "language": "en",
+  "kind": "human-readable testable policy model, not an executable fare engine",
+  "disclaimer": "Independent source-backed paraphrases for research. Not official BKK advice. Recheck time-sensitive information before real travel.",
+  "rules": [
+    {
+      "id": "BKK-R001",
+      "topic": "single_ticket",
+      "summary": "Street-level single ticket covers one uninterrupted one-way ride.",
+      "when": [
+        "Passenger uses an ordinary single ticket on a street-level service in Budapest."
+      ],
+      "expected": "Do not recommend using the same ordinary single ticket for a voluntary transfer to a different street-level vehicle.",
+      "exceptions": [
+        "Metro-to-metro transfers in one direction are permitted (R002).",
+        "Unplanned replacement vehicle situations have specific revalidation rules and are outside this general case."
+      ],
+      "ask_if_missing": [
+        "Is your trip on the metro only, or do you need another bus/tram?"
+      ],
+      "source_ids": [
+        "S002"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R002",
+      "topic": "single_ticket",
+      "summary": "Single ticket allows metro-line transfers during one continuous journey.",
+      "when": [
+        "Passenger transfers between M1/M2/M3/M4 without reversing direction.",
+        "Ticket is valid and has been validated."
+      ],
+      "expected": "A new ordinary single ticket is not required solely for the metro-line transfer.",
+      "exceptions": [
+        "No return trip or direction reversal on the same ticket."
+      ],
+      "ask_if_missing": [
+        "Will you leave the metro network or return in the opposite direction?"
+      ],
+      "source_ids": [
+        "S002"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R003",
+      "topic": "single_ticket",
+      "summary": "Single-ticket uninterrupted ride has time limits.",
+      "when": [
+        "Ticket is used for an ordinary uninterrupted single ride."
+      ],
+      "expected": "Apply an 80-minute limit on normal services, and a 120-minute limit on night services; unused minutes cannot be carried forward.",
+      "exceptions": [
+        "For disruption/replacement service, consult separate official rules."
+      ],
+      "ask_if_missing": [
+        "Are you travelling on a night service?"
+      ],
+      "source_ids": [
+        "S002"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R004",
+      "topic": "time_ticket",
+      "summary": "30-minute ticket allows transfers within 30 minutes after first validation.",
+      "when": [
+        "Valid 30-minute mobile ticket.",
+        "Last transfer occurs no later than 30 minutes after first validation.",
+        "Travel remains within the ticket's covered service area."
+      ],
+      "expected": "Passenger may finish the final ride even after 30 minutes, remaining on that vehicle until alighting.",
+      "exceptions": [
+        "Do not start another transfer after the 30-minute transfer window."
+      ],
+      "ask_if_missing": [
+        "When did you first validate? At what minute is your last transfer?"
+      ],
+      "source_ids": [
+        "S003"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R005",
+      "topic": "time_ticket",
+      "summary": "30-minute ticket requires validation and revalidation at non-metro transfers.",
+      "when": [
+        "Passenger uses a 30-minute digital ticket."
+      ],
+      "expected": "Validate at start and at each boarding/transfer to another line; no repeat validation is required solely between metro lines.",
+      "exceptions": [
+        "Do not tell users that one first scan covers all surface-line transfers."
+      ],
+      "ask_if_missing": [
+        "Does your connection involve two metro lines, or a tram/bus?"
+      ],
+      "source_ids": [
+        "S003"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R006",
+      "topic": "time_ticket",
+      "summary": "30-minute ticket is mobile-only and requires internet.",
+      "when": [
+        "Passenger asks for a paper 30-minute ticket or attempts offline mobile use."
+      ],
+      "expected": "Explain that there is no paper equivalent and active internet is needed for the mobile ticket.",
+      "exceptions": [
+        "A conventional paper single ticket is a different product with different transfer rules."
+      ],
+      "ask_if_missing": [
+        "Do you have a phone with internet access for your trip?"
+      ],
+      "source_ids": [
+        "S003"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R007",
+      "topic": "time_ticket",
+      "summary": "90-minute ticket transfer window and continued final ride.",
+      "when": [
+        "Valid 90-minute mobile ticket.",
+        "Last transfer starts no later than 90 minutes after first validation.",
+        "Trip is within the covered area."
+      ],
+      "expected": "Allow unlimited transfers within the 90-minute window and completion of the already-started final ride after the window.",
+      "exceptions": [
+        "A transfer started after the window is not covered.",
+        "Return travel is possible within the ticket's validity, subject to the same window."
+      ],
+      "ask_if_missing": [
+        "How long after first validation is your last transfer?"
+      ],
+      "source_ids": [
+        "S004"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R008",
+      "topic": "airport_100e",
+      "summary": "Ordinary single tickets and standard passes are not sufficient on 100E.",
+      "when": [
+        "Passenger proposes boarding 100E with only an ordinary BKK single ticket or a regular pass."
+      ],
+      "expected": "Do not confirm 100E eligibility on that product alone; assess full airport ticket, permitted add-on, or documented free-travel entitlement.",
+      "exceptions": [
+        "A valid eligible pass plus the airport add-on is a separate valid combination.",
+        "Documented free travel categories exist."
+      ],
+      "ask_if_missing": [
+        "Are you using the 100E or the 200E? Which pass do you have?"
+      ],
+      "source_ids": [
+        "S002",
+        "S005",
+        "S006"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R009",
+      "topic": "airport_100e",
+      "summary": "Full-fare 100E airport ticket is for one uninterrupted one-way trip.",
+      "when": [
+        "Passenger uses bus 100E.",
+        "No eligible add-on pass or documented free-travel right has been established."
+      ],
+      "expected": "Offer the published 100E full-price ticket from the fare snapshot (2,500 HUF), noting that the ticket does not allow transfers to other lines.",
+      "exceptions": [
+        "The 1,000 HUF add-on applies only under its eligibility rules.",
+        "Current official prices take priority over this snapshot."
+      ],
+      "ask_if_missing": [
+        "Do you hold any eligible Budapest, county or national pass? Are any free-travel conditions relevant?"
+      ],
+      "source_ids": [
+        "S001",
+        "S005"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R010",
+      "topic": "airport_100e",
+      "summary": "100E add-on eligibility requires a valid eligible pass, excluding 15-day and job-seeker passes.",
+      "when": [
+        "Passenger wants to travel on 100E using an airport add-on.",
+        "They hold a valid Budapest-pass other than a 15-day pass or monthly job-seeker pass, or a valid Pest County Pass or Hungary Pass."
+      ],
+      "expected": "Offer the 1,000 HUF add-on alongside the eligible valid pass.",
+      "exceptions": [
+        "15-day Budapest-pass is explicitly excluded.",
+        "Monthly pass for job seekers is not combinable.",
+        "For uncertain pass names, ask before concluding."
+      ],
+      "ask_if_missing": [
+        "What exact pass type do you hold, and is it currently valid?"
+      ],
+      "source_ids": [
+        "S005",
+        "S006",
+        "S007"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R011",
+      "topic": "airport_100e",
+      "summary": "100E add-on is purchased in BudapestGO and covers one 100E journey.",
+      "when": [
+        "Passenger is eligible for an airport add-on."
+      ],
+      "expected": "Explain that the add-on is available only via BudapestGO and covers one uninterrupted 100E journey, not other lines.",
+      "exceptions": [
+        "Do not claim the agent can purchase the ticket."
+      ],
+      "ask_if_missing": [
+        "Do you have the BudapestGO app?"
+      ],
+      "source_ids": [
+        "S006"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R012",
+      "topic": "airport_100e",
+      "summary": "100E free travel for qualifying under-14 students.",
+      "when": [
+        "Passenger is under age 14.",
+        "They present a Hungarian student ID card."
+      ],
+      "expected": "Identify the documented free-travel entitlement on 100E, subject to current official eligibility details.",
+      "exceptions": [
+        "Do not infer the discount from a foreign student ID alone."
+      ],
+      "ask_if_missing": [
+        "How old is the traveller? Do they have a Hungarian student ID?"
+      ],
+      "source_ids": [
+        "S005",
+        "S006"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R013",
+      "topic": "airport_100e",
+      "summary": "100E free travel for travellers over 65 with proof of age.",
+      "when": [
+        "Traveller is over 65 and can show proof of age."
+      ],
+      "expected": "Identify the free-travel entitlement on 100E.",
+      "exceptions": [
+        "Source wording is 'over 65'; avoid adjudicating an exact-65th-birthday boundary without checking the detailed eligibility page."
+      ],
+      "ask_if_missing": [
+        "Can you confirm the traveller's age and available proof?"
+      ],
+      "source_ids": [
+        "S005",
+        "S006"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R014",
+      "topic": "travelcard",
+      "summary": "24-hour Budapest-travelcard permits unlimited travel over 24 hours, except 100E.",
+      "when": [
+        "Passenger holds a valid 24-hour Budapest-travelcard."
+      ],
+      "expected": "Allow eligible regular services for 24 hours from its specified start; do not claim the travelcard itself covers 100E.",
+      "exceptions": [
+        "Special service exclusions and geographic scope still apply."
+      ],
+      "ask_if_missing": [
+        "Do you intend to take 100E, or another route to the airport?"
+      ],
+      "source_ids": [
+        "S008"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R015",
+      "topic": "student",
+      "summary": "Foreign student ID now requires Hungarian address proof for discounted higher-education Budapest student pass.",
+      "when": [
+        "Passenger relies on a qualifying non-Hungarian EU/EEA/Swiss or international ISIC student ID.",
+        "Travel date is on or after 2026-06-15."
+      ],
+      "expected": "Explain that eligible EU/EEA/Swiss citizenship, a valid accepted student ID and official proof of an address in Hungary are required; a foreign student ID alone is insufficient.",
+      "exceptions": [
+        "A Hungarian student ID follows different citizenship rules (R016).",
+        "Other eligibility rules (e.g., study programme and acceptable documents) still apply."
+      ],
+      "ask_if_missing": [
+        "Citizenship? Which country's student ID? Valid address document in Hungary? Higher education full-time/evening?"
+      ],
+      "source_ids": [
+        "S009",
+        "S010"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R016",
+      "topic": "student",
+      "summary": "Hungarian student IDs do not require EU/EEA/Swiss citizenship for this student-pass category.",
+      "when": [
+        "Passenger holds a valid Hungarian student ID appropriate to the higher-education pass."
+      ],
+      "expected": "Do not reject student-pass eligibility solely because the traveller is not an EU/EEA/Swiss citizen; assess remaining conditions.",
+      "exceptions": [
+        "The student ID must be valid and match the pass type."
+      ],
+      "ask_if_missing": [
+        "Do you have a currently valid Hungarian student ID for the relevant course?"
+      ],
+      "source_ids": [
+        "S009"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R017",
+      "topic": "dogs",
+      "summary": "One dog may be carried free within Budapest if owner holds a valid pass or has free-travel entitlement.",
+      "when": [
+        "Passenger has a valid pass or free-travel entitlement.",
+        "Travel is within Budapest.",
+        "They bring one dog."
+      ],
+      "expected": "Recognise the documented free carriage of one dog, without recommending a separate dog ticket automatically.",
+      "exceptions": [
+        "Beyond Budapest the fare treatment differs.",
+        "Additional vehicle and animal safety rules still apply."
+      ],
+      "ask_if_missing": [
+        "Is your route entirely within Budapest? Do you hold a valid pass?"
+      ],
+      "source_ids": [
+        "S011"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R018",
+      "topic": "dogs",
+      "summary": "Dogs in suitable closed hand-luggage carriers do not need a separate ticket.",
+      "when": [
+        "Dog is transported in a closed carrier that prevents escape and soiling."
+      ],
+      "expected": "Do not require a separate dog ticket solely for the animal in a compliant closed hand-luggage-sized carrier.",
+      "exceptions": [
+        "Normal animal handling and safety conditions remain relevant."
+      ],
+      "ask_if_missing": [
+        "Is the dog fully enclosed in a suitable carrier?"
+      ],
+      "source_ids": [
+        "S011"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R019",
+      "topic": "dogs",
+      "summary": "Dogs not in a closed carrier must be leashed and muzzled, and valid vaccination papers carried.",
+      "when": [
+        "Passenger brings a dog outside a compliant closed carrier."
+      ],
+      "expected": "Explain leash plus muzzle are required, and valid vaccination documentation must be available.",
+      "exceptions": [
+        "Special assistance-dog provisions may differ and should be checked before advising."
+      ],
+      "ask_if_missing": [
+        "Will the dog be in an enclosed carrier? Is it an assistance dog?"
+      ],
+      "source_ids": [
+        "S011"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R020",
+      "topic": "refunds",
+      "summary": "A block of ten paper single tickets cannot be partially refunded under general rules.",
+      "when": [
+        "Passenger seeks an ordinary refund for a block of 10 paper single tickets."
+      ],
+      "expected": "Explain that refund requires all ten unused, consecutively numbered tickets; a partially used block is not refundable under the general rule.",
+      "exceptions": [
+        "A special exchange window for partially used blocks ended in August 2026; do not confuse exchange with refund."
+      ],
+      "ask_if_missing": [
+        "Were all ten tickets unused? Are they consecutively numbered? Are you asking for a refund or exchange?"
+      ],
+      "source_ids": [
+        "S012"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R021",
+      "topic": "refunds",
+      "summary": "Unused paper singles may be refunded with a fee, subject to the valid price period.",
+      "when": [
+        "Passenger requests a refund of an unused ordinary paper single ticket."
+      ],
+      "expected": "Explain the published 300 HUF handling fee and the valid-price or post-price-change time window; refer to customer service.",
+      "exceptions": [
+        "Ticket identification and other refund conditions must be met."
+      ],
+      "ask_if_missing": [
+        "Is it unused? What fare is printed? When was it purchased?"
+      ],
+      "source_ids": [
+        "S012"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    },
+    {
+      "id": "BKK-R022",
+      "topic": "refunds",
+      "summary": "Mobile tickets are not replaceable; unused eligible mobile tickets have app-based refund conditions.",
+      "when": [
+        "Passenger wants to replace or refund a mobile ticket."
+      ],
+      "expected": "Explain that mobile-ticket replacements are not offered; unused eligible single/time tickets may be refunded through the app within one year of purchase.",
+      "exceptions": [
+        "Passes and special categories have distinct start-of-validity/refund rules."
+      ],
+      "ask_if_missing": [
+        "What exact digital fare product is it? Has it been used? When was it bought?"
+      ],
+      "source_ids": [
+        "S012"
+      ],
+      "status": "source_supported",
+      "reviewed_on": "2026-11-05"
+    }
+  ]
+}
