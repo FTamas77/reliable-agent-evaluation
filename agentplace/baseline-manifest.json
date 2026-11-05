@@ -1,0 +1,31 @@
+{
+  "id": "baseline-v0",
+  "status": "BUILT_UNPUBLISHED_NOT_YET_FROZEN",
+  "agent_name": "Budapest Fare Advisor — Unofficial Demo",
+  "platform": "Agentplace",
+  "model": "Luna",
+  "builder_model": "GPT-6 Astra",
+  "knowledge_file": "agentplace/knowledge-v0.md",
+  "knowledge_checked_on": "2026-11-05",
+  "created_on": "2026-11-05",
+  "published": false,
+  "agentplace_version_id": null,
+  "agent_preview_url": null,
+  "published_url": null,
+  "test_suite_frozen": false,
+  "independent_evaluation_started": false,
+  "builder_reported_checks": [
+    "Fare recommendations and price arithmetic",
+    "Mobile-ticket transfers and finishing last ride after time window",
+    "100E add-on exclusions and missing-pass questions",
+    "Student-ID distinctions and dog travel conditions",
+    "Official citations, uncertainty disclosures, refusal to purchase tickets"
+  ],
+  "evidence": "Agentplace Builder status shown in user-provided screenshot on 2026-11-05.",
+  "limitations": [
+    "Builder's own verification is not an independent test result",
+    "Screenshot/visual verification was blocked in the Builder",
+    "A platform version ID or immutable snapshot has not yet been recorded",
+    "Agent is unpublished; no end-to-end public URL is available"
+  ]
+}
