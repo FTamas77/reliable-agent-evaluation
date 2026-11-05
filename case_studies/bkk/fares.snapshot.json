@@ -1,0 +1,17 @@
+{
+  "snapshot_date": "2026-11-05",
+  "currency": "HUF",
+  "source_id": "S001",
+  "purpose": "Evidence snapshot for tests only, not live fares. Verify official current prices before use.",
+  "amounts": {
+    "single_ticket": 500,
+    "block_of_10_tickets": 4500,
+    "thirty_minute_ticket": 600,
+    "ninety_minute_ticket": 850,
+    "airport_100e_single_ticket": 2500,
+    "airport_100e_addon_ticket": 1000,
+    "budapest_24h_travelcard": 2750,
+    "monthly_budapest_pass": 8950,
+    "monthly_budapest_student_pass": 3450
+  }
+}
