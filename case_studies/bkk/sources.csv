@@ -1,0 +1,3 @@
+source_id,url,topic,checked_date,status,notes
+bkk-prices,https://bkk.hu/en/tickets-and-passes/prices/,fares,,TO_VERIFY,Check current pricing and linked rules
+bkk-discounts,https://bkk.hu/en/tickets-and-passes/discounts/,discount eligibility,,TO_VERIFY,Check current applicability and exceptions
