@@ -1,0 +1,9 @@
+{
+  "run_id": "EXAMPLE-NOT-A-REAL-TEST",
+  "agent_version": "placeholder",
+  "disclaimer": "Illustrative format only: these outcomes were not observed or measured.",
+  "results": [
+    {"test_id": "S001", "status": "PARTIAL", "failure_categories": ["missing_clarification"], "evidence": "REPLACE_WITH_TRANSCRIPT_REF", "notes": "Illustrative only"},
+    {"test_id": "S002", "status": "PASS", "failure_categories": [], "evidence": "REPLACE_WITH_TRANSCRIPT_REF", "notes": "Illustrative only"}
+  ]
+}
