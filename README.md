@@ -58,3 +58,12 @@ python evaluation/validate_rules.py
 ```
 
 The checker does not check factual accuracy. BKK policies and prices can change.
+
+## Build the first Agentplace agent (baseline v0)
+
+- [Builder brief](agentplace/builder-brief.md): paste this into the Agentplace AI Builder.
+- [Independent source-based knowledge v0](agentplace/knowledge-v0.md): add this to the agent as a dated knowledge file, **not** as a test oracle.
+- [Guided setup](agentplace/setup-guide.md): manual workflow, Luna model, preview, versioning and public publishing.
+- [Baseline manifest template](agentplace/baseline-manifest.example.json): record what was really built, without inventing results.
+
+**Current status:** builder materials are ready in the repository; no Agentplace agent has been created or published through this repository. An account holder must start the build in their Agentplace workspace.
