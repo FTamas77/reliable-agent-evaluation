@@ -41,3 +41,20 @@ This is an independent educational evaluation project. It is **not affiliated wi
 ## License
 
 No open-source license has been selected yet. Repository visibility alone does not grant redistribution rights. A license can be added before inviting contributors.
+
+## Current milestone: evidence-based knowledge model
+
+As of 2026-11-05, the first BKK case study includes **22 conditional rules**, **14 reviewed official source links**, **9 dated fare values**, and **16 unexecuted stress-test sketches**. These artefacts are for experiment design; they do **not** represent tested agent quality.
+
+- [Rule model](case_studies/bkk/knowledge/rules.json) and [how to read it](case_studies/bkk/knowledge/README.md)
+- [Source register](case_studies/bkk/sources.csv) and [dated fare snapshot](case_studies/bkk/fares.snapshot.json)
+- [How to model business rules](docs/rule-modeling.md)
+- [Challenging scenario sketches](tests/scenario-ideas.md)
+
+Run the structural model checker:
+
+```bash
+python evaluation/validate_rules.py
+```
+
+The checker does not check factual accuracy. BKK policies and prices can change.
