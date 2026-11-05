@@ -1,0 +1,15 @@
+{
+  "id": "baseline-v0",
+  "status": "NOT_RUN",
+  "agent_name": "Budapest Fare Advisor — Unofficial Demo",
+  "builder_brief": "agentplace/builder-brief.md",
+  "knowledge": "agentplace/knowledge-v0.md",
+  "evaluation_oracle": "case_studies/bkk/knowledge/rules.json",
+  "model": "Luna",
+  "agentplace_version": null,
+  "agent_preview_url": null,
+  "agent_published_url": null,
+  "created_at": null,
+  "recorded_by": null,
+  "notes": "Example manifest only. Fill verified values after creating an agent. No tests have been run."
+}
