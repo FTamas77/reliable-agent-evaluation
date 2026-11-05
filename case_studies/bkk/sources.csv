@@ -1,3 +1,15 @@
-source_id,url,topic,checked_date,status,notes
-bkk-prices,https://bkk.hu/en/tickets-and-passes/prices/,fares,,TO_VERIFY,Check current pricing and linked rules
-bkk-discounts,https://bkk.hu/en/tickets-and-passes/discounts/,discount eligibility,,TO_VERIFY,Check current applicability and exceptions
+source_id,title,url,reviewed_on,status,notes
+"S001","Fare types and prices","https://bkk.hu/en/tickets-and-passes/prices/","2026-11-05","reviewed","Published fare snapshot; verify prices before use"
+"S002","Single ticket","https://bkk.hu/en/tickets-and-passes/prices/single-ticket/","2026-11-05","reviewed","Street-level vs metro transfers; day/night duration"
+"S003","30-minute ticket","https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/","2026-11-05","reviewed","Transfer window, revalidation, mobile-only"
+"S004","90-minute ticket","https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/","2026-11-05","reviewed","Transfer window, revalidation, return travel"
+"S005","Airport shuttle single ticket","https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/","2026-11-05","reviewed","100E full fare and explicit 15-day exclusion for add-on"
+"S006","Airport add-on ticket","https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/","2026-11-05","reviewed","100E add-on conditions; job-seeker exclusion; BudapestGO purchase"
+"S007","Airport Express information","https://bkk.hu/en/travel-information/airport-express/airport-shuttle.6421/","2026-11-05","reviewed","Cross-check add-on pass eligibility; distinguish 200E"
+"S008","24-hour Budapest-travelcard","https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/","2026-11-05","reviewed","24-hour validity, exclusions"
+"S009","Monthly Budapest-pass for students","https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students","2026-11-05","reviewed","Accepted student IDs and residency criteria"
+"S010","2026 change to foreign student ID rules","https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/","2026-11-05","reviewed","Dated 2026-06-11; change effective 2026-06-15"
+"S011","Dogs on public transport","https://bkk.hu/en/travel-information/dogs-on-public-transport/","2026-11-05","reviewed","Pass-based free dog travel and handling rules"
+"S012","Replacement and refund","https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/replacement-and-refund.11413/","2026-11-05","reviewed","Refund conditions and fees; beware of time-limited 2026 transitional rules"
+"S013","Block of 10 tickets","https://bkk.hu/en/tickets-and-passes/prices/block-of-10-tickets","2026-11-05","reviewed","Separate rides, general ticket terms"
+"S014","Monthly Budapest-pass","https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass/","2026-11-05","reviewed","Ordinary pass scope and 100E exclusion"
