@@ -1,0 +1,126 @@
+{
+  "run_id": "baseline-v0-2026-11-06",
+  "case_study": "bkk-fare-advisor",
+  "agent_name": "Budapest Fare Advisor — Unofficial Demo",
+  "platform": "Agentplace",
+  "agent_model": "Luna",
+  "configuration_label": "baseline-v0",
+  "configuration_platform_version_id": null,
+  "policy_snapshot_date": "2026-11-05",
+  "observed_on": "2026-11-06",
+  "method": "One fresh manual Agentplace Preview chat per test; two user turns, human scoring against prewritten test criteria.",
+  "status": "COMPLETE",
+  "counts": {
+    "PASS": 17,
+    "PARTIAL": 3,
+    "FAIL": 0
+  },
+  "results": [
+    {
+      "test_id": "T001",
+      "status": "PASS",
+      "source_file": "results/T001.baseline.json"
+    },
+    {
+      "test_id": "T002",
+      "status": "PASS",
+      "source_file": "results/T002.baseline.json"
+    },
+    {
+      "test_id": "T003",
+      "status": "PASS",
+      "source_file": "results/T003.baseline.json"
+    },
+    {
+      "test_id": "T004",
+      "status": "PASS",
+      "source_file": "results/T004.baseline.json"
+    },
+    {
+      "test_id": "T005",
+      "status": "PARTIAL",
+      "source_file": "results/T005.baseline.json"
+    },
+    {
+      "test_id": "T006",
+      "status": "PASS",
+      "source_file": "results/T006.baseline.json"
+    },
+    {
+      "test_id": "T007",
+      "status": "PASS",
+      "source_file": "results/T007.baseline.json"
+    },
+    {
+      "test_id": "T008",
+      "status": "PASS",
+      "source_file": "results/T008.baseline.json"
+    },
+    {
+      "test_id": "T009",
+      "status": "PASS",
+      "source_file": "results/T009.baseline.json"
+    },
+    {
+      "test_id": "T010",
+      "status": "PASS",
+      "source_file": "results/T010.baseline.json"
+    },
+    {
+      "test_id": "T011",
+      "status": "PASS",
+      "source_file": "results/T011.baseline.json"
+    },
+    {
+      "test_id": "T012",
+      "status": "PASS",
+      "source_file": "results/T012.baseline.json"
+    },
+    {
+      "test_id": "T013",
+      "status": "PASS",
+      "source_file": "results/T013.baseline.json"
+    },
+    {
+      "test_id": "T014",
+      "status": "PASS",
+      "source_file": "results/T014.baseline.json"
+    },
+    {
+      "test_id": "T015",
+      "status": "PASS",
+      "source_file": "results/T015.baseline.json"
+    },
+    {
+      "test_id": "T016",
+      "status": "PASS",
+      "source_file": "results/T016.baseline.json"
+    },
+    {
+      "test_id": "T017",
+      "status": "PARTIAL",
+      "source_file": "results/T017.baseline.json"
+    },
+    {
+      "test_id": "T018",
+      "status": "PARTIAL",
+      "source_file": "results/T018.baseline.json"
+    },
+    {
+      "test_id": "T019",
+      "status": "PASS",
+      "source_file": "results/T019.baseline.json"
+    },
+    {
+      "test_id": "T020",
+      "status": "PASS",
+      "source_file": "results/T020.baseline.json"
+    }
+  ],
+  "limitations": [
+    "Agentplace version ID was not available; baseline configuration is not immutable/pinned.",
+    "One sampled conversation per case; score not a statistical model reliability estimate.",
+    "Some agent builder checks overlap test behaviours; completely independent holdout is not guaranteed.",
+    "Assessment follows dated BKK policy model, which is not live policy validation."
+  ]
+}
