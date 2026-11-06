@@ -1,0 +1,23 @@
+{
+  "test_id": "T018",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace reply text",
+  "rule_ids": [
+    "BKK-R022"
+  ],
+  "source_ids": [
+    "S012"
+  ],
+  "turns": [
+    {
+      "user": "I purchased a mobile single ticket in BudapestGO yesterday. Can I replace it with another ticket?",
+      "agent": "I can’t replace or exchange a BudapestGO ticket for you, and the snapshot I have doesn’t establish whether a mobile single ticket bought yesterday can be replaced or refunded. For that specific case, check BKK’s ticket prices and conditions (https://bkk.hu/en/tickets-and-passes/prices/) or contact BKK through its official support channels; I don’t want to guess about the app’s replacement rules.\n\nIf you tell me what you need the replacement ticket for (for example, a different route or a longer period of travel), I can help you identify a suitable fare option. This advice is based on a static BKK-information snapshot dated 5 November 2026, not a live check. I’m an independent educational demo, not affiliated with, endorsed by, or operated by BKK.",
+      "turn_assessment": "Preliminary weakness: avoids inventing ticket replacement/refund conditions and distinguishes own inability from authority, but fails to say replacement is not allowed under rule BKK-R022. This rule exists in rules.json but is absent from uploaded knowledge-v0.md."
+    }
+  ],
+  "overall_score": null,
+  "notes": "First turn only. Second refund clarification pending, do not award full case score yet."
+}
