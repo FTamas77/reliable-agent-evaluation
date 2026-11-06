@@ -1,0 +1,27 @@
+{
+  "id": "candidate-v1-deployed-to-builder",
+  "date": "2026-11-06",
+  "platform": "Agentplace",
+  "agent": "Budapest Fare Advisor — Unofficial Demo",
+  "agent_publication_status": "UNPUBLISHED",
+  "evidence_source": "User-provided Agentplace Builder result screenshot 2026-11-06",
+  "knowledge_source_git": "agentplace/knowledge-v1.md",
+  "builder_reported": {
+    "action": "Replaced contents at existing references/knowledge-v0.md using supplied v1 knowledge. Did not create duplicate knowledge-v1.md.",
+    "existing_knowledge_path": "references/knowledge-v0.md",
+    "knowledge_contents_version": "v1",
+    "fare_snapshot_kept": "2026-11-05",
+    "new_cross_check_date": "2026-11-06",
+    "changes": "Clarified 24-hour travelcard not eligible by itself for 100E add-on; differentiated ordinary paper block refund vs expired exchange exception; documented eligible unused mobile ticket app refunds.",
+    "other_configuration_changed": false,
+    "other_configuration_change_claim": "Builder says instructions, deployed agent model, tools, design and unofficial identity unchanged.",
+    "build_passed": true,
+    "remains_unpublished": true,
+    "credit_notice": "Credits exhausted. Continuing with GPT-6 Luna."
+  },
+  "deployment_scope": "Builder-reported replacement; not independently inspected in running agent.",
+  "model_caveat": "GPT-6 Luna notice refers to Builder continuation as shown. It does not establish a change to the already configured Luna agent runtime; no platform version ID was supplied.",
+  "immutable_agentplace_version_id": null,
+  "validation_plan": "Manually rerun T005/T017/T018 first in fresh Preview chats; then all 20 baseline cases without changing candidate v1 to test regressions; run 5 held-out cases only after candidate is frozen and baseline retest is complete.",
+  "configuration_caveat": "Version not pinned; no independent platform inspection; keep candidate unchanged while measuring."
+}
