@@ -1,0 +1,36 @@
+{
+  "test_id": "T015",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-shared Agentplace response text",
+  "rule_ids": [
+    "BKK-R017",
+    "BKK-R019"
+  ],
+  "source_ids": [
+    "S011"
+  ],
+  "turns": [
+    {
+      "user": "I have a valid Budapest pass and want to bring one dog on a tram within Budapest. Does it need its own ticket?",
+      "agent": "Based on the 5 November 2026 snapshot, if your valid Budapest pass is one that covers your tram trip, you may take one dog free of charge within Budapest; the dog does not need its own ticket. Outside a suitable fully closed carrier, the dog must be leashed and muzzled, and you should carry valid animal vaccination documentation. A dog in a suitable fully closed carrier can travel without a separate animal ticket as well.\n\nSee BKK’s Dogs on public transport (https://bkk.hu/en/travel-information/dogs-on-public-transport/) page for the official conditions. This is snapshot-based guidance, not live verification.",
+      "turn_assessment": "First turn meets expected criteria on free dog carriage with a valid pass and explains animal safety rules. Second turn pending."
+    },
+    {
+      "user": "The dog won't be in a carrier. What safety rules should I follow?",
+      "agent": "For a dog outside a carrier, the snapshot says to keep it on a leash and muzzled. Carry valid animal vaccination documentation too. Since you have a valid Budapest pass and are taking one dog on a tram within Budapest, the snapshot supports that the dog travels free of charge under those conditions.\n\nSee BKK’s Dogs on public transport (https://bkk.hu/en/travel-information/dogs-on-public-transport/) page for the official rules. This is based on the 5 November 2026 snapshot, not a live check; confirm the current conditions with BKK.",
+      "turn_assessment": "Correctly states leash, muzzle, vaccination document and pass-based free travel for a dog outside a carrier."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Two-turn assessment from user-provided Agentplace responses. Dated 2026-11-05 BKK snapshot, not live BKK rule verification. Platform version not pinned.",
+  "expected_criteria_met": {
+    "one_dog_free_with_qualifying_pass": true,
+    "leash_required_outside_carrier": true,
+    "muzzle_required_outside_carrier": true,
+    "valid_vaccination_documents": true
+  },
+  "critical_failures_observed": []
+}
