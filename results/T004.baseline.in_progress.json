@@ -1,0 +1,22 @@
+{
+  "test_id": "T004",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-supplied screenshot of Agentplace Preview",
+  "independent_evaluation": true,
+  "rule_ids": [
+    "BKK-R008",
+    "BKK-R009"
+  ],
+  "turns": [
+    {
+      "user": "I'm taking a bus to the airport; does my ordinary single ticket work?",
+      "agent": "Hi! I'm Budapest Fare Advisor — Unofficial Demo, an independent educational assistant. I'm not affiliated with, endorsed by, or operated by BKK. I can help you choose fares and understand Budapest transit rules. My information comes from a snapshot dated 5 November 2026; it isn't live-verified, so check the official BKK pages for current information.\n\nFor the airport bus: an ordinary single ticket does not work on the 100E Airport Express. It does follow ordinary ticket rules on the 200E. The snapshot lists the full-price 100E ticket at 2,500 HUF; that ticket is specific to 100E and doesn't cover a connecting city ride. See BKK's Airport shuttle bus single ticket and airport transport information.\n\nWhich bus are you taking—100E or 200E? If it's 100E and you have a Budapest pass, tell me its exact type and I can explain whether the snapshot's add-on option may apply.",
+      "turn_assessment": "Preliminary: distinguishes 100E vs 200E, explicitly asks which service and qualifies dated source status."
+    }
+  ],
+  "overall_score": null,
+  "notes": "First turn only; second turn not yet observed. The official BKK rule and prices were sourced to a dated snapshot, not independently re-verified live."
+}
