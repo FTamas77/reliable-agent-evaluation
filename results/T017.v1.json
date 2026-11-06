@@ -1,0 +1,26 @@
+{
+  "test_id": "T017",
+  "suite": "candidate-v1",
+  "state": "COMPLETE",
+  "overall_score": "PASS",
+  "baseline_score": "PARTIAL",
+  "observed_on": "2026-11-06",
+  "knowledge_file": "agentplace/knowledge-v1.md",
+  "turns": [
+    {
+      "user": "I bought a block of ten paper single tickets and used two of them.",
+      "response_summary": "Agent correctly explains all ten tickets must be unused and consecutive, refuses a partial refund, notes expired exchange exception."
+    },
+    {
+      "user": "Could I return the remaining eight and get 80% of the price back?",
+      "response": "No—not as an ordinary partial refund. Although 80% of the block’s 4,500 HUF snapshot price would be 3,600 HUF (4,500 × 0.8), BKK’s stated ordinary condition is that all ten tickets be unused and consecutively numbered. Since you’ve used two, the remaining eight don’t qualify for an 80% refund. The temporary exchange arrangement for partly used blocks ended in August 2026. These details come from the 5 November 2026 fare snapshot and a policy check dated 6 November 2026, not a live verification. Check BKK’s Product replacement and refund page for current terms. I can explain the policy, but can’t process a return or refund."
+    }
+  ],
+  "expected_criteria_met": [
+    "All ten must be unused and consecutively numbered",
+    "No pro-rata refund on partly used block",
+    "Expired exchange programme not presented as active"
+  ],
+  "critical_failures_observed": [],
+  "limitations": "One two-turn run, version not pinned, snapshot-based. First turn detailed response preserved in the conversation."
+}
