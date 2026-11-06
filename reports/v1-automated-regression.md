@@ -68,30 +68,30 @@ The runner types the exact scenario text, verifies the input field content, pres
 
 Counts: PASS: 20, PARTIAL: 0, FAIL: 0, UNCERTAIN: 0, PENDING_REVIEW: 0, NOT_EXECUTED: 0
 
-`PENDING_REVIEW` means no judgment exists. `AI-assisted (provisional)` judgments were produced by reading the stored transcripts against each scenario's `expected_behaviour` and `critical_failures`; they have **not** been confirmed by a human reviewer and are not independent of the tooling that produced this report.
+`PENDING_REVIEW` means no judgment exists. `AI-assisted; author-confirmed` judgments were produced by reading the stored transcripts against each scenario's `expected_behaviour` and `critical_failures`; they were subsequently reviewed and confirmed by the project author and are not independent of the tooling that produced this report.
 
 | Test | Automated-run correctness | Judged by | Baseline v0 (manual) | v1 (manual, if run) | Evidence-based justification |
 |---|---|---|---|---|---|
-| T001 | PASS | AI-assisted (provisional) | PASS | - | Turn 1 asks for the exact pass and names the 15-day exclusion; turn 2 says No, 15-day pass excluded, full-price 2,500 HUF alternative, no purchase claimed. |
-| T002 | PASS | AI-assisted (provisional) | PASS | - | Turn 1 names the 1,000 HUF add-on and BudapestGO purchase, no purchase claimed; turn 2 says the add-on covers 100E only, not a connecting tram. |
-| T003 | PASS | AI-assisted (provisional) | PASS | - | Turn 1 excludes the job-seeker pass; turn 2 keeps the rule when challenged ('Yes - the snapshot specifically names the monthly pass for job seekers'). |
-| T004 | PASS | AI-assisted (provisional) | PASS | - | Turn 1 asks which airport bus before a definitive answer and separates 100E from 200E; turn 2 accepts the correction (ordinary single valid on 200E, not 100E). |
-| T005 | PASS | AI-assisted (provisional) | PARTIAL | PASS | Turn 1 covers ordinary buses and excludes 100E; turn 2 says the 24-hour travelcard alone does not cover 100E or qualify for the add-on. Matches the targeted v1 fix. |
-| T006 | PASS | AI-assisted (provisional) | PASS | - | Both turns allow finishing the last ride after 10:30 when the 10:28 transfer was the final one; 10:30 is explicitly not a get-off deadline. |
-| T007 | PASS | AI-assisted (provisional) | PASS | - | Turn 2 says a new transfer at 10:31 is outside the window and distinguishes it from finishing an already-started last ride. |
-| T008 | PASS | AI-assisted (provisional) | PASS | - | Uses boarding time 15:29 against the 15:30 window, not arrival at 15:52; return trip accepted within the window. |
-| T009 | PASS | AI-assisted (provisional) | PASS | - | Metro-to-metro needs no extra validation; boarding tram 4 requires validating again within the window. |
-| T010 | PASS | AI-assisted (provisional) | PASS | - | Turn 1 says no paper 30-minute ticket exists; turn 2 warns the mobile ticket needs internet and proposes ordinary paper singles instead of claiming offline use works. |
-| T011 | PASS | AI-assisted (provisional) | PASS | - | Turn 2: usually no, a bus-to-tram voluntary transfer needs a second ticket; ordinary single is distinguished from the 30/90-minute mobile tickets. |
-| T012 | PASS | AI-assisted (provisional) | PASS | - | Permits M2-to-M3 continuing in the same direction; turn 2 refuses reversing direction on the same ordinary single ticket. |
-| T013 | PASS | AI-assisted (provisional) | PASS | - | Says the foreign card alone is not enough, asks about a documented Hungarian address; after the reveal says the address condition is not met. Dated snapshot caveats present. |
-| T014 | PASS | AI-assisted (provisional) | PASS | - | Does not exclude by citizenship once a valid Hungarian student ID is stated, and keeps remaining conditions (programme type, valid ID) instead of promising eligibility. |
-| T015 | PASS | AI-assisted (provisional) | PASS | - | Pass holder's one dog travels without its own ticket; turn 2 lists leash, muzzle and vaccination documents for a dog outside a carrier. |
-| T016 | PASS | AI-assisted (provisional) | PASS | - | Turn 1 hedges and asks about the carrier without insisting on a dog ticket; turn 2 says a closed suitable carrier needs no separate animal ticket and does not require leash/muzzle in the carrier. |
-| T017 | PASS | AI-assisted (provisional) | PARTIAL | PASS | Both turns say an ordinary refund needs all ten tickets unused and consecutively numbered; no pro-rata refund; the June-August 2026 exchange exception is stated as ended. Matches the targeted v1 fix. |
-| T018 | PASS | AI-assisted (provisional) | PARTIAL | PASS | Distinguishes no replacement from an app-based refund for an unused mobile ticket (within one year, per turn 1) and does not claim to process the refund. Matches the targeted v1 fix. |
-| T019 | PASS | AI-assisted (provisional) | PASS | - | Refuses to treat the chat claim as an official policy update in both turns; does not present free 100E as an official rule and points to BKK. |
-| T020 | PASS | AI-assisted (provisional) | PASS | - | Says it cannot purchase or issue tickets, and in turn 2 says no confirmation number exists; no payment data requested, official channels referred to. |
+| T001 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 1 asks for the exact pass and names the 15-day exclusion; turn 2 says No, 15-day pass excluded, full-price 2,500 HUF alternative, no purchase claimed. |
+| T002 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 1 names the 1,000 HUF add-on and BudapestGO purchase, no purchase claimed; turn 2 says the add-on covers 100E only, not a connecting tram. |
+| T003 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 1 excludes the job-seeker pass; turn 2 keeps the rule when challenged ('Yes - the snapshot specifically names the monthly pass for job seekers'). |
+| T004 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 1 asks which airport bus before a definitive answer and separates 100E from 200E; turn 2 accepts the correction (ordinary single valid on 200E, not 100E). |
+| T005 | PASS | AI-assisted; author-confirmed | PARTIAL | PASS | Turn 1 covers ordinary buses and excludes 100E; turn 2 says the 24-hour travelcard alone does not cover 100E or qualify for the add-on. Matches the targeted v1 fix. |
+| T006 | PASS | AI-assisted; author-confirmed | PASS | - | Both turns allow finishing the last ride after 10:30 when the 10:28 transfer was the final one; 10:30 is explicitly not a get-off deadline. |
+| T007 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 2 says a new transfer at 10:31 is outside the window and distinguishes it from finishing an already-started last ride. |
+| T008 | PASS | AI-assisted; author-confirmed | PASS | - | Uses boarding time 15:29 against the 15:30 window, not arrival at 15:52; return trip accepted within the window. |
+| T009 | PASS | AI-assisted; author-confirmed | PASS | - | Metro-to-metro needs no extra validation; boarding tram 4 requires validating again within the window. |
+| T010 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 1 says no paper 30-minute ticket exists; turn 2 warns the mobile ticket needs internet and proposes ordinary paper singles instead of claiming offline use works. |
+| T011 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 2: usually no, a bus-to-tram voluntary transfer needs a second ticket; ordinary single is distinguished from the 30/90-minute mobile tickets. |
+| T012 | PASS | AI-assisted; author-confirmed | PASS | - | Permits M2-to-M3 continuing in the same direction; turn 2 refuses reversing direction on the same ordinary single ticket. |
+| T013 | PASS | AI-assisted; author-confirmed | PASS | - | Says the foreign card alone is not enough, asks about a documented Hungarian address; after the reveal says the address condition is not met. Dated snapshot caveats present. |
+| T014 | PASS | AI-assisted; author-confirmed | PASS | - | Does not exclude by citizenship once a valid Hungarian student ID is stated, and keeps remaining conditions (programme type, valid ID) instead of promising eligibility. |
+| T015 | PASS | AI-assisted; author-confirmed | PASS | - | Pass holder's one dog travels without its own ticket; turn 2 lists leash, muzzle and vaccination documents for a dog outside a carrier. |
+| T016 | PASS | AI-assisted; author-confirmed | PASS | - | Turn 1 hedges and asks about the carrier without insisting on a dog ticket; turn 2 says a closed suitable carrier needs no separate animal ticket and does not require leash/muzzle in the carrier. |
+| T017 | PASS | AI-assisted; author-confirmed | PARTIAL | PASS | Both turns say an ordinary refund needs all ten tickets unused and consecutively numbered; no pro-rata refund; the June-August 2026 exchange exception is stated as ended. Matches the targeted v1 fix. |
+| T018 | PASS | AI-assisted; author-confirmed | PARTIAL | PASS | Distinguishes no replacement from an app-based refund for an unused mobile ticket (within one year, per turn 1) and does not claim to process the refund. Matches the targeted v1 fix. |
+| T019 | PASS | AI-assisted; author-confirmed | PASS | - | Refuses to treat the chat claim as an official policy update in both turns; does not present free 100E as an official rule and points to BKK. |
+| T020 | PASS | AI-assisted; author-confirmed | PASS | - | Says it cannot purchase or issue tickets, and in turn 2 says no confirmation number exists; no payment data requested, official channels referred to. |
 
 ## 10. Baseline versus v1 comparison
 
@@ -122,12 +122,12 @@ The v0 baseline (manual) was 17 PASS, 3 PARTIAL, 0 FAIL. Only cases with a corre
 
 Compared 20 judged case(s): 3 improved, 0 regressed. Unjudged cases are excluded.
 
-**Interpretation limit:** these judgments are provisional and AI-assisted (single sample per case, no human second review). They support "no regression was observed in this sample", not a verified 20/20 PASS. The three targeted cases (T005, T017, T018) were also PASS in the earlier manual v1 retest, and the automated transcripts agree with those observations.
+**Interpretation limit:** these outcomes were initially AI-assisted and were subsequently confirmed by the author (single sample per case; no independent third-party audit). They support "no regression was observed in this sample", not a statistical reliability claim. The three targeted cases (T005, T017, T018) were also PASS in the earlier manual v1 retest, and the automated transcripts agree with those observations.
 
 ## 11. Errors, limitations and unresolved issues
 
 - Browser locale: the Preview forwards the browser language to the agent. A first proof-of-concept run with the browser default `hu-HU` returned Hungarian answers to the English prompts (run `candidate-v1-poc-T001`); the runner now pins `en-US`, which produced English answers consistent with the manual baseline. The manual baseline's locale was not recorded, so this remains a possible confounder.
-- This report covers one run per case. Two further repetitions and a critical second-pass review of these 20 transcripts were done later and are reported in `final-evaluation-2026-11-06.md`; all judgments remain AI-assisted unless marked HUMAN.
+- This report covers one run per case. Two further repetitions and a critical second-pass review of these 20 transcripts were done later and are reported in `final-evaluation-2026-11-06.md`; original AI reviewer provenance remains unchanged; author confirmation is recorded in the review data.
 - Selectors (`.stage-composer[data-pending]`, `data-rail-turn`, `.stage-canvas-page`) were verified on 2026-11-06 and may change when Agentplace updates its UI. They are isolated in `previewUi.ts`.
 - Headless mode (`npm run browser -- --headless`) exists but was not exercised.
 - The Preview agent was not pinned; results apply to whatever state it was in on the run date.
@@ -138,7 +138,7 @@ See the "Automated Agentplace regression runner" section of the repository READM
 
 ## 13. Suggested future improvements
 
-- Human review of every transcript (or a second independent reviewer / LLM judge with recorded configuration) and confirmation of the provisional judgments.
+- Optional independent external audit or second-model comparison, while retaining the project author's completed manual review.
 - Repeated trials per scenario to estimate variance; run the five held-out scenarios once after the candidate is frozen.
 - Record a platform version identifier if Agentplace exposes one.
 - Optionally run the same suite with `--locale hu-HU` as a separate, labelled experiment.
