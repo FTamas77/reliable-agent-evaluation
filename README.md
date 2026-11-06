@@ -42,7 +42,7 @@ This is an independent educational evaluation project. It is **not affiliated wi
 
 No open-source license has been selected yet. Repository visibility alone does not grant redistribution rights. A license can be added before inviting contributors.
 
-## Current milestone: evidence-based knowledge model
+## Evidence-based knowledge model
 
 As of 2026-11-05, the first BKK case study includes **22 conditional rules**, **14 reviewed official source links**, **9 dated fare values**, and **16 unexecuted stress-test sketches**. These artefacts are for experiment design; they do **not** represent tested agent quality.
 
@@ -66,12 +66,16 @@ The checker does not check factual accuracy. BKK policies and prices can change.
 - [Guided setup](agentplace/setup-guide.md): manual workflow, Luna model, preview, versioning and public publishing.
 - [Baseline manifest template](agentplace/baseline-manifest.example.json): record what was really built, without inventing results.
 
-**Current status:** builder materials are ready in the repository; no Agentplace agent has been created or published through this repository. An account holder must start the build in their Agentplace workspace.
+**Current status:** An Agentplace Preview demo was built with the Luna model and the dated v0 knowledge file. It remains unpublished, and a platform-pinned immutable version ID has not been established. See the [baseline manifest](agentplace/baseline-manifest.json).
 
-## Evaluation test design (draft, not executed)
+## Baseline evaluation — 2026-11-06
 
 - [20 baseline test conversations](tests/baseline-cases.json) with rule references, expected behaviour and critical failure criteria.
 - [5 held-out conversations](tests/heldout-cases.json) reserved for a post-improvement generalisation check.
 - [How to run and score tests](tests/README.md); [structural test validator](evaluation/validate_scenarios.py).
 
-**No actual performance claims yet.** Freeze the Agentplace version and review the source-backed cases before baseline execution. Keep expected answers out of the agent's uploaded knowledge.
+**Observed baseline:** 20 manually evaluated, two-turn Agentplace Preview conversations; **17 PASS, 3 PARTIAL, 0 FAIL (85% strict-pass share)**. This is one manual run per case, not a statistically established reliability rate. The version is not platform-pinned. The five held-out tests remain unexecuted.
+
+- [Baseline report](reports/baseline-v0-2026-11-06.md): per-test results, evidence limits, root-cause hypotheses and a controlled v1 plan.
+- [Machine-readable baseline run](results/baseline-v0.run.json) and [individual test results](results/).
+- [Source-backed test specifications](tests/baseline-cases.json), [held-out scenarios](tests/heldout-cases.json) and [test method](tests/README.md).
