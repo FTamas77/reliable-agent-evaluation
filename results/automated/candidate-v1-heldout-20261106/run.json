@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "candidate-v1-heldout-20261106",
+  "agent_config_label": "candidate-v1",
+  "suite": "heldout",
+  "started_at": "2026-11-06T09:32:01.844Z",
+  "finished_at": "2026-11-06T09:33:39.993Z",
+  "total_duration_ms": 98149,
+  "environment": {
+    "node": "v24.13.0",
+    "playwright_core": "1.65.0",
+    "browser": "Chromium 156.0.8078.80 (attached over CDP)",
+    "locale": "en-US",
+    "browser_default_language": "hu-HU"
+  },
+  "agent_preview_url_hash": "391720ad5468",
+  "planned": [
+    "H001",
+    "H002",
+    "H003",
+    "H004",
+    "H005"
+  ],
+  "counts": {
+    "SUCCESS": 5,
+    "ERROR": 0,
+    "INCOMPLETE": 0,
+    "SKIPPED": 0
+  },
+  "results": [
+    {
+      "test_id": "H001",
+      "execution_state": "SUCCESS",
+      "duration_ms": 19797,
+      "file": "H001.json"
+    },
+    {
+      "test_id": "H002",
+      "execution_state": "SUCCESS",
+      "duration_ms": 22681,
+      "file": "H002.json"
+    },
+    {
+      "test_id": "H003",
+      "execution_state": "SUCCESS",
+      "duration_ms": 18636,
+      "file": "H003.json"
+    },
+    {
+      "test_id": "H004",
+      "execution_state": "SUCCESS",
+      "duration_ms": 19201,
+      "file": "H004.json"
+    },
+    {
+      "test_id": "H005",
+      "execution_state": "SUCCESS",
+      "duration_ms": 17830,
+      "file": "H005.json"
+    }
+  ],
+  "notes": []
+}

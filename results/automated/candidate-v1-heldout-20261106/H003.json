@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "H003",
+  "title": "Paper single ticket refund fee",
+  "run_id": "candidate-v1-heldout-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:32:44.325Z",
+  "finished_at": "2026-11-06T09:33:02.961Z",
+  "duration_ms": 18636,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "0fb5399e63ab"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have an unused ordinary paper single ticket. Can I get a refund?",
+      "agent": "Generally, yes—if it is still unused. BKK’s refund policy says unused paper single tickets can be refunded under its product conditions. I can’t process or confirm a refund for you; check the current BKK product replacement and refund policy for the applicable procedure and conditions.\n\nThis is based on the 5 November 2026 knowledge snapshot, not a live verification. If yours is from a block of ten, the snapshot says the ordinary refund requires all ten tickets to be unused and consecutively numbered, so a remaining ticket from a partly used block would not qualify for an ordinary partial refund.",
+      "links": [
+        {
+          "text": "BKK product replacement and refund policy",
+          "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+        }
+      ],
+      "started_at": "2026-11-06T09:32:49.802Z",
+      "completed_at": "2026-11-06T09:32:55.042Z",
+      "duration_ms": 5240,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "It's a current-price ticket bought yesterday. Is there a handling fee?",
+      "agent": "I can’t confirm the handling fee for a refund of a paper ordinary single ticket from the information I have. The 5 November 2026 snapshot doesn’t state that fee, and the current BKK refund page needs to be checked for the applicable paper-ticket conditions. BKK: Product replacement and refund\n\nSince it was bought yesterday and is unused, those details may help when you ask BKK—but they don’t by themselves establish whether a fee applies. I can’t process or confirm the refund. Note that the snapshot’s one-year app-refund rule is for eligible mobile tickets, not paper tickets.",
+      "links": [
+        {
+          "text": "BKK: Product replacement and refund",
+          "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+        }
+      ],
+      "started_at": "2026-11-06T09:32:55.062Z",
+      "completed_at": "2026-11-06T09:33:02.947Z",
+      "duration_ms": 7885,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:32:44.325Z",
+      "duration_ms": 18635,
+      "session_id_hash": "0fb5399e63ab",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have an unused ordinary paper single ticket. Can I get a refund?",
+          "agent": "Generally, yes—if it is still unused. BKK’s refund policy says unused paper single tickets can be refunded under its product conditions. I can’t process or confirm a refund for you; check the current BKK product replacement and refund policy for the applicable procedure and conditions.\n\nThis is based on the 5 November 2026 knowledge snapshot, not a live verification. If yours is from a block of ten, the snapshot says the ordinary refund requires all ten tickets to be unused and consecutively numbered, so a remaining ticket from a partly used block would not qualify for an ordinary partial refund.",
+          "links": [
+            {
+              "text": "BKK product replacement and refund policy",
+              "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+            }
+          ],
+          "started_at": "2026-11-06T09:32:49.802Z",
+          "completed_at": "2026-11-06T09:32:55.042Z",
+          "duration_ms": 5240,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "It's a current-price ticket bought yesterday. Is there a handling fee?",
+          "agent": "I can’t confirm the handling fee for a refund of a paper ordinary single ticket from the information I have. The 5 November 2026 snapshot doesn’t state that fee, and the current BKK refund page needs to be checked for the applicable paper-ticket conditions. BKK: Product replacement and refund\n\nSince it was bought yesterday and is unused, those details may help when you ask BKK—but they don’t by themselves establish whether a fee applies. I can’t process or confirm the refund. Note that the snapshot’s one-year app-refund rule is for eligible mobile tickets, not paper tickets.",
+          "links": [
+            {
+              "text": "BKK: Product replacement and refund",
+              "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+            }
+          ],
+          "started_at": "2026-11-06T09:32:55.062Z",
+          "completed_at": "2026-11-06T09:33:02.947Z",
+          "duration_ms": 7885,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Identify the documented ordinary refund pathway and a 300 HUF handling fee from the dated rule model; refer to official customer service for current conditions."
+    ],
+    "critical_failures": [
+      "Promises a free refund without caveats.",
+      "Claims the demo can issue a refund."
+    ],
+    "baseline_score": null,
+    "manual_v1_score": null
+  }
+}
