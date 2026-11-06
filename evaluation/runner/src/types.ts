@@ -91,6 +91,9 @@ export interface Review {
   justification: string;
   criteria_notes?: string;
   needs_human_review?: boolean;
+  /** The project author manually reviewed and confirmed this previously AI-assisted score. */
+  author_confirmed?: boolean;
+  author_reviewed_on?: string;
   /** Second-pass reviews keep the first-pass score separately; the original review file stays untouched. */
   original_score?: Score | "UNCERTAIN";
   second_pass?: "UPHELD" | "REVISED";
