@@ -1,7 +1,7 @@
 # Final evaluation — Budapest Fare Advisor (unofficial demo), candidate-v1
 
 **Date of final runs:** 2026-11-06 · **Fare/policy snapshot used by the agent:** 2026-11-05 (plus a targeted 2026-11-06 cross-check for 100E eligibility and refunds, Builder-reported)
-**Agent status:** published public demo URL supplied on 2026-11-06: https://sudk3zosa1zp.run.agentplace.io/ (the documented evaluation runs were performed in the unpublished Preview; post-publication accessibility and behaviour have not been independently verified) · **Platform version ID:** none available (labels `baseline-v0` / `candidate-v1` are research labels, not immutable releases)
+**Agent status:** published public demo URL supplied on 2026-11-06: https://sudk3zosa1zp.run.agentplace.io/ (the documented evaluation runs were performed in the unpublished Preview; the author confirmed on 2026-11-06 that the public agent opens and works; the recorded measurements are from the pre-publication Preview) · **Platform version ID:** none available (labels `baseline-v0` / `candidate-v1` are research labels, not immutable releases)
 
 ## 1. Executive summary
 
@@ -21,7 +21,7 @@ What the evidence supports: the targeted knowledge fix worked on the cases it ta
 - **Platform:** Agentplace (agent builder with a standalone Preview chat). The agent was created with the Builder and evaluated only through the standalone Preview.
 - **Model:** the project record ([baseline-manifest.json](../agentplace/baseline-manifest.json)) lists the Luna model. This is the configured value; the runtime model was not independently inspected. A Builder notice ("Continuing with GPT-6 Luna") is noted in [v1-deployment-record.json](../agentplace/v1-deployment-record.json) and does not establish a runtime change.
 - **Use case:** helps visitors choose Budapest tickets and understand rules: 100E vs 200E airport buses and the 100E add-on, 30/90-minute mobile tickets and transfers, student passes, dogs, refunds.
-- **Status:** an **independent, unofficial** demo; **not affiliated with or endorsed by BKK or Agentplace**. It cannot sell tickets or confirm eligibility. It now has a public demo link: https://sudk3zosa1zp.run.agentplace.io/ (supplied after the evaluation was completed; not independently re-tested here).
+- **Status:** an **independent, unofficial** demo; **not affiliated with or endorsed by BKK or Agentplace**. It cannot sell tickets or confirm eligibility. It now has a public demo link: https://sudk3zosa1zp.run.agentplace.io/ (supplied after the evaluation; the author checked that the public demo works, but no full regression was run against the published endpoint).
 - **Knowledge:** short original paraphrases of public BKK pages with dated source links ([knowledge-v0.md](../agentplace/knowledge-v0.md), [knowledge-v1.md](../agentplace/knowledge-v1.md)); fare values dated 2026-11-05. The agent is instructed not to infer anything the notes do not cover.
 
 ## 3. Evaluation methodology
