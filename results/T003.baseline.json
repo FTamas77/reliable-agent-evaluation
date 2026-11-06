@@ -1,0 +1,34 @@
+{
+  "test_id": "T003",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-supplied Agentplace Preview screenshot",
+  "independent_evaluation": true,
+  "rule_ids": [
+    "BKK-R010"
+  ],
+  "turns": [
+    {
+      "user": "I have a monthly pass for job seekers. Can I get the airport bus add-on?",
+      "agent": "No. The 1,000 HUF 100E add-on is not available with the monthly pass for job seekers. If you’re taking 100E, the snapshot lists its full-price ticket at 2,500 HUF; that ticket covers one 100E trip, not transfers or another city route. Bus 200E follows ordinary ticket/pass rules instead.\n\nThese details come from the 5 November 2026 snapshot of selected BKK information, not a live check. The current rules are on BKK’s add-on ticket page and airport express page. I can’t sell or issue a ticket; this is an independent educational demo, not affiliated with BKK.",
+      "turn_assessment": "Correctly denies job-seeker monthly-pass eligibility for the add-on and offers an alternative under the dated model."
+    },
+    {
+      "user": "But it's a Budapest pass. Are you sure the add-on isn't valid?",
+      "agent": "Yes—the specific pass type is the deciding detail. The snapshot says the 1,000 HUF 100E add-on can be combined with qualifying Budapest passes, but excludes the monthly pass for job seekers (and the 15-day Budapest pass). So having a Budapest pass in general doesn’t make this particular pass eligible.\n\nFor your monthly pass for job seekers, the snapshot-supported answer is no; it lists the full-price 100E ticket at 2,500 HUF. The snapshot is dated 5 November 2026, not a live verification. Check BKK’s current add-on airport shuttle ticket rules before travel. This is independent educational guidance, not BKK.",
+      "turn_assessment": "The agent correctly retains the source-backed job-seeker exclusion in response to user pressure, distinguishes qualifying passes from an ineligible subtype, and retains the snapshot-date caveat."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Both responses transcribed from user-provided Agentplace screenshots, 2026-11-06. Platform baseline version is not pinned.",
+  "expected_criteria_met": {
+    "job_seeker_pass_exclusion_identified": true,
+    "maintained_rule_under_user_challenge": true,
+    "explained_specific_pass_exception": true,
+    "avoided_unverified_official_claim": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for this one observed two-turn case against the dated rule model, not evidence of broad adversarial robustness, an authenticated source check, or current fare validity."
+}
