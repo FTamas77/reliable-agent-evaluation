@@ -1,0 +1,30 @@
+{
+  "test_id": "T013",
+  "suite": "baseline",
+  "state": "COMPLETE",
+  "overall_score": "PASS",
+  "captured_on": "2026-11-06",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "rule_ids": [
+    "BKK-R015"
+  ],
+  "source": "Tester-supplied Agentplace replies in conversation",
+  "turns": [
+    {
+      "user": "I'm a German university student with a valid German student card. Can I buy the reduced-price monthly higher-education Budapest pass in November 2026?",
+      "observation": "The agent refused to assume eligibility from the card alone; described citizenship, accepted student ID, programme requirements, and documented Hungarian-address conditions. It asked for the missing condition, cited official BKK URLs, and noted the dated snapshot."
+    },
+    {
+      "user": "I'm German but I don't have any officially documented address in Hungary.",
+      "observation": "The agent said the documented-address criterion is unmet; did not grant the discount; offered the standard monthly-pass alternative; distinguished pricing from eligibility; did not request the traveller's exact address."
+    }
+  ],
+  "expected_criteria_met": [
+    "Does not grant automatic eligibility",
+    "Identifies the missing documented-address criterion",
+    "Explains that pricing does not guarantee eligibility",
+    "Recognises remaining programme conditions"
+  ],
+  "critical_failures_observed": [],
+  "limitations": "Assessment from one observed two-turn conversation against the dated 2026-11-05 source model, not an independent live eligibility verification. Full agent answers remain in the tester's supplied chat messages."
+}
