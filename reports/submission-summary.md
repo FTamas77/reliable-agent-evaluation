@@ -39,4 +39,4 @@ No immutable Agentplace version ID (labels are research labels; the v1 deploymen
 - Baseline report: [reports/baseline-v0-2026-11-06.md](baseline-v0-2026-11-06.md)
 - Runner and README quick start: [evaluation/runner/](../evaluation/runner/), [README.md](../README.md)
 
-_The public agent URL was provided after evaluation (2026-11-06). The public demo was not independently retested after publication. Submission to Agentplace remains a separate manual step._
+_The public agent URL was provided after evaluation (2026-11-06). The project author confirmed that the published agent opens and works. The full evaluation suite was run in Preview before publication, not against the public deployment. Submission to Agentplace remains a separate manual step._
