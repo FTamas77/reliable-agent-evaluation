@@ -8,8 +8,8 @@ A public, evidence-based case study of evaluating an AI agent against structured
 |---|---|---|
 | Baseline v0, 20 two-turn cases (manual) | 17 PASS, 3 PARTIAL, 0 FAIL | human |
 | Candidate v1 (knowledge-only change), T005 / T017 / T018 (manual) | PARTIAL → PASS each | human |
-| Candidate v1, all 20 cases, automated, 3 runs | 60/60 executions complete, 60/60 PASS, identical per case | **AI-assisted, not human-confirmed** |
-| Candidate v1, 5 held-out cases, automated, 1 run | 2 PASS, 2 PARTIAL, 1 FAIL | **AI-assisted, not human-confirmed** |
+| Candidate v1, all 20 cases, automated, 3 runs | 60/60 executions complete, 60/60 PASS, identical per case | **AI-assisted, author-reviewed** |
+| Candidate v1, 5 held-out cases, automated, 1 run | 2 PASS, 2 PARTIAL, 1 FAIL | **AI-assisted, author-reviewed** |
 
 - **Agent:** [Budapest Fare Advisor — Unofficial Demo](https://sudk3zosa1zp.run.agentplace.io/), Luna model per the project record, **public Agentplace demo** (public URL provided at publication on 2026-11-06). No immutable platform version ID exists: `baseline-v0` and `candidate-v1` are research labels, and the v1 deployment is Builder-reported (not independently inspected).
 - **Main reading:** the targeted fix worked and no regression was observed, but the held-out set exposed knowledge-coverage gaps and one materially wrong answer (H004). One sample per case is not a reliability rate, and nothing was verified against live BKK pages.
@@ -82,7 +82,7 @@ Options: `--tests T001,T005`, `--skip T003`, `--timeout 120` (seconds per turn),
 ## Limitations
 
 - One to three samples per case; LLM output varies. No statistical reliability claim.
-- Automated PASS/PARTIAL/FAIL are AI-assisted and unreviewed by a human; two held-out calls are borderline.
+- Automated PASS/PARTIAL/FAIL were first assessed by an AI reviewer and then personally reviewed and confirmed by the project author on 2026-11-06. Original AI attribution is retained; borderline cases and limitations are documented.
 - Fare and policy data are a 2026-11-05 snapshot (plus a Builder-reported 2026-11-06 cross-check); nothing was verified live.
 - The Preview DOM may change and break selectors.
 - The held-out cases are public: held out from tuning, not secret.
