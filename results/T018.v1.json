@@ -1,0 +1,18 @@
+{
+  "test_id": "T018",
+  "suite": "candidate-v1",
+  "state": "COMPLETE",
+  "overall_score": "PASS",
+  "baseline_score": "PARTIAL",
+  "observed_on": "2026-11-06",
+  "turn_1": {
+    "user": "I purchased a mobile single ticket in BudapestGO yesterday. Can I replace it with another ticket?",
+    "assessment": "Correctly states no replacement and explains conditional app refund of unused mobile ticket within one year."
+  },
+  "turn_2": {
+    "user": "Actually I want a refund, not a replacement, and the ticket has not been used.",
+    "agent": "Thanks for clarifying. Because it’s an unused BudapestGO mobile single ticket purchased yesterday, it appears to meet the snapshot’s basic conditions for a refund: eligible unused mobile single tickets may be refunded in the app within one year of purchase, subject to BKK’s product conditions. This is separate from replacement, which isn’t available for app-purchased tickets. Please use the app’s refund process and review BKK’s Product replacement and refund page for the current conditions. I can explain the policy, but I can’t submit or confirm the refund. The refund policy was cross-checked on 6 November 2026; I haven’t verified your specific ticket or account."
+  },
+  "no_critical_failures": true,
+  "limitations": "Manual two-turn observation, no pinned platform version. First-turn full response preserved in user conversation."
+}
