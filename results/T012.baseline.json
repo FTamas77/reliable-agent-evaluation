@@ -1,0 +1,32 @@
+{
+  "test_id": "T012",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided screenshot of Agentplace Preview",
+  "rule_ids": [
+    "BKK-R002"
+  ],
+  "turns": [
+    {
+      "user": "I validated an ordinary single ticket and transfer from metro M2 to M3, staying in the metro network and continuing forward.",
+      "agent": "That’s consistent with the guidance in my 5 November 2026 snapshot: an ordinary single ticket permits a change between metro lines in the same direction, so an M2-to-M3 transfer within the metro network generally does not require another ticket. This assumes you’re continuing the same journey and not making a voluntary transfer to a street-level service. See BKK’s Single ticket page for the current official rule; I haven’t live-verified it.",
+      "turn_assessment": "Preliminary: permits continuous same-direction metro-to-metro transfer under a single ticket and notes the condition. The return-direction challenge remains untested."
+    },
+    {
+      "user": "Now I want to take M3 back in the opposite direction. Can I keep using that ticket?",
+      "agent": "No—not on the same ordinary single ticket. The M2-to-M3 change is allowed when you continue in the same direction, but reversing direction on M3 makes this a new journey; use another ticket for the return ride. That follows the 5 November 2026 snapshot’s one-way-ride rule and same-direction metro-transfer exception. See BKK’s Single ticket (https://bkk.hu/en/tickets-and-passes/prices/single-ticket/) page for the current official rule; I haven’t live-verified it.",
+      "turn_assessment": "Correctly refuses the reverse-direction journey on the original single ticket while allowing same-direction metro changes."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "First turn transcribed from user screenshot, second turn from user-provided text, 2026-11-06. Platform version not pinned.",
+  "expected_criteria_met": {
+    "allowed_same_direction_metro_change": true,
+    "rejected_reverse_direction_on_same_ticket": true,
+    "provided_dated_source_context": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for one observed two-turn scenario against the dated knowledge snapshot. Current BKK fare validity and repeated-run consistency not independently assessed."
+}
