@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "case_study": "bkk-fare-advisor",
+  "suite": "heldout",
+  "phase": "post-improvement generalization only",
+  "status": "DRAFT_NOT_FROZEN",
+  "created_on": "2026-11-06",
+  "rule_model": "case_studies/bkk/knowledge/rules.json",
+  "policy_snapshot_date": "2026-11-05",
+  "execution": "MANUAL_FRESH_CHAT_PER_CASE",
+  "note": "Original, independently authored test designs. Expected behaviours derive from the dated repository rule model; official facts may change and must be checked. No conversations have yet been run.",
+  "count": 5,
+  "scenarios": [
+    {
+      "id": "H001",
+      "title": "Under-14 passenger and Hungarian student ID",
+      "category": "free_travel",
+      "rule_ids": [
+        "BKK-R012"
+      ],
+      "source_ids": [
+        "S005",
+        "S006"
+      ],
+      "user_turns": [
+        "My child is 13. Do I have to buy an airport shuttle ticket?",
+        "They have a valid Hungarian student ID. We're taking 100E."
+      ],
+      "expected_behaviour": [
+        "Assess the under-14 Hungarian-student-ID free-travel entitlement on 100E, but clarify current official conditions if needed."
+      ],
+      "critical_failures": [
+        "Charges a full adult 100E fare by default despite evidence meeting the documented conditions."
+      ],
+      "testing_note": "Reserved until after agent improvements.",
+      "observed_transcript": null,
+      "score": null
+    },
+    {
+      "id": "H002",
+      "title": "Older passenger, age proof",
+      "category": "free_travel",
+      "rule_ids": [
+        "BKK-R013"
+      ],
+      "source_ids": [
+        "S005",
+        "S006"
+      ],
+      "user_turns": [
+        "My grandmother is 67. Can she ride the 100E without paying?",
+        "She can show official proof of age."
+      ],
+      "expected_behaviour": [
+        "Recognise the documented age-based 100E free travel entitlement for someone over 65 with proof."
+      ],
+      "critical_failures": [
+        "Insists every 100E passenger always needs a full-price ticket."
+      ],
+      "testing_note": "Reserved age-based eligibility.",
+      "observed_transcript": null,
+      "score": null
+    },
+    {
+      "id": "H003",
+      "title": "Paper single ticket refund fee",
+      "category": "refund",
+      "rule_ids": [
+        "BKK-R021"
+      ],
+      "source_ids": [
+        "S012"
+      ],
+      "user_turns": [
+        "I have an unused ordinary paper single ticket. Can I get a refund?",
+        "It's a current-price ticket bought yesterday. Is there a handling fee?"
+      ],
+      "expected_behaviour": [
+        "Identify the documented ordinary refund pathway and a 300 HUF handling fee from the dated rule model; refer to official customer service for current conditions."
+      ],
+      "critical_failures": [
+        "Promises a free refund without caveats.",
+        "Claims the demo can issue a refund."
+      ],
+      "testing_note": "Reserved fee/temporal-validity check.",
+      "observed_transcript": null,
+      "score": null
+    },
+    {
+      "id": "H004",
+      "title": "Night bus and ticket duration",
+      "category": "time_boundary",
+      "rule_ids": [
+        "BKK-R003"
+      ],
+      "source_ids": [
+        "S002"
+      ],
+      "user_turns": [
+        "My ordinary single ticket has been validated for 85 minutes. Does that automatically make it invalid?",
+        "I'm on a night service, still on the same continuous ride."
+      ],
+      "expected_behaviour": [
+        "Clarify whether this is a day or night service before deciding.",
+        "Use the documented night-service maximum of 120 minutes rather than applying the 80-minute daytime maximum."
+      ],
+      "critical_failures": [
+        "Declares the ticket invalid after 80 minutes regardless of night-service context."
+      ],
+      "testing_note": "Reserved service-type exception.",
+      "observed_transcript": null,
+      "score": null
+    },
+    {
+      "id": "H005",
+      "title": "Foreign ID and address is not sufficient by itself",
+      "category": "eligibility",
+      "rule_ids": [
+        "BKK-R015"
+      ],
+      "source_ids": [
+        "S009",
+        "S010"
+      ],
+      "user_turns": [
+        "I'm a Polish university student with a valid Polish student ID. Can I get the discounted monthly Budapest student pass?",
+        "I'm an EU citizen and have official documentation of my Hungarian address. Does that guarantee it?"
+      ],
+      "expected_behaviour": [
+        "Recognise the nationality, address and student ID as relevant but confirm remaining accepted-document and programme-type conditions.",
+        "Avoid unconditional guarantee based on only some criteria."
+      ],
+      "critical_failures": [
+        "Guarantees eligibility without checking required study programme and document details."
+      ],
+      "testing_note": "Reserved positive eligibility with remaining uncertainty.",
+      "observed_transcript": null,
+      "score": null
+    }
+  ]
+}
