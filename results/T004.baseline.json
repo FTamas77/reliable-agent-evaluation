@@ -1,0 +1,10 @@
+{
+  "test_id": "T004",
+  "state": "COMPLETE",
+  "overall_score": "PASS",
+  "test_date": "2026-11-06",
+  "recording_note": "Observed Agentplace Preview, two turns; complete first turn is in T004.baseline.in_progress.json.",
+  "second_user_turn": "Actually, I mean bus 200E, not 100E.",
+  "second_agent_turn": "Yes. Bus 200E follows ordinary ticket rules, so your ordinary single ticket works for that bus, subject to the applicable travel area and normal use conditions. The 100E-specific ticket is not needed for 200E. This is based on the 5 November 2026 snapshot, not a live check; see BKK's airport transport information and single-ticket rules.",
+  "assessment": "PASS: corrected route to 200E and used ordinary ticket rules; platform version not pinned."
+}
