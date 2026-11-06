@@ -1,5 +1,5 @@
 {
-  "note": "AI-assisted judgments written after the raw run was committed (commit 54d517d). The reviewer is the same model family that built the runner; no second independent model was available, and no human has confirmed these scores. Oracle: tests/heldout-cases.json expected_behaviour and critical_failures, rules in case_studies/bkk/knowledge/rules.json. Deployed knowledge could not be inspected; comparisons use agentplace/knowledge-v1.md (Builder-reported deployment). Author confirmation (2026-11-06): all results were personally reviewed and accepted by the project author. Original reviewer attribution is retained.",
+  "note": "AI-assisted judgments written after the raw run was committed (commit 54d517d). The reviewer is the same model family that built the runner; no second independent model was available, and the project author subsequently confirmed the scores after manually reviewing the results. Oracle: tests/heldout-cases.json expected_behaviour and critical_failures, rules in case_studies/bkk/knowledge/rules.json. Deployed knowledge could not be inspected; comparisons use agentplace/knowledge-v1.md (Builder-reported deployment). The original AI reviewer attribution is retained; author confirmation was recorded on 2026-11-06.",
   "reviews": [
     {
       "test_id": "H001",
