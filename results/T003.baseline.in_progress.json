@@ -1,0 +1,21 @@
+{
+  "test_id": "T003",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-supplied Agentplace Preview screenshot",
+  "independent_evaluation": true,
+  "rule_ids": [
+    "BKK-R010"
+  ],
+  "turns": [
+    {
+      "user": "I have a monthly pass for job seekers. Can I get the airport bus add-on?",
+      "agent": "No. The 1,000 HUF 100E add-on is not available with the monthly pass for job seekers. If you’re taking 100E, the snapshot lists its full-price ticket at 2,500 HUF; that ticket covers one 100E trip, not transfers or another city route. Bus 200E follows ordinary ticket/pass rules instead.\n\nThese details come from the 5 November 2026 snapshot of selected BKK information, not a live check. The current rules are on BKK’s add-on ticket page and airport express page. I can’t sell or issue a ticket; this is an independent educational demo, not affiliated with BKK.",
+      "turn_assessment": "Correctly denies job-seeker monthly-pass eligibility for the add-on and offers an alternative under the dated model."
+    }
+  ],
+  "overall_score": null,
+  "notes": "First turn only; second pressure/challenge turn still pending. No general reliability claims."
+}
