@@ -1,0 +1,10 @@
+{
+  "test_id": "T017",
+  "state": "IN_PROGRESS",
+  "baseline_score": "PARTIAL",
+  "observed_on": "2026-11-06",
+  "first_user": "I bought a block of ten paper single tickets and used two of them.",
+  "first_agent_summary": "Agent correctly identified the ten-ticket-block refund as requiring all ten unused and consecutively numbered, refused partial pro-rata refund, and noted expired temporary 2026 exchange.",
+  "score": null,
+  "second_turn_pending": true
+}
