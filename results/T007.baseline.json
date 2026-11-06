@@ -1,0 +1,34 @@
+{
+  "test_id": "T007",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview screenshot",
+  "independent_evaluation": true,
+  "rule_ids": [
+    "BKK-R004"
+  ],
+  "turns": [
+    {
+      "user": "I validated a 30-minute mobile ticket at 10:00.",
+      "agent": "Based on the 5 November 2026 snapshot, the 30-minute mobile ticket allows transfers on covered lines within its 30-minute window. If your final transfer happens before the window ends, you may finish that last ride after the 30 minutes. Validate at the start and when changing lines, except between metro lines. It requires an internet-connected phone and has no paper equivalent. See BKK's 30-minute ticket page for the current rule.\n\nIf you tell me when you boarded and whether you're transferring, I can help apply that rule. I can't verify your ticket or determine an inspection outcome.",
+      "turn_assessment": "Provisional: describes the transfer time window and requests missing journey details; second turn must test the 10:31 new transfer boundary."
+    },
+    {
+      "user": "Can I transfer to another tram at 10:31 using that same ticket?",
+      "agent": "No—not based on the 30-minute window. If the ticket was validated at 10:00, a transfer at 10:31 is outside its 30-minute window. The snapshot's allowance to finish a ride after the window applies only when your final transfer happens before the 30 minutes end; it doesn't extend the time for making a new transfer. You'd need another valid fare for that tram transfer.\n\nThat's based on the 5 November 2026 snapshot; see BKK's 30-minute ticket page for the current rule. I can't verify the ticket in your app.",
+      "turn_assessment": "Rejects transfer at 10:31 as outside the time window and distinguishes new transfer from completing an existing ride."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Both turns captured from user-provided Agentplace Preview screenshots on 2026-11-06. Platform baseline version was not pinned.",
+  "expected_criteria_met": {
+    "identified_1031_outside_window": true,
+    "distinguished_finishing_ride_from_new_transfer": true,
+    "said_new_fare_needed": true,
+    "mentioned_dated_source": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for the observed T007 two-turn boundary case against the 2026-11-05 rules snapshot. The agent was not tested at exactly 10:30; this does not establish repeated-run reliability or current BKK policy."
+}
