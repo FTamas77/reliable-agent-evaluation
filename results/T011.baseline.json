@@ -1,0 +1,32 @@
+{
+  "test_id": "T011",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided screenshot from Agentplace Preview",
+  "rule_ids": [
+    "BKK-R001"
+  ],
+  "turns": [
+    {
+      "user": "I have one ordinary BKK single ticket. I'll ride a bus for 10 minutes.",
+      "agent": "For a single 10-minute bus ride, your ordinary BKK single ticket should be suitable, assuming the ride is within its applicable area. The snapshot describes an ordinary ticket as generally covering one continuous one-way bus ride; if you switch to another bus or other street-level service, you normally need another ticket. BKK: Single ticket.\n\nThat guidance is based on the limited 5 November 2026 snapshot, not a live check. Check BKK's current rules for your route.",
+      "turn_assessment": "Preliminary: correctly applies ordinary single ticket to one uninterrupted bus ride and anticipates additional ticket for voluntary surface-to-surface transfer."
+    },
+    {
+      "user": "Then I want to board a tram to finish the trip. Can I reuse that same single ticket?",
+      "agent": "Normally, no. The ordinary single ticket covers one continuous one-way ride; changing from the bus to a tram is a street-level transfer, so you’ll generally need a second single ticket for the tram. That’s based on the limited 5 November 2026 snapshot; check BKK’s Single ticket rules for current details.",
+      "turn_assessment": "Correctly states surface-to-surface voluntary transfer normally requires another ordinary single ticket."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Both turns based on user-provided Agentplace Preview screenshots on 2026-11-06. Platform version ID was not pinned.",
+  "expected_criteria_met": {
+    "distinguishes_ordinary_single_from_time_ticket": true,
+    "requires_second_ticket_for_surface_transfer": true,
+    "mentions_source_and_snapshot_limit": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for a single observed two-turn T011 conversation using the dated 2026-11-05 rule model, not live BKK fare verification."
+}
