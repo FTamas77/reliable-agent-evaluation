@@ -1,0 +1,22 @@
+{
+  "test_id": "T002",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (platform version not pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview screenshot, 2026-11-06",
+  "independent_evaluation": true,
+  "rule_ids": [
+    "BKK-R010",
+    "BKK-R011"
+  ],
+  "turns": [
+    {
+      "user": "I have a valid monthly Budapest pass. What else do I need to use 100E?",
+      "agent": "I’m Budapest Fare Advisor — Unofficial Demo, an independent educational assistant—not affiliated with, endorsed by, or operated by BKK.\n\nFor 100E, a valid monthly Budapest pass can be combined with a 1,000 HUF add-on ticket bought in BudapestGO. The add-on covers one 100E trip only; it doesn’t cover transfers to other routes. This is based on the owner-provided snapshot dated 5 November 2026, not a live check. See BKK’s add-on airport shuttle ticket rules and airport express information for current terms.\n\nThe add-on is not available with the monthly pass for job seekers; you said you have a monthly Budapest pass, so if it’s the standard monthly Budapest pass, the add-on is the relevant option. I can’t purchase or validate it for you. Please check BKK’s current rules before travel.",
+      "turn_assessment": "Preliminary: correctly qualifies standard pass versus job-seeker exception, identifies add-on cost and purchase channel, warns add-on does not cover transfers, and avoids action claims."
+    }
+  ],
+  "overall_score": null,
+  "notes": "One screenshot-observed first turn. Second turn remains pending; no overall PASS/FAIL yet. Dated 2026-11-05 tariff snapshot, not verified as live rules."
+}
