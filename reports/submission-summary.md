@@ -1,6 +1,6 @@
 # Submission summary — Reliable evaluation of an Agentplace fare-advisor agent
 
-**Public agent URL:** _not yet published — to be added by the author after publishing_ · **Repository:** https://github.com/FTamas77/reliable-agent-evaluation
+**Public agent URL:** [Budapest Fare Advisor — Unofficial Demo](https://sudk3zosa1zp.run.agentplace.io/) · **Repository:** https://github.com/FTamas77/reliable-agent-evaluation
 
 ## Problem and agent
 
@@ -39,4 +39,4 @@ No immutable Agentplace version ID (labels are research labels; the v1 deploymen
 - Baseline report: [reports/baseline-v0-2026-11-06.md](baseline-v0-2026-11-06.md)
 - Runner and README quick start: [evaluation/runner/](../evaluation/runner/), [README.md](../README.md)
 
-_Not yet submitted. Publishing the agent and adding its public URL remain manual steps._
+_The public agent URL was provided after evaluation (2026-11-06). The public demo was not independently retested after publication. Submission to Agentplace remains a separate manual step._
