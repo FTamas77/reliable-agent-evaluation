@@ -21,5 +21,7 @@
     "Asks for journey details rather than inventing exact number of tickets"
   ],
   "critical_failures_observed": [],
-  "limitation": "Evaluated once from screenshots, against a dated source snapshot; no repeated-run reliability or live fare verification."
+  "limitation": "Evaluated once from screenshots, against a dated source snapshot; no repeated-run reliability or live fare verification.",
+  "overall_score": "PASS",
+  "state": "COMPLETE"
 }
