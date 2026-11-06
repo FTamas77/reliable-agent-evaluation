@@ -67,3 +67,11 @@ The checker does not check factual accuracy. BKK policies and prices can change.
 - [Baseline manifest template](agentplace/baseline-manifest.example.json): record what was really built, without inventing results.
 
 **Current status:** builder materials are ready in the repository; no Agentplace agent has been created or published through this repository. An account holder must start the build in their Agentplace workspace.
+
+## Evaluation test design (draft, not executed)
+
+- [20 baseline test conversations](tests/baseline-cases.json) with rule references, expected behaviour and critical failure criteria.
+- [5 held-out conversations](tests/heldout-cases.json) reserved for a post-improvement generalisation check.
+- [How to run and score tests](tests/README.md); [structural test validator](evaluation/validate_scenarios.py).
+
+**No actual performance claims yet.** Freeze the Agentplace version and review the source-backed cases before baseline execution. Keep expected answers out of the agent's uploaded knowledge.
