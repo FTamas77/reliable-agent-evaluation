@@ -1,6 +1,6 @@
 {
   "id": "baseline-v0",
-  "status": "BUILT_UNPUBLISHED_NOT_YET_FROZEN",
+  "status": "BUILT_UNPUBLISHED_BASELINE_LABEL_DOCUMENTED_PLATFORM_SNAPSHOT_UNCONFIRMED",
   "agent_name": "Budapest Fare Advisor — Unofficial Demo",
   "platform": "Agentplace",
   "model": "Luna",
@@ -36,5 +36,12 @@
     "saved_version_confirmed": false,
     "summary": "Builder says instructions, knowledge, model settings and files were unchanged during the version enquiry. 'Baseline v0' is only a conversation label, not yet a saved version or pinned snapshot.",
     "next_step": "Open Agentplace workspace Versions manually; capture current version label and timestamp."
+  },
+  "version_discovery": {
+    "checked_on": "2026-11-06",
+    "evidence": "User screenshots: Agentplace project sidebar, builder chat menu, project title menu",
+    "finding": "No Versions or saved-version menu was visible in these views; available menus showed Rename, Delete, and New chat.",
+    "platform_version_id": null,
+    "notes": "Do not claim platform snapshot exists. Keep agent configuration unchanged during first evaluation. The Git repository captures known inputs but not complete internal Agentplace state."
   }
 }
