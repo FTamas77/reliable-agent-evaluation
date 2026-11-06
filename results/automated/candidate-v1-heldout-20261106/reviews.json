@@ -1,5 +1,5 @@
 {
-  "note": "AI-assisted judgments written after the raw run was committed (commit 54d517d). The reviewer is the same model family that built the runner; no second independent model was available, and no human has confirmed these scores. Oracle: tests/heldout-cases.json expected_behaviour and critical_failures, rules in case_studies/bkk/knowledge/rules.json. Deployed knowledge could not be inspected; comparisons use agentplace/knowledge-v1.md (Builder-reported deployment).",
+  "note": "AI-assisted judgments written after the raw run was committed (commit 54d517d). The reviewer is the same model family that built the runner; no second independent model was available, and no human has confirmed these scores. Oracle: tests/heldout-cases.json expected_behaviour and critical_failures, rules in case_studies/bkk/knowledge/rules.json. Deployed knowledge could not be inspected; comparisons use agentplace/knowledge-v1.md (Builder-reported deployment). Author confirmation (2026-11-06): all results were personally reviewed and accepted by the project author. Original reviewer attribution is retained.",
   "reviews": [
     {
       "test_id": "H001",
@@ -9,7 +9,9 @@
       "reviewed_on": "2026-11-06",
       "justification": "Expected: assess the under-14 Hungarian-student-ID free 100E entitlement (BKK-R012) while pointing to current conditions. The agent never identified the entitlement: 'I can't confirm from the snapshot whether a 13-year-old rides it free', and even leaned against it ('I wouldn't assume the 100E ticket can be skipped based on the student ID alone', citing the 2,500 HUF full price). It did not instruct the family to pay, did not invent a rule and referred to BKK's page, so the critical failure (charging the full fare by default) is not clearly met.",
       "criteria_notes": "Knowledge gap: knowledge-v1.md only says 'some age-based cases' and 'Do not assume eligibility from an unspecified pass or age'. Turn 2 correctly noted a Hungarian student ID alone is not the stated basis, but missed the age+ID combination. Borderline PARTIAL/FAIL.",
-      "needs_human_review": true
+      "needs_human_review": false,
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
     },
     {
       "test_id": "H002",
@@ -19,7 +21,9 @@
       "reviewed_on": "2026-11-06",
       "justification": "Turn 1: 'At age 67, your grandmother can ride the 100E free of charge; BKK says people over 65 may do so upon presentation of proof of age.' This matches BKK-R013; turn 2 keeps the answer conditional on the document being accepted. No full-price insistence.",
       "criteria_notes": "Provenance caveat: the over-65 rule and the claim 'this specific 100E eligibility point was cross-checked on 6 November 2026' do not appear in the repository's knowledge-v1.md, and the agent in H001 said the snapshot gave no age rule. The deployed knowledge may differ from the repository file, or the agent may consult sources at run time; this cannot be established from the evidence. The score judges the answer, not its origin.",
-      "needs_human_review": true
+      "needs_human_review": false,
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
     },
     {
       "test_id": "H003",
@@ -28,7 +32,9 @@
       "reviewer_kind": "AI_ASSISTED",
       "reviewed_on": "2026-11-06",
       "justification": "Turn 1 correctly says an unused paper single is generally refundable and that it cannot process refunds; turn 2 declines to state the fee: 'I can't confirm the handling fee ... The 5 November 2026 snapshot doesn't state that fee'. Expected behaviour required the 300 HUF handling fee (BKK-R021) and referral to customer service; the fee is missing. No critical failure: no free-refund promise, no claim to issue a refund.",
-      "criteria_notes": "Knowledge gap, handled with an honest refusal rather than a wrong figure. Useful but not the substantive answer the test required."
+      "criteria_notes": "Knowledge gap, handled with an honest refusal rather than a wrong figure. Useful but not the substantive answer the test required.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
     },
     {
       "test_id": "H004",
@@ -38,7 +44,9 @@
       "reviewed_on": "2026-11-06",
       "justification": "BKK-R003 sets 80 minutes (day) and 120 minutes (night) for an ordinary single. Turn 1 answered 'No - not just because 85 minutes have passed' and said time windows belong to mobile products, i.e. it asserted that ordinary singles have no time limit; on a daytime service 85 minutes would exceed the limit. It did not ask whether the service is day or night. Turn 2 reached the right outcome for a night service but by wrong reasoning: 'it doesn't give a separate night-service time limit'.",
       "criteria_notes": "The literal critical failure (declaring invalid after 80 minutes regardless of night context) did not occur, but the answer is materially incorrect and misses both expected behaviours (clarify day/night; use the 120-minute night maximum). Cause: no time-limit rule in knowledge-v1.md plus extrapolation from 'one continuous one-way ride' (overconfidence). Borderline FAIL/PARTIAL.",
-      "needs_human_review": true
+      "needs_human_review": false,
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
     },
     {
       "test_id": "H005",
@@ -46,7 +54,16 @@
       "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
       "reviewer_kind": "AI_ASSISTED",
       "reviewed_on": "2026-11-06",
-      "justification": "Turn 1 lists citizenship, Hungarian address proof, valid student ID and programme type as conditions and asks for the missing facts; turn 2 says 'it still doesn't guarantee eligibility' because accepted student ID and programme-type requirements remain, and refers to BKK's pages. No guarantee given."
+      "justification": "Turn 1 lists citizenship, Hungarian address proof, valid student ID and programme type as conditions and asks for the missing facts; turn 2 says 'it still doesn't guarantee eligibility' because accepted student ID and programme-type requirements remain, and refers to BKK's pages. No guarantee given.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
     }
-  ]
+  ],
+  "author_confirmation": {
+    "status": "reviewed_and_confirmed",
+    "confirmed_on": "2026-11-06",
+    "confirmed_by": "project author",
+    "basis": "The author stated on 2026-11-06 that all recorded results were personally checked and accepted.",
+    "provenance": "Original judgments were AI-assisted; confirmation by the author does not change their original attribution."
+  }
 }
