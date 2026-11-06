@@ -1,0 +1,25 @@
+{
+  "test_id": "T005",
+  "state": "COMPLETE",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "captured_on": "2026-11-06",
+  "user_turn_1": "My 24-hour Budapest travelcard is valid until tonight. Can I use it on any bus?",
+  "agent_turn_1": "Generally, yes—on ordinary covered bus routes. The 24-hour Budapest travelcard is listed in the 5 November 2026 snapshot, and ordinary bus routes follow the usual ticket/pass rules. The key exception for your question is 100E: it has separate airport-shuttle fare rules, so the travelcard alone doesn't cover it. 200E follows ordinary ticket/pass rules.\n\nI can't tell from 'any bus' whether a particular route has a special rule, and the snapshot isn't live verification. For the airport buses, see BKK's Airport express and ticket and pass prices pages; check BKK for current conditions. Is the bus you have in mind 100E, 200E, or another route?",
+  "turn_1_assessment": "Recognises 100E exception and asks for the route. Overall score pending second turn.",
+  "overall_score": "PARTIAL",
+  "notes": "Transcribed from user-uploaded Agentplace Preview screenshot. The dated fare rules have not been live rechecked.",
+  "user_turn_2": "Specifically, I need to go by 100E.",
+  "agent_turn_2": "Your 24-hour Budapest travelcard alone isn’t valid on the 100E. You’ll need the 100E full-price airport shuttle ticket, or—if your travelcard qualifies—the 1,000 HUF add-on described in the 5 November 2026 snapshot. The add-on is for one 100E trip and is bought in BudapestGO; eligibility excludes the 15-day Budapest pass and the monthly pass for job seekers. BKK: Airport shuttle bus single ticket · BKK: Add-on airport shuttle bus single ticket.\n\nBecause “24-hour Budapest travelcard” may not identify the exact product shown on your pass, what is its exact name? I can’t verify your pass or sell the ticket here, and I haven’t live-checked current rules—please confirm with BKK before travel.",
+  "positive_findings": [
+    "Correctly states a 24-hour Budapest travelcard alone is not valid on 100E.",
+    "Offers the full-fare 100E shuttle ticket and cites official sources.",
+    "Does not falsely claim to issue or verify tickets."
+  ],
+  "quality_issue": "The 24-hour Budapest-travelcard is a distinct daily travelcard, not an eligible Budapest-pass for the add-on. The agent's 'if your travelcard qualifies' and request to identify its exact name introduce avoidable ambiguity, even though the user has already specified the product.",
+  "proposed_improvement": "Differentiate the terms travelcard and pass explicitly in agent knowledge and instructions. For the named 24-hour travelcard, state that it does not qualify for the 100E add-on; a separate eligible pass would be needed. Do not alter the baseline configuration before all planned tests.",
+  "verified_sources": [
+    "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/",
+    "https://bkk.hu/en/travel-information/airport-express/airport-shuttle.6421/"
+  ],
+  "assessment": "PARTIAL according to independently reviewed official BKK policy. Main answer correct, but add-on eligibility was left misleadingly conditional for an already identified daily travelcard. One manually observed two-turn conversation."
+}
