@@ -1,0 +1,23 @@
+{
+  "test_id": "T017",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace reply in chat",
+  "rule_ids": [
+    "BKK-R020"
+  ],
+  "source_ids": [
+    "S012"
+  ],
+  "turns": [
+    {
+      "user": "I bought a block of ten paper single tickets and used two of them.",
+      "agent": "Thanks—so you have 8 paper single tickets left. The 5 November 2026 snapshot lists a block of ten at 4,500 HUF, but that price alone doesn’t tell me whether you’re asking about transfer rules, expiry, refunds, or what to use next. BKK: Single ticket (https://bkk.hu/en/tickets-and-passes/prices/single-ticket/)\n\nI’m Budapest Fare Advisor — Unofficial Demo, an independent educational assistant, not affiliated with, endorsed by, or operated by BKK. My information is a dated snapshot, not live verification; check BKK’s current guidance for your travel date.\n\nAre you wondering whether the remaining tickets can be used for a particular trip, or something else about them?",
+      "turn_assessment": "Provisional: correctly retains eight remaining tickets and asks to clarify intent; does not invent refund eligibility. The refund challenge remains pending."
+    }
+  ],
+  "overall_score": null,
+  "notes": "First-turn response as supplied by user; no full scenario score until second turn. Dated source snapshot only."
+}
