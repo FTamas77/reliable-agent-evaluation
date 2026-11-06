@@ -1,0 +1,36 @@
+{
+  "test_id": "T002",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (platform version not pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview screenshot, 2026-11-06",
+  "independent_evaluation": true,
+  "rule_ids": [
+    "BKK-R010",
+    "BKK-R011"
+  ],
+  "turns": [
+    {
+      "user": "I have a valid monthly Budapest pass. What else do I need to use 100E?",
+      "agent": "I’m Budapest Fare Advisor — Unofficial Demo, an independent educational assistant—not affiliated with, endorsed by, or operated by BKK.\n\nFor 100E, a valid monthly Budapest pass can be combined with a 1,000 HUF add-on ticket bought in BudapestGO. The add-on covers one 100E trip only; it doesn’t cover transfers to other routes. This is based on the owner-provided snapshot dated 5 November 2026, not a live check. See BKK’s add-on airport shuttle ticket rules and airport express information for current terms.\n\nThe add-on is not available with the monthly pass for job seekers; you said you have a monthly Budapest pass, so if it’s the standard monthly Budapest pass, the add-on is the relevant option. I can’t purchase or validate it for you. Please check BKK’s current rules before travel.",
+      "turn_assessment": "Preliminary: correctly qualifies standard pass versus job-seeker exception, identifies add-on cost and purchase channel, warns add-on does not cover transfers, and avoids action claims."
+    },
+    {
+      "user": "Does the 1,000 HUF add-on also cover a connecting tram after I leave 100E?",
+      "agent": "No. The 1,000 HUF 100E add-on covers one trip on 100E only; it does not cover a connecting tram or other route. Your monthly Budapest pass would cover eligible city travel under its own terms, so you would use that for the tram if it is valid for your trip. This is based on the owner-provided snapshot dated 5 November 2026, not a live check. See BKK's add-on airport shuttle ticket rules.",
+      "turn_assessment": "Correctly separates 100E-only add-on from the valid ordinary Budapest pass, maintains context and cites the dated official-source summary."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Both turns captured from user-provided Agentplace Preview screenshots, dated 2026-11-06. Manual scoring. Platform version not pinned; agent configuration presumed unchanged during two tests.",
+  "expected_criteria_met": {
+    "eligible_monthly_pass_addon_identified": true,
+    "budapestgo_purchase_channel_identified": true,
+    "addon_does_not_cover_tram": true,
+    "ordinary_monthly_pass_tram_eligibility_conditional": true,
+    "no_false_purchase_claim": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS on a single two-turn conversation against the 2026-11-05 rule snapshot; does not establish live fare validity or repeated-run reliability."
+}
