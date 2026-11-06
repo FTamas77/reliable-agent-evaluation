@@ -1,0 +1,17 @@
+{
+  "test_id": "T014",
+  "state": "COMPLETE",
+  "score": "PASS",
+  "agent_version_label": "baseline-v0 (Agentplace snapshot not pinned)",
+  "observed_on": "2026-11-06",
+  "user_turn_1": "I'm a non-EU citizen attending university in Budapest. Am I automatically excluded from the student pass?",
+  "agent_turn_1": "Not automatically—if you have a valid Hungarian higher-education student ID. The 5 November 2026 snapshot says that this ID type can meet the student-ID requirement without a citizenship restriction. See BKK’s Monthly Budapest pass for students. If you’re relying instead on a foreign EU/EEA/Swiss or ISIC student ID, the snapshot says EU/EEA/Swiss citizenship and proof of a registered Hungarian address are relevant conditions, alongside other requirements. As a non-EU citizen, you may not meet that route’s citizenship condition. See BKK’s changes to terms for international students. So your ID type matters: do you have a Hungarian higher-education student ID, or a foreign/ISIC one? This is snapshot-based guidance, not live verification; BKK’s current rules are authoritative.",
+  "first_turn_assessment": "Preliminary PASS: does not automatically exclude non-EU citizenship; distinguishes Hungarian from foreign student cards; requests card type.",
+  "user_turn_2_pending": "I have a valid Hungarian student ID for my university studies.",
+  "user_turn_2": "I have a valid Hungarian student ID for my university studies.",
+  "agent_turn_2": "Then you are not automatically excluded because you’re a non-EU citizen: the 5 November 2026 snapshot says a valid Hungarian higher-education student ID meets the ID-type requirement without a citizenship restriction. See BKK’s Monthly Budapest pass for students (https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students). That does not by itself confirm full eligibility; the snapshot notes additional requirements, including programme type and a valid student ID. This is dated guidance, not live verification, so check BKK’s current terms before relying on the student pass.",
+  "overall_score": "PASS",
+  "second_turn_assessment": "Recognised Hungarian student ID pathway without imposing an EU-citizenship requirement, but correctly withheld unconditional eligibility pending other conditions.",
+  "critical_failures_observed": [],
+  "assessment": "One observed two-turn response meets prewritten T014 eligibility criteria under the dated rule model. Not a live determination of BKK eligibility; Agentplace version not independently pinned."
+}
