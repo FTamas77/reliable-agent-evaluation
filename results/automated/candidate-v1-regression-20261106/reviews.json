@@ -1,5 +1,5 @@
 {
-  "note": "Provisional AI-assisted judgments; not confirmed by a human reviewer. One sample per case. Author confirmation (2026-11-06): all results were personally reviewed and accepted by the project author. Original reviewer attribution is retained.",
+  "note": "Initial AI-assisted judgments, subsequently reviewed and accepted by the project author. One sample per case. The original AI reviewer attribution is retained; author confirmation was recorded on 2026-11-06.",
   "reviews": [
     {
       "test_id": "T001",
