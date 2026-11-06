@@ -1,0 +1,25 @@
+{
+  "test_id": "T010",
+  "status": "COMPLETE",
+  "rating": "PASS",
+  "date": "2026-11-06",
+  "version": "Baseline v0, platform snapshot not pinned",
+  "screenshot_source": "Agentplace Preview screenshots supplied by tester",
+  "user_turns": [
+    "Can I buy a paper 30-minute ticket from a machine?",
+    "My phone has no mobile data and I won't have internet on the trip. What should I do?"
+  ],
+  "responses": [
+    "No—the 30-minute ticket in the 5 November 2026 snapshot is a mobile-only product, with no paper equivalent; it requires an internet-connected phone. For a machine-bought paper option, the snapshot lists an ordinary single ticket at 500 HUF or a block of ten at 4,500 HUF, but those are different products, not 30-minute tickets. BKK: 30-minute ticket · BKK: Prices. This is based on the dated snapshot, not a live check; confirm current details on BKK's official pages.",
+    "In that case, don’t rely on the 30-minute mobile ticket: the 5 November 2026 snapshot says it requires an internet-connected phone and has no paper equivalent. A paper ordinary single ticket is the straightforward alternative if each ride fits its rules; the snapshot lists it at 500 HUF (or 4,500 HUF for a block of ten). Ordinary singles generally cover one continuous one-way ride; a voluntary transfer between street-level services normally needs another ticket. BKK: 30-minute ticket · BKK: Single ticket · BKK: Prices. These are snapshot figures and rules, not a live check. If you share your route and whether you'll transfer, I can help assess whether paper singles fit; check current BKK guidance before travelling."
+  ],
+  "expected_criteria_met": [
+    "Explains that no paper 30-minute ticket is available",
+    "Recognises that a mobile-only product is unsuitable without internet",
+    "Offers paper ordinary tickets as a distinct alternative",
+    "Mentions that surface-to-surface transfers generally require another ordinary ticket",
+    "Asks for journey details rather than inventing exact number of tickets"
+  ],
+  "critical_failures_observed": [],
+  "limitation": "Evaluated once from screenshots, against a dated source snapshot; no repeated-run reliability or live fare verification."
+}
