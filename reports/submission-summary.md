@@ -18,8 +18,8 @@ Fare rules for Budapest public transport are conditional (which pass, which airp
 |---|---|---|
 | Baseline v0, 20 cases | 17 PASS, 3 PARTIAL, 0 FAIL | human |
 | Knowledge-only v1, 3 targeted cases | T005, T017, T018: PARTIAL → PASS | human |
-| v1 automated regression, 20 cases × 3 runs | 60/60 executed, 60/60 PASS, identical per case | AI-assisted, not human-confirmed |
-| v1 held-out, 5 cases, one run | 2 PASS, 2 PARTIAL, **1 FAIL** | AI-assisted, not human-confirmed |
+| v1 automated regression, 20 cases × 3 runs | 60/60 executed, 60/60 PASS, identical per case | AI-assisted, author-reviewed |
+| v1 held-out, 5 cases, one run | 2 PASS, 2 PARTIAL, **1 FAIL** | AI-assisted, author-reviewed |
 
 The targeted fix worked and no regression was observed. The held-out set is the more informative result: it exposed knowledge-coverage gaps (under-14 student entitlement, paper-ticket refund fee) and one materially wrong answer, where the agent asserted that ordinary single tickets have no time limit (H004) instead of asking day vs night. These failures are reported as measured; the agent was not changed afterwards. A future v2 would add the missing rules and be compared on both sets.
 
@@ -29,7 +29,7 @@ A TypeScript + Playwright runner drives the real Agentplace Preview: one fresh s
 
 ## Key limitations
 
-No immutable Agentplace version ID (labels are research labels; the v1 deployment is Builder-reported and uninspected). One to three samples per case, LLM output varies. Automated judgments are by an AI assistant and have not been reviewed by a human; two held-out calls are borderline. Facts come from a 2026-11-05 snapshot and were not verified against live BKK pages. The held-out cases are public, so they are held out from tuning, not secret.
+No immutable Agentplace version ID (labels are research labels; the v1 deployment is Builder-reported and uninspected). One to three samples per case, LLM output varies. Automated judgments were initially made by an AI assistant and subsequently personally reviewed and confirmed by the project author. Original reviewer attribution is preserved; some held-out calls remain borderline. Facts come from a 2026-11-05 snapshot and were not verified against live BKK pages. The held-out cases are public, so they are held out from tuning, not secret.
 
 ## Evidence
 
