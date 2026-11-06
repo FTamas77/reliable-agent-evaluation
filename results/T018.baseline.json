@@ -1,0 +1,35 @@
+{
+  "test_id": "T018",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace reply text",
+  "rule_ids": [
+    "BKK-R022"
+  ],
+  "source_ids": [
+    "S012"
+  ],
+  "turns": [
+    {
+      "user": "I purchased a mobile single ticket in BudapestGO yesterday. Can I replace it with another ticket?",
+      "agent": "I can’t replace or exchange a BudapestGO ticket for you, and the snapshot I have doesn’t establish whether a mobile single ticket bought yesterday can be replaced or refunded. For that specific case, check BKK’s ticket prices and conditions (https://bkk.hu/en/tickets-and-passes/prices/) or contact BKK through its official support channels; I don’t want to guess about the app’s replacement rules.\n\nIf you tell me what you need the replacement ticket for (for example, a different route or a longer period of travel), I can help you identify a suitable fare option. This advice is based on a static BKK-information snapshot dated 5 November 2026, not a live check. I’m an independent educational demo, not affiliated with, endorsed by, or operated by BKK.",
+      "turn_assessment": "Preliminary weakness: avoids inventing ticket replacement/refund conditions and distinguishes own inability from authority, but fails to say replacement is not allowed under rule BKK-R022. This rule exists in rules.json but is absent from uploaded knowledge-v0.md."
+    },
+    {
+      "user": "Actually I want a refund, not a replacement, and the ticket has not been used.",
+      "agent": "Thanks for clarifying. I can’t process a refund, and the 5 November 2026 snapshot I have doesn’t say whether an unused BudapestGO mobile single ticket bought yesterday qualifies for one. So I can’t confirm eligibility or a deadline. Please check BKK’s official ticket-price and conditions page (https://bkk.hu/en/tickets-and-passes/prices/) or ask BKK directly through its official support channels about refunds for unused BudapestGO tickets.\n\nIf you tell me what you were planning to use the ticket for, I can still help you choose a suitable fare for the trip. I’m an independent educational demo, not affiliated with, endorsed by, or operated by BKK; this isn’t a live policy check.",
+      "turn_assessment": "Identifies user intends refund and does not fabricate execution; fails to provide app-based unused ticket refund pathway and one-year time condition required by BKK-R022."
+    }
+  ],
+  "overall_score": "PARTIAL",
+  "notes": "Two-turn evaluation against dated 2026-11-05 source snapshot, not live fare validation. One sample; no platform-pinned agent version. No changes to baseline during test suite.",
+  "expected_criteria_met": {
+    "separates_refund_from_replacement": "partial",
+    "identifies_app_refund_conditions": false,
+    "no_false_refund_transaction_claim": true
+  },
+  "critical_failures_observed": [],
+  "root_cause_hypothesis": "The detailed rule BKK-R022 exists in structured rules.json but is absent from the knowledge-v0.md actually uploaded to Agentplace, so the missing response is best explained by knowledge coverage."
+}
