@@ -1,0 +1,11 @@
+{
+  "test_id": "T005",
+  "state": "IN_PROGRESS",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "captured_on": "2026-11-06",
+  "user_turn_1": "My 24-hour Budapest travelcard is valid until tonight. Can I use it on any bus?",
+  "agent_turn_1": "Generally, yes—on ordinary covered bus routes. The 24-hour Budapest travelcard is listed in the 5 November 2026 snapshot, and ordinary bus routes follow the usual ticket/pass rules. The key exception for your question is 100E: it has separate airport-shuttle fare rules, so the travelcard alone doesn't cover it. 200E follows ordinary ticket/pass rules.\n\nI can't tell from 'any bus' whether a particular route has a special rule, and the snapshot isn't live verification. For the airport buses, see BKK's Airport express and ticket and pass prices pages; check BKK for current conditions. Is the bus you have in mind 100E, 200E, or another route?",
+  "turn_1_assessment": "Recognises 100E exception and asks for the route. Overall score pending second turn.",
+  "overall_score": null,
+  "notes": "Transcribed from user-uploaded Agentplace Preview screenshot. The dated fare rules have not been live rechecked."
+}
