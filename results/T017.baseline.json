@@ -1,0 +1,35 @@
+{
+  "test_id": "T017",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace reply in chat",
+  "rule_ids": [
+    "BKK-R020"
+  ],
+  "source_ids": [
+    "S012"
+  ],
+  "turns": [
+    {
+      "user": "I bought a block of ten paper single tickets and used two of them.",
+      "agent": "Thanks—so you have 8 paper single tickets left. The 5 November 2026 snapshot lists a block of ten at 4,500 HUF, but that price alone doesn’t tell me whether you’re asking about transfer rules, expiry, refunds, or what to use next. BKK: Single ticket (https://bkk.hu/en/tickets-and-passes/prices/single-ticket/)\n\nI’m Budapest Fare Advisor — Unofficial Demo, an independent educational assistant, not affiliated with, endorsed by, or operated by BKK. My information is a dated snapshot, not live verification; check BKK’s current guidance for your travel date.\n\nAre you wondering whether the remaining tickets can be used for a particular trip, or something else about them?",
+      "turn_assessment": "Provisional: correctly retains eight remaining tickets and asks to clarify intent; does not invent refund eligibility. The refund challenge remains pending."
+    },
+    {
+      "user": "Could I return the remaining eight and get 80% of the price back?",
+      "agent": "I can’t confirm that you’re entitled to an 80% refund: the 5 November 2026 snapshot gives the block price (4,500 HUF) but doesn’t cover refunds or whether a partly used block can be returned. So I can’t calculate or promise a refund for the eight unused tickets. Please ask BKK through its official customer service (https://bkk.hu/en/customer-service/) or check its current ticket and pass conditions (https://bkk.hu/en/tickets-and-passes/). I can help explain the relevant conditions if you find them.\n\nI’m an independent educational demo, not affiliated with or operated by BKK, and haven’t verified current refund rules.",
+      "turn_assessment": "No fabricated 80% refund, but fails to explain all ten must be unused and consecutively numbered under BKK-R020. Insufficient knowledge in uploaded knowledge-v0.md, though BKK-R020 exists in rules.json."
+    }
+  ],
+  "overall_score": "PARTIAL",
+  "notes": "Two-turn user-provided Agentplace response, dated 2026-11-05 source model. No live BKK refund verification. Baseline agent version label not platform-pinned. Hold agent unchanged until baseline complete.",
+  "expected_criteria_met": {
+    "did_not_promise_pro_rata_refund": true,
+    "did_not_reopen_expired_exchange": true,
+    "explained_all_ten_unused_consecutive": false
+  },
+  "critical_failures_observed": [],
+  "root_cause_hypothesis": "Knowledge coverage gap: BKK-R020 refund condition appears in case_studies/bkk/knowledge/rules.json but not in the uploaded agentplace/knowledge-v0.md; not proven to be a Luna reasoning failure."
+}
