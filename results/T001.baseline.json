@@ -1,0 +1,36 @@
+{
+  "test_id": "T001",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "Screenshot of Agentplace Preview supplied by tester",
+  "independent_evaluation": true,
+  "turns": [
+    {
+      "user": "I have a Budapest pass. Can I get the cheaper ticket for bus 100E?",
+      "agent": "Your exact pass type determines whether the cheaper 100E add-on applies.\n\nPossibly. The 5 November 2026 snapshot says some valid Budapest passes qualify for the 1,000 HUF 100E add-on instead of the 2,500 HUF full-price 100E ticket. But the add-on is excluded for the 15-day Budapest pass and the monthly pass for job seekers; it covers one 100E trip only. The snapshot says it is bought in BudapestGO. See BKK’s Airport shuttle bus single ticket and Add-on airport shuttle bus single ticket pages for the applicable rules; I haven’t live-verified them.\n\nWhich exact Budapest pass do you have? I can tell you whether the snapshot indicates that it qualifies.",
+      "turn_assessment": "Expected clarification and exception handling observed"
+    },
+    {
+      "user": "It's a 15-day Budapest pass, valid today. Is the cheaper ticket still OK?",
+      "agent": "For a 15-day Budapest pass, the snapshot does not support using the cheaper add-on.\n\nNo—the 5 November 2026 snapshot specifically excludes the 15-day Budapest pass from the 1,000 HUF 100E add-on. It lists the full-price 100E ticket at 2,500 HUF instead.\n\nYour pass being valid today does not remove that exclusion. See BKK’s Add-on Airport shuttle bus single ticket and Airport shuttle bus single ticket pages for current terms; I haven’t live-verified them. I can explain the distinction, but I can’t verify your pass or issue a ticket.",
+      "turn_assessment": "Expected exclusion recognized after the information reveal; full-price alternative provided; no purchase or verification falsely claimed."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Both turns were transcribed from user-provided Agentplace Preview screenshots, 2026-11-06. Platform version is labelled baseline-v0 but not independently pinned or identified. This is one observed test of the fixed draft, not a statistical estimate.",
+  "rule_ids": [
+    "BKK-R008",
+    "BKK-R010"
+  ],
+  "expected_criteria_met": {
+    "clarified_exact_pass_type": true,
+    "recognized_15_day_exclusion": true,
+    "corrected_based_on_new_information": true,
+    "alternative_without_fictitious_purchase": true,
+    "source_snapshot_caveat": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for the two-turn scripted scenario against the dated 2026-11-05 rule model. One manually observed conversation; no claim about general reliability or current live BKK rules."
+}
