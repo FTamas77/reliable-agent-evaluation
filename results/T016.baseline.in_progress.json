@@ -1,0 +1,24 @@
+{
+  "test_id": "T016",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview text",
+  "rule_ids": [
+    "BKK-R018",
+    "BKK-R019"
+  ],
+  "source_ids": [
+    "S011"
+  ],
+  "turns": [
+    {
+      "user": "I don't have a monthly pass, and I'm bringing my small dog on a tram.",
+      "agent": "Is your dog in a fully closed carrier, or travelling on a leash and muzzle? That changes which condition applies.\n\nFor a tram in Budapest, the snapshot says your dog can travel free if it is in a suitable, fully closed carrier. If it rides outside a carrier, the known conditions are a leash and muzzle. Carry valid animal vaccination documentation. The snapshot does not specify a separate dog-fare price for someone without a pass, so I can’t infer one from it; your own tram fare is separate.\n\nThese details come from my 5 November 2026 knowledge snapshot, not a live check. See BKK’s Dogs on public transport (https://bkk.hu/en/travel-information/dogs-on-public-transport/) for the current rule. I’m Budapest Fare Advisor — Unofficial Demo, an independent educational assistant, not affiliated with, endorsed by, or operated by BKK.",
+      "turn_assessment": "Provisional: requests clarification of whether the animal is enclosed, correctly describes the closed-carrier exception, and declines to invent a no-pass animal fare."
+    }
+  ],
+  "overall_score": null,
+  "notes": "First turn only. Second turn is pending; source is dated snapshot, not live fare verification."
+}
