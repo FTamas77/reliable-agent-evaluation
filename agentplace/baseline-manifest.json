@@ -27,5 +27,14 @@
     "Screenshot/visual verification was blocked in the Builder",
     "A platform version ID or immutable snapshot has not yet been recorded",
     "Agent is unpublished; no end-to-end public URL is available"
-  ]
+  ],
+  "latest_builder_check": {
+    "date": "2026-11-06",
+    "source": "User-provided Agentplace Builder screenshot",
+    "configuration_modified": false,
+    "publication_modified": false,
+    "saved_version_confirmed": false,
+    "summary": "Builder says instructions, knowledge, model settings and files were unchanged during the version enquiry. 'Baseline v0' is only a conversation label, not yet a saved version or pinned snapshot.",
+    "next_step": "Open Agentplace workspace Versions manually; capture current version label and timestamp."
+  }
 }
