@@ -90,4 +90,8 @@ export interface Review {
   reviewed_on: string;
   justification: string;
   criteria_notes?: string;
+  needs_human_review?: boolean;
+  /** Second-pass reviews keep the first-pass score separately; the original review file stays untouched. */
+  original_score?: Score | "UNCERTAIN";
+  second_pass?: "UPHELD" | "REVISED";
 }

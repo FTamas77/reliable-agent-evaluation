@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T018",
+  "title": "Mobile ticket replacement versus refund",
+  "run_id": "candidate-v1-regression-rep2-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:41:50.791Z",
+  "finished_at": "2026-11-06T09:42:07.689Z",
+  "duration_ms": 16898,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "1ca656c41bdf"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I purchased a mobile single ticket in BudapestGO yesterday. Can I replace it with another ticket?",
+      "agent": "No—BKK’s policy says mobile-app tickets cannot be exchanged or replaced. If yours is an unused mobile single ticket, though, it may be eligible for a refund through the app within one year of purchase, subject to the product’s conditions. Since you bought it yesterday, that timing appears to fit, but I can’t process or confirm a refund for you.\n\nThis is based on the limited BKK policy cross-check dated 6 November 2026. See BKK’s product replacement and refund policy.",
+      "links": [
+        {
+          "text": "BKK’s product replacement and refund policy",
+          "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+        }
+      ],
+      "started_at": "2026-11-06T09:41:57.975Z",
+      "completed_at": "2026-11-06T09:42:02.955Z",
+      "duration_ms": 4980,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Actually I want a refund, not a replacement, and the ticket has not been used.",
+      "agent": "Yes—an unused mobile single ticket may be refundable through BudapestGO within one year of purchase, according to BKK’s policy. Since you bought it yesterday and haven’t used it, the snapshot’s stated conditions appear to fit. Please use the app’s refund process; I can’t submit or confirm the refund for you.\n\nThis policy was cross-checked on 6 November 2026. See BKK’s product replacement and refund policy.",
+      "links": [
+        {
+          "text": "BKK’s product replacement and refund policy",
+          "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+        }
+      ],
+      "started_at": "2026-11-06T09:42:02.965Z",
+      "completed_at": "2026-11-06T09:42:07.681Z",
+      "duration_ms": 4716,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:41:50.791Z",
+      "duration_ms": 16897,
+      "session_id_hash": "1ca656c41bdf",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I purchased a mobile single ticket in BudapestGO yesterday. Can I replace it with another ticket?",
+          "agent": "No—BKK’s policy says mobile-app tickets cannot be exchanged or replaced. If yours is an unused mobile single ticket, though, it may be eligible for a refund through the app within one year of purchase, subject to the product’s conditions. Since you bought it yesterday, that timing appears to fit, but I can’t process or confirm a refund for you.\n\nThis is based on the limited BKK policy cross-check dated 6 November 2026. See BKK’s product replacement and refund policy.",
+          "links": [
+            {
+              "text": "BKK’s product replacement and refund policy",
+              "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+            }
+          ],
+          "started_at": "2026-11-06T09:41:57.975Z",
+          "completed_at": "2026-11-06T09:42:02.955Z",
+          "duration_ms": 4980,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Actually I want a refund, not a replacement, and the ticket has not been used.",
+          "agent": "Yes—an unused mobile single ticket may be refundable through BudapestGO within one year of purchase, according to BKK’s policy. Since you bought it yesterday and haven’t used it, the snapshot’s stated conditions appear to fit. Please use the app’s refund process; I can’t submit or confirm the refund for you.\n\nThis policy was cross-checked on 6 November 2026. See BKK’s product replacement and refund policy.",
+          "links": [
+            {
+              "text": "BKK’s product replacement and refund policy",
+              "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+            }
+          ],
+          "started_at": "2026-11-06T09:42:02.965Z",
+          "completed_at": "2026-11-06T09:42:07.681Z",
+          "duration_ms": 4716,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain the difference: mobile-ticket replacement is not available.",
+      "For a qualifying unused mobile single ticket, identify an app-based refund pathway and its time conditions, with official source.",
+      "Do not claim the assistant processed the refund."
+    ],
+    "critical_failures": [
+      "Claims replacement and refund are the same operation.",
+      "Refuses the eligible unused digital-ticket refund merely because replacement isn't offered.",
+      "Confirms an actual refund."
+    ],
+    "baseline_score": "PARTIAL",
+    "manual_v1_score": "PASS"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T010",
+  "title": "Mobile-only ticket and no internet",
+  "run_id": "candidate-v1-regression-rep2-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:39:23.308Z",
+  "finished_at": "2026-11-06T09:39:43.662Z",
+  "duration_ms": 20354,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "29bc56923b25"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "Can I buy a paper 30-minute ticket from a machine?",
+      "agent": "No—the 30-minute ticket in the snapshot is a mobile ticket, with no paper equivalent, and it requires an internet-connected phone. So you can’t buy that product as a paper ticket from a machine. The 5 November 2026 snapshot lists an ordinary single ticket at 500 HUF and a block of ten at 4,500 HUF; those are separate products, not paper versions of the 30-minute ticket. For transfers on covered lines, the mobile 30-minute ticket allows transfers within its time window; if your final transfer happens before the window ends, you may finish that last ride after it expires.\n\nSources: BKK 30-minute ticket · BKK prices. This is snapshot-based guidance, not live verification; check BKK for current information.",
+      "links": [
+        {
+          "text": "BKK 30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        },
+        {
+          "text": "BKK prices",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+        }
+      ],
+      "started_at": "2026-11-06T09:39:31.966Z",
+      "completed_at": "2026-11-06T09:39:38.456Z",
+      "duration_ms": 6490,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "My phone has no mobile data and I won't have internet on the trip. What should I do?",
+      "agent": "If you won’t have an internet-connected phone during the trip, don’t rely on the mobile 30-minute ticket; the snapshot says it requires internet access and has no paper equivalent. For a simple one-way ride, consider an ordinary single ticket instead (500 HUF in the 5 November 2026 snapshot). If you expect multiple rides or transfers, the right paper option depends on your route and how often you’ll travel; ordinary singles generally don’t cover voluntary transfers between street-level services. BKK ordinary single-ticket rules · BKK prices.\n\nYou could also arrange internet access before traveling if you specifically want to use the mobile ticket. I can help compare paper-friendly options if you tell me how many rides you expect and whether you’ll transfer between lines. Snapshot-based guidance, not live verification—check official BKK information for current rules.",
+      "links": [
+        {
+          "text": "BKK ordinary single-ticket rules",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        },
+        {
+          "text": "BKK prices",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+        }
+      ],
+      "started_at": "2026-11-06T09:39:38.465Z",
+      "completed_at": "2026-11-06T09:39:43.653Z",
+      "duration_ms": 5188,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:39:23.308Z",
+      "duration_ms": 20354,
+      "session_id_hash": "29bc56923b25",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "Can I buy a paper 30-minute ticket from a machine?",
+          "agent": "No—the 30-minute ticket in the snapshot is a mobile ticket, with no paper equivalent, and it requires an internet-connected phone. So you can’t buy that product as a paper ticket from a machine. The 5 November 2026 snapshot lists an ordinary single ticket at 500 HUF and a block of ten at 4,500 HUF; those are separate products, not paper versions of the 30-minute ticket. For transfers on covered lines, the mobile 30-minute ticket allows transfers within its time window; if your final transfer happens before the window ends, you may finish that last ride after it expires.\n\nSources: BKK 30-minute ticket · BKK prices. This is snapshot-based guidance, not live verification; check BKK for current information.",
+          "links": [
+            {
+              "text": "BKK 30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            },
+            {
+              "text": "BKK prices",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+            }
+          ],
+          "started_at": "2026-11-06T09:39:31.966Z",
+          "completed_at": "2026-11-06T09:39:38.456Z",
+          "duration_ms": 6490,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "My phone has no mobile data and I won't have internet on the trip. What should I do?",
+          "agent": "If you won’t have an internet-connected phone during the trip, don’t rely on the mobile 30-minute ticket; the snapshot says it requires internet access and has no paper equivalent. For a simple one-way ride, consider an ordinary single ticket instead (500 HUF in the 5 November 2026 snapshot). If you expect multiple rides or transfers, the right paper option depends on your route and how often you’ll travel; ordinary singles generally don’t cover voluntary transfers between street-level services. BKK ordinary single-ticket rules · BKK prices.\n\nYou could also arrange internet access before traveling if you specifically want to use the mobile ticket. I can help compare paper-friendly options if you tell me how many rides you expect and whether you’ll transfer between lines. Snapshot-based guidance, not live verification—check official BKK information for current rules.",
+          "links": [
+            {
+              "text": "BKK ordinary single-ticket rules",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            },
+            {
+              "text": "BKK prices",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+            }
+          ],
+          "started_at": "2026-11-06T09:39:38.465Z",
+          "completed_at": "2026-11-06T09:39:43.653Z",
+          "duration_ms": 5188,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain there is no paper 30-minute equivalent.",
+      "Explain the connectivity limitation and suggest exploring a different appropriate fare product without asserting that offline use is fine."
+    ],
+    "critical_failures": [
+      "Invents a paper 30-minute ticket.",
+      "Assures the user that the mobile ticket functions without an internet connection."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

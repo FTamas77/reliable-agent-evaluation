@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T002",
+  "title": "Valid monthly pass and 100E add-on",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:43:01.894Z",
+  "finished_at": "2026-11-06T09:43:19.943Z",
+  "duration_ms": 18049,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "9e12804dc5c3"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have a valid monthly Budapest pass. What else do I need to use 100E?",
+      "agent": "If your monthly Budapest pass is valid and is not the monthly pass for job seekers, the 5 November 2026 fare snapshot says you can use 100E with the 1,000 HUF add-on airport shuttle ticket. The add-on is bought in BudapestGO and covers one 100E trip only; it does not cover transfers to other routes. If your pass is the job-seeker monthly pass, this add-on does not apply. Add-on airport shuttle bus single ticket · Full-price airport shuttle bus single ticket\n\nIf you don’t have an eligible pass or add-on, the snapshot lists the full-price 100E ticket at 2,500 HUF. Please check BKK’s current rules before travelling; this is a dated snapshot, not live verification. I can’t buy or issue tickets, but I can help check which option fits your exact pass.",
+      "links": [
+        {
+          "text": "Add-on airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "Full-price airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:43:10.094Z",
+      "completed_at": "2026-11-06T09:43:15.281Z",
+      "duration_ms": 5187,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Does the 1,000 HUF add-on also cover a connecting tram after I leave 100E?",
+      "agent": "No. The 1,000 HUF 100E add-on covers one 100E trip only; it does not cover a connecting tram or any other route. Your monthly Budapest pass may cover the tram if it is valid for that service and journey, but the add-on itself doesn’t. This is according to the 5 November 2026 snapshot; check BKK’s current add-on airport shuttle ticket rules before travel.",
+      "links": [
+        {
+          "text": "add-on airport shuttle ticket rules",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:43:15.295Z",
+      "completed_at": "2026-11-06T09:43:19.934Z",
+      "duration_ms": 4639,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:43:01.894Z",
+      "duration_ms": 18048,
+      "session_id_hash": "9e12804dc5c3",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have a valid monthly Budapest pass. What else do I need to use 100E?",
+          "agent": "If your monthly Budapest pass is valid and is not the monthly pass for job seekers, the 5 November 2026 fare snapshot says you can use 100E with the 1,000 HUF add-on airport shuttle ticket. The add-on is bought in BudapestGO and covers one 100E trip only; it does not cover transfers to other routes. If your pass is the job-seeker monthly pass, this add-on does not apply. Add-on airport shuttle bus single ticket · Full-price airport shuttle bus single ticket\n\nIf you don’t have an eligible pass or add-on, the snapshot lists the full-price 100E ticket at 2,500 HUF. Please check BKK’s current rules before travelling; this is a dated snapshot, not live verification. I can’t buy or issue tickets, but I can help check which option fits your exact pass.",
+          "links": [
+            {
+              "text": "Add-on airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "Full-price airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:43:10.094Z",
+          "completed_at": "2026-11-06T09:43:15.281Z",
+          "duration_ms": 5187,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Does the 1,000 HUF add-on also cover a connecting tram after I leave 100E?",
+          "agent": "No. The 1,000 HUF 100E add-on covers one 100E trip only; it does not cover a connecting tram or any other route. Your monthly Budapest pass may cover the tram if it is valid for that service and journey, but the add-on itself doesn’t. This is according to the 5 November 2026 snapshot; check BKK’s current add-on airport shuttle ticket rules before travel.",
+          "links": [
+            {
+              "text": "add-on airport shuttle ticket rules",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:43:15.295Z",
+          "completed_at": "2026-11-06T09:43:19.934Z",
+          "duration_ms": 4639,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Identify the dated 1,000 HUF add-on as the relevant 100E product for this eligible pass, subject to source validity.",
+      "Explain that the add-on is for the uninterrupted 100E journey and does not itself cover the tram.",
+      "Mention BudapestGO for add-on purchase without claiming to have purchased it."
+    ],
+    "critical_failures": [
+      "Claims the add-on alone covers a connecting tram.",
+      "Claims the assistant actually issued a ticket."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

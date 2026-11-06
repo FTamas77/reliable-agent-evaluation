@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T016",
+  "title": "Enclosed carrier for a dog without pass",
+  "run_id": "candidate-v1-regression-rep2-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:41:12.457Z",
+  "finished_at": "2026-11-06T09:41:31.846Z",
+  "duration_ms": 19389,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "29d8901bc977"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I don't have a monthly pass, and I'm bringing my small dog on a tram.",
+      "agent": "For a tram trip within Budapest, the snapshot supports a simple rule for a small dog in a suitable, fully closed carrier: the dog can travel without a separate animal ticket. If the dog travels outside a carrier, the known rule requires a leash and muzzle, and you should carry valid vaccination documentation. BKK: Dogs on public transport\n\nSince you don’t have a monthly pass, I can’t assume the pass-holder condition applies. The 5 November 2026 snapshot doesn’t specify the dog-fare rule for a passenger travelling on an ordinary ticket, so I can’t say whether a separate dog ticket is needed in that case. Do you plan to keep your dog in a fully closed carrier, or travel with them outside one—and what ticket or travelcard will you use? This is an independent demo, not affiliated with BKK; check BKK’s current rule before travelling.",
+      "links": [
+        {
+          "text": "BKK: Dogs on public transport",
+          "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+        }
+      ],
+      "started_at": "2026-11-06T09:41:20.626Z",
+      "completed_at": "2026-11-06T09:41:26.884Z",
+      "duration_ms": 6258,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "The dog will stay inside a closed, suitable hand-luggage-sized carrier that can't leak or let it escape.",
+      "agent": "That fits the carrier condition in my 5 November 2026 snapshot: a dog in a suitable, fully closed carrier can travel on the tram without a separate animal ticket. Keep the carrier closed during the ride, and bring the dog’s valid vaccination documentation. BKK: Dogs on public transport\n\nThis guidance is based on the dated snapshot, not a live check; please confirm BKK’s current rule before travel.",
+      "links": [
+        {
+          "text": "BKK: Dogs on public transport",
+          "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+        }
+      ],
+      "started_at": "2026-11-06T09:41:26.896Z",
+      "completed_at": "2026-11-06T09:41:31.837Z",
+      "duration_ms": 4941,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:41:12.457Z",
+      "duration_ms": 19389,
+      "session_id_hash": "29d8901bc977",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I don't have a monthly pass, and I'm bringing my small dog on a tram.",
+          "agent": "For a tram trip within Budapest, the snapshot supports a simple rule for a small dog in a suitable, fully closed carrier: the dog can travel without a separate animal ticket. If the dog travels outside a carrier, the known rule requires a leash and muzzle, and you should carry valid vaccination documentation. BKK: Dogs on public transport\n\nSince you don’t have a monthly pass, I can’t assume the pass-holder condition applies. The 5 November 2026 snapshot doesn’t specify the dog-fare rule for a passenger travelling on an ordinary ticket, so I can’t say whether a separate dog ticket is needed in that case. Do you plan to keep your dog in a fully closed carrier, or travel with them outside one—and what ticket or travelcard will you use? This is an independent demo, not affiliated with BKK; check BKK’s current rule before travelling.",
+          "links": [
+            {
+              "text": "BKK: Dogs on public transport",
+              "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+            }
+          ],
+          "started_at": "2026-11-06T09:41:20.626Z",
+          "completed_at": "2026-11-06T09:41:26.884Z",
+          "duration_ms": 6258,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "The dog will stay inside a closed, suitable hand-luggage-sized carrier that can't leak or let it escape.",
+          "agent": "That fits the carrier condition in my 5 November 2026 snapshot: a dog in a suitable, fully closed carrier can travel on the tram without a separate animal ticket. Keep the carrier closed during the ride, and bring the dog’s valid vaccination documentation. BKK: Dogs on public transport\n\nThis guidance is based on the dated snapshot, not a live check; please confirm BKK’s current rule before travel.",
+          "links": [
+            {
+              "text": "BKK: Dogs on public transport",
+              "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+            }
+          ],
+          "started_at": "2026-11-06T09:41:26.896Z",
+          "completed_at": "2026-11-06T09:41:31.837Z",
+          "duration_ms": 4941,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Do not automatically require an additional dog ticket for a dog in a compliant closed carrier.",
+      "Distinguish the closed-carrier rules from those applicable to a dog outside the carrier."
+    ],
+    "critical_failures": [
+      "Insists a separate dog ticket is always needed when the traveller lacks a pass.",
+      "Insists leash and muzzle must be worn inside a compliant fully closed carrier."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T008",
+  "title": "90-minute return trip and late transfer",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:44:55.930Z",
+  "finished_at": "2026-11-06T09:45:14.187Z",
+  "duration_ms": 18257,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "9d224dfc7a3d"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I activated a 90-minute ticket at 14:00 and want to return by tram after my visit.",
+      "agent": "Your 90-minute ticket’s window runs from 14:00 to 15:30. You can use it for the return tram if you board/validate for that ride before 15:30. If the tram ride begins before the window ends, you may finish that final ride after 15:30. If you need to change to another line, make that transfer before 15:30 and validate again; transfers between metro lines are the exception.\n\nThese are the rules in my 5 November 2026 snapshot, not a live verification. See BKK’s 90-minute ticket page for current terms. I can’t validate or check your ticket for you.",
+      "links": [
+        {
+          "text": "90-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:01.915Z",
+      "completed_at": "2026-11-06T09:45:08.172Z",
+      "duration_ms": 6257,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "The return tram boards at 15:29 and I get off at 15:52. Is that valid?",
+      "agent": "Yes, based on the snapshot’s rule: if you board and validate the tram at 15:29, before your ticket window ends at 15:30, you may finish that ride at 15:52. If you change to another line, make and validate that transfer before 15:30. This assumes the tram is on a covered service and your mobile ticket is correctly validated.\n\nThat rule is from the 5 November 2026 snapshot; I haven’t live-checked current terms. See BKK’s 90-minute ticket page.",
+      "links": [
+        {
+          "text": "90-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:08.180Z",
+      "completed_at": "2026-11-06T09:45:14.177Z",
+      "duration_ms": 5997,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:44:55.930Z",
+      "duration_ms": 18256,
+      "session_id_hash": "9d224dfc7a3d",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I activated a 90-minute ticket at 14:00 and want to return by tram after my visit.",
+          "agent": "Your 90-minute ticket’s window runs from 14:00 to 15:30. You can use it for the return tram if you board/validate for that ride before 15:30. If the tram ride begins before the window ends, you may finish that final ride after 15:30. If you need to change to another line, make that transfer before 15:30 and validate again; transfers between metro lines are the exception.\n\nThese are the rules in my 5 November 2026 snapshot, not a live verification. See BKK’s 90-minute ticket page for current terms. I can’t validate or check your ticket for you.",
+          "links": [
+            {
+              "text": "90-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:01.915Z",
+          "completed_at": "2026-11-06T09:45:08.172Z",
+          "duration_ms": 6257,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "The return tram boards at 15:29 and I get off at 15:52. Is that valid?",
+          "agent": "Yes, based on the snapshot’s rule: if you board and validate the tram at 15:29, before your ticket window ends at 15:30, you may finish that ride at 15:52. If you change to another line, make and validate that transfer before 15:30. This assumes the tram is on a covered service and your mobile ticket is correctly validated.\n\nThat rule is from the 5 November 2026 snapshot; I haven’t live-checked current terms. See BKK’s 90-minute ticket page.",
+          "links": [
+            {
+              "text": "90-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:08.180Z",
+          "completed_at": "2026-11-06T09:45:14.177Z",
+          "duration_ms": 5997,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Use the 90-minute last-transfer window (boarding at 15:29) rather than arrival time.",
+      "Explain that a return journey can be within a 90-minute ticket if all applicable conditions are met."
+    ],
+    "critical_failures": [
+      "Rejects the ticket solely because arrival is after 15:30.",
+      "Says all return trips are prohibited even within the window."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

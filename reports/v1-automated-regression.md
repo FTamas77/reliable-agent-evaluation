@@ -127,7 +127,7 @@ Compared 20 judged case(s): 3 improved, 0 regressed. Unjudged cases are excluded
 ## 11. Errors, limitations and unresolved issues
 
 - Browser locale: the Preview forwards the browser language to the agent. A first proof-of-concept run with the browser default `hu-HU` returned Hungarian answers to the English prompts (run `candidate-v1-poc-T001`); the runner now pins `en-US`, which produced English answers consistent with the manual baseline. The manual baseline's locale was not recorded, so this remains a possible confounder.
-- Single run per case; no repeated trials; semantic judgments are provisional unless marked HUMAN.
+- This report covers one run per case. Two further repetitions and a critical second-pass review of these 20 transcripts were done later and are reported in `final-evaluation-2026-11-06.md`; all judgments remain AI-assisted unless marked HUMAN.
 - Selectors (`.stage-composer[data-pending]`, `data-rail-turn`, `.stage-canvas-page`) were verified on 2026-11-06 and may change when Agentplace updates its UI. They are isolated in `previewUi.ts`.
 - Headless mode (`npm run browser -- --headless`) exists but was not exercised.
 - The Preview agent was not pinned; results apply to whatever state it was in on the run date.

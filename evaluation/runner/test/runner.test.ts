@@ -4,7 +4,7 @@ import { CompletionTracker, textWarnings, type UiSnapshot } from "../src/complet
 import { assertPreviewUrl } from "../src/previewUi.js";
 import { parseScenarios, selectScenarios } from "../src/scenarios.js";
 import { countStates, parseReviews, validateScenarioResult } from "../src/results.js";
-import { comparisonSection, correctnessCounts } from "../src/report.js";
+import { comparisonSection, correctnessCounts, stabilityTable } from "../src/report.js";
 import type { Review, ScenarioResult } from "../src/types.js";
 
 const scenarioJson = {
@@ -93,4 +93,14 @@ test("report keeps unreviewed results PENDING_REVIEW and compares only judged ca
   const comparison = comparisonSection(results, reviews, { baseline: new Map([["T001", "PASS"]]), manualV1: new Map() });
   assert.match(comparison, /REGRESSION/);
   assert.doesNotMatch(comparison, /T002/);
+});
+
+test("stabilityTable flags cases whose state or score differs between runs", () => {
+  const rev = (score: Review["score"]): Review => ({ test_id: "T001", score, reviewer: "x", reviewer_kind: "AI_ASSISTED", reviewed_on: "d", justification: "j" });
+  const runs = [
+    { label: "a", results: [makeResult()], reviews: new Map([["T001", rev("PASS")]]) },
+    { label: "b", results: [makeResult()], reviews: new Map([["T001", rev("PARTIAL")]]) },
+  ];
+  const table = stabilityTable(runs);
+  assert.match(table, /\| T001 \| SUCCESS \/ PASS \| SUCCESS \/ PARTIAL \| yes \| NO \|/);
 });

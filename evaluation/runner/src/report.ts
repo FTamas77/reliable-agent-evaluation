@@ -76,3 +76,25 @@ export function renderTemplate(templateFile: string, values: Record<string, stri
   if (missing) throw new Error(`Unresolved template placeholders: ${[...new Set(missing)].join(", ")}`);
   return text;
 }
+
+export interface RunWithReviews {
+  label: string;
+  results: ScenarioResult[];
+  reviews: Map<string, Review>;
+}
+
+/** Descriptive per-case consistency across repeated runs; not a reliability estimate. */
+export function stabilityTable(runs: RunWithReviews[]): string {
+  const ids = [...new Set(runs.flatMap((run) => run.results.map((r) => r.test_id)))].sort();
+  const header = `| Test | ${runs.map((r) => r.label).join(" | ")} | Execution stable | Correctness stable |`;
+  const rows = ids.map((id) => {
+    const cells = runs.map((run) => {
+      const result = run.results.find((r) => r.test_id === id);
+      return result ? { state: result.execution_state, score: scoreFor(result, run.reviews.get(id)) } : { state: "MISSING", score: "MISSING" };
+    });
+    const execStable = new Set(cells.map((c) => c.state)).size === 1;
+    const scoreStable = new Set(cells.map((c) => c.score)).size === 1;
+    return `| ${id} | ${cells.map((c) => `${c.state} / ${c.score}`).join(" | ")} | ${execStable ? "yes" : "NO"} | ${scoreStable ? "yes" : "NO"} |`;
+  });
+  return [header, `|---|${runs.map(() => "---|").join("")}---|---|`, ...rows].join("\n");
+}

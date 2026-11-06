@@ -3,7 +3,7 @@ import path from "node:path";
 import { parseArgs } from "node:util";
 import { DEFAULT_CDP_PORT, DEFAULT_PROFILE_DIR, connectToBrowser, launchBrowserForLogin } from "./browser.js";
 import { loadReferenceScores } from "./baseline.js";
-import { comparisonSection, correctnessCounts, correctnessTable, executionTable, renderTemplate, runMetadata } from "./report.js";
+import { comparisonSection, correctnessCounts, correctnessTable, executionTable, renderTemplate, runMetadata, stabilityTable } from "./report.js";
 import { loadRunSummary, loadScenarioResults, parseReviews, readJson, validateScenarioResult } from "./results.js";
 import { readInstalledVersion, runSuite } from "./runner.js";
 import { loadScenarios, selectScenarios } from "./scenarios.js";
@@ -42,7 +42,7 @@ const USAGE = `Usage: tsx evaluation/runner/src/cli.ts <command> [options]
   run --tests T001,T002 | --all         execute scenarios (needs --agent-url or AGENTPLACE_PREVIEW_URL)
       [--timeout 120] [--retries 1] [--out DIR] [--resume RUN_ID_OR_DIR] [--skip T003] [--label candidate-v1]
   validate --run DIR                    re-check every SUCCESS result against the scenario file
-  report --run DIR [--reviews FILE] [--out FILE]   render the Markdown report`;
+  report --run DIR [--reviews FILE] [--out FILE]   render the Markdown report\n  stability --run DIR1,DIR2,...         per-case execution/correctness consistency across repeated runs (uses each DIR/reviews.json)`;
 
 type Values = ReturnType<typeof parseArgs<{ options: typeof OPTIONS }>>["values"];
 
@@ -61,6 +61,8 @@ async function main(): Promise<void> {
       return runCommand(values, port);
     case "validate":
       return validateCommand(values);
+    case "stability":
+      return stabilityCommand(values);
     case "report":
       return reportCommand(values);
     default:
@@ -134,6 +136,16 @@ function validateCommand(values: Values): void {
   if (new Set(sessions).size !== sessions.length) problems.push("two scenarios share one session id");
   if (problems.length > 0) throw new Error(`Validation failed:\n- ${problems.join("\n- ")}`);
   console.log(`OK: ${sessions.length} SUCCESS result(s) valid, all sessions distinct.`);
+}
+
+function stabilityCommand(values: Values): void {
+  if (!values.run) throw new Error("--run DIR1,DIR2,... required");
+  const runs = values.run.split(",").map((dir) => {
+    const reviewsFile = path.join(dir, "reviews.json");
+    const reviews = new Map<string, Review>(existsSync(reviewsFile) ? parseReviews(readJson(reviewsFile)).map((r) => [r.test_id, r]) : []);
+    return { label: path.basename(dir), results: loadScenarioResults(dir), reviews };
+  });
+  console.log(stabilityTable(runs));
 }
 
 function reportCommand(values: Values): void {

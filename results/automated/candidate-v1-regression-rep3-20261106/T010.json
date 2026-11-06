@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T010",
+  "title": "Mobile-only ticket and no internet",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:45:33.963Z",
+  "finished_at": "2026-11-06T09:45:51.261Z",
+  "duration_ms": 17298,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "3c1bb9e27a7c"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "Can I buy a paper 30-minute ticket from a machine?",
+      "agent": "No. The 30-minute ticket in the 5 November 2026 snapshot is mobile-only—there’s no paper equivalent, and it requires an internet-connected phone. So you can’t buy that product as a paper ticket from a machine. 30-minute ticket\n\nThe snapshot lists an ordinary single ticket at 500 HUF as a paper-ticket alternative, but it generally covers one continuous one-way ride; a voluntary change between street-level services normally requires another ticket. Single ticket Check BKK’s current information before travelling.",
+      "links": [
+        {
+          "text": "30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        },
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:41.068Z",
+      "completed_at": "2026-11-06T09:45:46.024Z",
+      "duration_ms": 4956,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "My phone has no mobile data and I won't have internet on the trip. What should I do?",
+      "agent": "Given that you won’t have internet during the trip, don’t rely on the 30-minute mobile ticket: the 5 November 2026 snapshot says it requires an internet-connected phone and has no paper equivalent. 30-minute ticket\n\nFor a paper option, the snapshot lists an ordinary single ticket at 500 HUF or a block of ten at 4,500 HUF. A single generally covers one continuous one-way ride; a voluntary change between street-level services normally needs another ticket. Single ticket · Prices\n\nIf you need transfers, or you’re considering an airport journey, tell me the route and how many rides you expect, and I can narrow down the paper options. These prices are from the dated snapshot, not live-verified; check BKK’s current information before travel.",
+      "links": [
+        {
+          "text": "30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        },
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        },
+        {
+          "text": "Prices",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:46.035Z",
+      "completed_at": "2026-11-06T09:45:51.254Z",
+      "duration_ms": 5219,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:45:33.963Z",
+      "duration_ms": 17298,
+      "session_id_hash": "3c1bb9e27a7c",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "Can I buy a paper 30-minute ticket from a machine?",
+          "agent": "No. The 30-minute ticket in the 5 November 2026 snapshot is mobile-only—there’s no paper equivalent, and it requires an internet-connected phone. So you can’t buy that product as a paper ticket from a machine. 30-minute ticket\n\nThe snapshot lists an ordinary single ticket at 500 HUF as a paper-ticket alternative, but it generally covers one continuous one-way ride; a voluntary change between street-level services normally requires another ticket. Single ticket Check BKK’s current information before travelling.",
+          "links": [
+            {
+              "text": "30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            },
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:41.068Z",
+          "completed_at": "2026-11-06T09:45:46.024Z",
+          "duration_ms": 4956,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "My phone has no mobile data and I won't have internet on the trip. What should I do?",
+          "agent": "Given that you won’t have internet during the trip, don’t rely on the 30-minute mobile ticket: the 5 November 2026 snapshot says it requires an internet-connected phone and has no paper equivalent. 30-minute ticket\n\nFor a paper option, the snapshot lists an ordinary single ticket at 500 HUF or a block of ten at 4,500 HUF. A single generally covers one continuous one-way ride; a voluntary change between street-level services normally needs another ticket. Single ticket · Prices\n\nIf you need transfers, or you’re considering an airport journey, tell me the route and how many rides you expect, and I can narrow down the paper options. These prices are from the dated snapshot, not live-verified; check BKK’s current information before travel.",
+          "links": [
+            {
+              "text": "30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            },
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            },
+            {
+              "text": "Prices",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:46.035Z",
+          "completed_at": "2026-11-06T09:45:51.254Z",
+          "duration_ms": 5219,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain there is no paper 30-minute equivalent.",
+      "Explain the connectivity limitation and suggest exploring a different appropriate fare product without asserting that offline use is fine."
+    ],
+    "critical_failures": [
+      "Invents a paper 30-minute ticket.",
+      "Assures the user that the mobile ticket functions without an internet connection."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

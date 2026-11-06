@@ -25,6 +25,8 @@ A useful multi-turn test withholds one key condition, waits for the assistant to
 
 ## What is not yet done
 
+> **Status update (2026-11-06):** the bullets below describe the state when this note was written. An unpublished Agentplace Preview agent was built and evaluated afterwards; see the [final evaluation](../../../reports/final-evaluation-2026-11-06.md).
+
 - No Agentplace agent has been created.
 - These are reviewed source-backed draft rules, not expert-certified legal/fare advice.
 - No evaluation conversations have been executed.
