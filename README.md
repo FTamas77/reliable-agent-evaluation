@@ -77,5 +77,6 @@ The checker does not check factual accuracy. BKK policies and prices can change.
 **Observed baseline:** 20 manually evaluated, two-turn Agentplace Preview conversations; **17 PASS, 3 PARTIAL, 0 FAIL (85% strict-pass share)**. This is one manual run per case, not a statistically established reliability rate. The version is not platform-pinned. The five held-out tests remain unexecuted.
 
 - [Baseline report](reports/baseline-v0-2026-11-06.md): per-test results, evidence limits, root-cause hypotheses and a controlled v1 plan.
+- [Candidate v1 knowledge](agentplace/knowledge-v1.md) and [knowledge-only change/deployment plan](agentplace/v1-change-plan.md): **prepared, not yet uploaded into Agentplace**.
 - [Machine-readable baseline run](results/baseline-v0.run.json) and [individual test results](results/).
 - [Source-backed test specifications](tests/baseline-cases.json), [held-out scenarios](tests/heldout-cases.json) and [test method](tests/README.md).
