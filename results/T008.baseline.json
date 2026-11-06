@@ -1,0 +1,33 @@
+{
+  "test_id": "T008",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview screenshot",
+  "rule_ids": [
+    "BKK-R007"
+  ],
+  "turns": [
+    {
+      "user": "I activated a 90-minute ticket at 14:00 and want to return by tram after my visit.",
+      "agent": "Your 90-minute ticket’s window runs from 14:00 to 15:30. If you board the return tram or make the transfer onto it before 15:30, you can finish that final ride after 15:30. Validate at the start of the journey and when changing to the tram; the metro-to-metro exception doesn’t apply here.\n\nIf you only start the return tram trip after 15:30, this ticket won’t cover it. This follows the 90-minute mobile-ticket rules in the 5 November 2026 snapshot; check BKK’s 90-minute ticket page for current terms.",
+      "turn_assessment": "Correctly recognises 14:00–15:30 transfer window, accommodates return travel and final journey ending after cutoff. First-turn provisional only."
+    },
+    {
+      "user": "The return tram boards at 15:29 and I get off at 15:52. Is that valid?",
+      "agent": "Yes—under the 90-minute mobile-ticket rule in the 5 November 2026 snapshot, that ride is covered: boarding the return tram at 15:29 is before the 15:30 window ends, and you may finish the final ride after the window expires, so getting off at 15:52 is okay. Validate the ticket for the tram transfer as required. See BKK’s 90-minute ticket page for current terms.",
+      "turn_assessment": "Correctly allows the 15:29 tram transfer before the 15:30 limit and completion of the final ride at 15:52; includes revalidation caveat."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Manual evaluation from user-provided Agentplace Preview screenshots on 2026-11-06. Agent platform version not pinned.",
+  "expected_criteria_met": {
+    "return_journey_possible": true,
+    "correct_time_window": true,
+    "finishing_final_ride_after_window": true,
+    "revalidation_noted": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for one observed two-turn interaction against the dated knowledge snapshot, not a verified current BKK fare check or reliability estimate."
+}
