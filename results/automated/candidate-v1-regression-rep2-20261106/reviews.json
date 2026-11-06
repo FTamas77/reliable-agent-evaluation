@@ -1,5 +1,5 @@
 {
-  "note": "AI-assisted first-pass judgments of the second independent repetition of the 20 baseline scenarios (candidate-v1 unchanged). Same reviewer model family as the other reviews; not human-confirmed. Oracle: tests/baseline-cases.json. T002 needed one technical retry (attempt 1 timed out waiting for the input box before any message was sent; recorded in T002.json). Author confirmation (2026-11-06): all results were personally reviewed and accepted by the project author. Original reviewer attribution is retained.",
+  "note": "AI-assisted first-pass judgments of the second independent repetition of the 20 baseline scenarios (candidate-v1 unchanged). Same reviewer model family as the other reviews; subsequently confirmed by the project author. Oracle: tests/baseline-cases.json. T002 needed one technical retry (attempt 1 timed out waiting for the input box before any message was sent; recorded in T002.json). The original AI reviewer attribution is retained; author confirmation was recorded on 2026-11-06.",
   "reviews": [
     {
       "test_id": "T001",
