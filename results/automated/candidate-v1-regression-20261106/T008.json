@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T008",
+  "title": "90-minute return trip and late transfer",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:29:51.286Z",
+  "finished_at": "2026-11-06T08:30:07.615Z",
+  "duration_ms": 16329,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "65d586d207b8"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I activated a 90-minute ticket at 14:00 and want to return by tram after my visit.",
+      "agent": "The key detail is when you board the return tram. Your 90-minute mobile ticket’s window runs from 14:00 to 15:30. It allows transfers on covered lines within that window; if you make your final transfer before 15:30, you may finish that last ride after 15:30. Validate at the start of a ride and when changing lines (except between metro lines).\n\nSo, if you board the return tram before 15:30, the ticket can cover it, assuming the route is within the applicable area and you follow the mobile-ticket validation steps. If you board after 15:30, it won’t cover the new tram ride. It requires an internet-connected phone and has no paper equivalent. This is based on the 5 November 2026 snapshot, not a live check.\n\nSee BKK’s 90-minute ticket page for current terms. What time do you expect to board the tram back?",
+      "links": [
+        {
+          "text": "90-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:29:55.626Z",
+      "completed_at": "2026-11-06T08:30:01.877Z",
+      "duration_ms": 6251,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "The return tram boards at 15:29 and I get off at 15:52. Is that valid?",
+      "agent": "Yes—according to the 5 November 2026 snapshot, that ride is covered if 15:29 is when you board the tram, it’s on a covered line, and you use the mobile ticket as required. Your 90-minute window ends at 15:30; the rule allows you to finish the last ride after the window when you boarded it within the window. Getting off at 15:52 is therefore okay under that rule.\n\nBKK’s 90-minute ticket page is the official reference for current terms; I haven’t live-checked it.",
+      "links": [
+        {
+          "text": "90-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:30:01.889Z",
+      "completed_at": "2026-11-06T08:30:07.607Z",
+      "duration_ms": 5718,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:29:51.286Z",
+      "duration_ms": 16328,
+      "session_id_hash": "65d586d207b8",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I activated a 90-minute ticket at 14:00 and want to return by tram after my visit.",
+          "agent": "The key detail is when you board the return tram. Your 90-minute mobile ticket’s window runs from 14:00 to 15:30. It allows transfers on covered lines within that window; if you make your final transfer before 15:30, you may finish that last ride after 15:30. Validate at the start of a ride and when changing lines (except between metro lines).\n\nSo, if you board the return tram before 15:30, the ticket can cover it, assuming the route is within the applicable area and you follow the mobile-ticket validation steps. If you board after 15:30, it won’t cover the new tram ride. It requires an internet-connected phone and has no paper equivalent. This is based on the 5 November 2026 snapshot, not a live check.\n\nSee BKK’s 90-minute ticket page for current terms. What time do you expect to board the tram back?",
+          "links": [
+            {
+              "text": "90-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:29:55.626Z",
+          "completed_at": "2026-11-06T08:30:01.877Z",
+          "duration_ms": 6251,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "The return tram boards at 15:29 and I get off at 15:52. Is that valid?",
+          "agent": "Yes—according to the 5 November 2026 snapshot, that ride is covered if 15:29 is when you board the tram, it’s on a covered line, and you use the mobile ticket as required. Your 90-minute window ends at 15:30; the rule allows you to finish the last ride after the window when you boarded it within the window. Getting off at 15:52 is therefore okay under that rule.\n\nBKK’s 90-minute ticket page is the official reference for current terms; I haven’t live-checked it.",
+          "links": [
+            {
+              "text": "90-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/90-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:30:01.889Z",
+          "completed_at": "2026-11-06T08:30:07.607Z",
+          "duration_ms": 5718,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Use the 90-minute last-transfer window (boarding at 15:29) rather than arrival time.",
+      "Explain that a return journey can be within a 90-minute ticket if all applicable conditions are met."
+    ],
+    "critical_failures": [
+      "Rejects the ticket solely because arrival is after 15:30.",
+      "Says all return trips are prohibited even within the window."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

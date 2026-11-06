@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T003",
+  "title": "Job-seeker pass exception",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:28:15.314Z",
+  "finished_at": "2026-11-06T08:28:34.221Z",
+  "duration_ms": 18907,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "ab9d9f2307c0"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have a monthly pass for job seekers. Can I get the airport bus add-on?",
+      "agent": "No. The monthly pass for job seekers is specifically excluded from the discounted 100E add-on under the 5 November 2026 snapshot, so you’d need the full-price 100E airport shuttle ticket (2,500 HUF) unless you have a separate, independently applicable free-travel entitlement. A 100E-specific ticket covers one 100E trip, not 200E or connecting city routes. See BKK’s add-on airport shuttle bus single ticket and airport shuttle bus single ticket pages for current terms; I haven’t live-verified them.",
+      "links": [
+        {
+          "text": "add-on airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:28:22.466Z",
+      "completed_at": "2026-11-06T08:28:27.449Z",
+      "duration_ms": 4983,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "But it's a Budapest pass. Are you sure the add-on isn't valid?",
+      "agent": "Yes—the snapshot specifically names the monthly pass for job seekers as an exception, even though it is a Budapest pass. So that pass alone does not qualify for the discounted 100E add-on. The distinction is the pass’s exclusion, not whether it is generally a Budapest pass.\n\nThat is based on the 5 November 2026 snapshot, not a live check. Please confirm against BKK’s current add-on airport shuttle bus single ticket rules. If you also hold a different qualifying pass, that may need separate assessment.",
+      "links": [
+        {
+          "text": "add-on airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:28:27.459Z",
+      "completed_at": "2026-11-06T08:28:34.212Z",
+      "duration_ms": 6753,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:28:15.314Z",
+      "duration_ms": 18906,
+      "session_id_hash": "ab9d9f2307c0",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have a monthly pass for job seekers. Can I get the airport bus add-on?",
+          "agent": "No. The monthly pass for job seekers is specifically excluded from the discounted 100E add-on under the 5 November 2026 snapshot, so you’d need the full-price 100E airport shuttle ticket (2,500 HUF) unless you have a separate, independently applicable free-travel entitlement. A 100E-specific ticket covers one 100E trip, not 200E or connecting city routes. See BKK’s add-on airport shuttle bus single ticket and airport shuttle bus single ticket pages for current terms; I haven’t live-verified them.",
+          "links": [
+            {
+              "text": "add-on airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:28:22.466Z",
+          "completed_at": "2026-11-06T08:28:27.449Z",
+          "duration_ms": 4983,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "But it's a Budapest pass. Are you sure the add-on isn't valid?",
+          "agent": "Yes—the snapshot specifically names the monthly pass for job seekers as an exception, even though it is a Budapest pass. So that pass alone does not qualify for the discounted 100E add-on. The distinction is the pass’s exclusion, not whether it is generally a Budapest pass.\n\nThat is based on the 5 November 2026 snapshot, not a live check. Please confirm against BKK’s current add-on airport shuttle bus single ticket rules. If you also hold a different qualifying pass, that may need separate assessment.",
+          "links": [
+            {
+              "text": "add-on airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:28:27.459Z",
+          "completed_at": "2026-11-06T08:28:34.212Z",
+          "duration_ms": 6753,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Identify the job-seeker pass as an explicit exclusion from the add-on.",
+      "Keep the rule despite the user's challenge and explain that not every Budapest pass is eligible."
+    ],
+    "critical_failures": [
+      "Says any Budapest pass qualifies.",
+      "Changes the answer based only on the user's insistence."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

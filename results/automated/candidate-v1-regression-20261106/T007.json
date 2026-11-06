@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T007",
+  "title": "New transfer after 30-minute deadline",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:29:32.643Z",
+  "finished_at": "2026-11-06T08:29:51.285Z",
+  "duration_ms": 18642,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "54371f452027"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I validated a 30-minute mobile ticket at 10:00.",
+      "agent": "If you’re asking about timing: the 30-minute window runs from 10:00 to 10:30. Transfers on covered lines are allowed within that window. If your final transfer happens before 10:30, you may complete that last ride after 10:30; the window is not necessarily a deadline to get off the vehicle. Validate at the start and when changing lines, except between metro lines. The 30-minute mobile ticket requires an internet-connected phone and has no paper equivalent.\n\nThese details are from the 5 November 2026 snapshot, not live verification. See BKK’s 30-minute ticket rules for current conditions. What route or transfer are you considering?",
+      "links": [
+        {
+          "text": "30-minute ticket rules",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:29:40.857Z",
+      "completed_at": "2026-11-06T08:29:46.591Z",
+      "duration_ms": 5734,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Can I transfer to another tram at 10:31 using that same ticket?",
+      "agent": "No—not for a new tram transfer at 10:31. Under the 5 November 2026 snapshot, transfers on covered lines must be made within the 30-minute window, so a transfer at 10:31 is outside the window that began at 10:00. The allowance to continue past 10:30 applies only when your final transfer was made before the window ended; it doesn’t extend the time to board another line. BKK: 30-minute ticket. This is snapshot-based guidance, not live verification.",
+      "links": [
+        {
+          "text": "BKK: 30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:29:46.599Z",
+      "completed_at": "2026-11-06T08:29:51.276Z",
+      "duration_ms": 4677,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:29:32.643Z",
+      "duration_ms": 18642,
+      "session_id_hash": "54371f452027",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I validated a 30-minute mobile ticket at 10:00.",
+          "agent": "If you’re asking about timing: the 30-minute window runs from 10:00 to 10:30. Transfers on covered lines are allowed within that window. If your final transfer happens before 10:30, you may complete that last ride after 10:30; the window is not necessarily a deadline to get off the vehicle. Validate at the start and when changing lines, except between metro lines. The 30-minute mobile ticket requires an internet-connected phone and has no paper equivalent.\n\nThese details are from the 5 November 2026 snapshot, not live verification. See BKK’s 30-minute ticket rules for current conditions. What route or transfer are you considering?",
+          "links": [
+            {
+              "text": "30-minute ticket rules",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:29:40.857Z",
+          "completed_at": "2026-11-06T08:29:46.591Z",
+          "duration_ms": 5734,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Can I transfer to another tram at 10:31 using that same ticket?",
+          "agent": "No—not for a new tram transfer at 10:31. Under the 5 November 2026 snapshot, transfers on covered lines must be made within the 30-minute window, so a transfer at 10:31 is outside the window that began at 10:00. The allowance to continue past 10:30 applies only when your final transfer was made before the window ended; it doesn’t extend the time to board another line. BKK: 30-minute ticket. This is snapshot-based guidance, not live verification.",
+          "links": [
+            {
+              "text": "BKK: 30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:29:46.599Z",
+          "completed_at": "2026-11-06T08:29:51.276Z",
+          "duration_ms": 4677,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain that the new transfer at minute 31 is outside the 30-minute transfer window.",
+      "Differentiate continuing an already-started final journey from beginning a new one."
+    ],
+    "critical_failures": [
+      "Allows a new transfer at 10:31 on the same expired transfer window."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

@@ -1,0 +1,26 @@
+﻿{
+    "name":  "reliable-agent-evaluation",
+    "version":  "1.0.0",
+    "private":  true,
+    "description":  "Playwright runner that executes the BKK fare advisor test scenarios against the Agentplace Preview.",
+    "type":  "module",
+    "scripts":  {
+                    "browser":  "tsx evaluation/runner/src/cli.ts browser",
+                    "inspect":  "tsx evaluation/runner/src/cli.ts inspect",
+                    "run:t001":  "tsx evaluation/runner/src/cli.ts run --tests T001",
+                    "run:all":  "tsx evaluation/runner/src/cli.ts run --all",
+                    "report":  "tsx evaluation/runner/src/cli.ts report",
+                    "typecheck":  "tsc --noEmit -p evaluation/runner",
+                    "test":  "node --import tsx --test evaluation/runner/test/*.test.ts"
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/FTamas77/reliable-agent-evaluation.git"
+                   },
+    "devDependencies":  {
+                            "@types/node":  "^26.6.6",
+                            "playwright-core":  "^1.65.0",
+                            "tsx":  "^4.23.15",
+                            "typescript":  "^7.0.2"
+                        }
+}

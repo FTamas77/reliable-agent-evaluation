@@ -80,3 +80,43 @@ The checker does not check factual accuracy. BKK policies and prices can change.
 - [Candidate v1 knowledge](agentplace/knowledge-v1.md) and [knowledge-only change/deployment plan](agentplace/v1-change-plan.md): **prepared, not yet uploaded into Agentplace**.
 - [Machine-readable baseline run](results/baseline-v0.run.json) and [individual test results](results/).
 - [Source-backed test specifications](tests/baseline-cases.json), [held-out scenarios](tests/heldout-cases.json) and [test method](tests/README.md).
+
+## Automated Agentplace regression runner (TypeScript + Playwright)
+
+`evaluation/runner/` drives the **standalone Agentplace Preview** in a real browser, plays the two user turns of each scenario in `tests/baseline-cases.json` in a fresh conversation, and stores the complete agent replies. It executes scenarios only: **correctness stays `PENDING_REVIEW` until someone judges the transcript** against the prewritten `expected_behaviour` and `critical_failures`. It never opens the Builder chat and never changes the agent.
+
+### Quick start (Windows/PowerShell, Node 20+, Chrome or Edge installed)
+
+```powershell
+npm install                       # playwright-core, typescript, tsx (no browser download)
+npm run browser                   # starts Chrome with a dedicated profile in .auth/ (git-ignored); sign in to Agentplace once, keep it open
+# In the dashboard click "Open draft preview" -> "Open in tab"; copy that URL (https://<id>-preview.run.agentplace.io/agent/<id>/preview)
+$env:AGENTPLACE_PREVIEW_URL = "<that URL>"
+npm run run:t001                  # proof of concept: T001 only
+npm run run:all                   # all 20 baseline scenarios, sequential, fresh conversation each
+npx tsx evaluation/runner/src/cli.ts run --all --resume <run-id>      # continue an interrupted run (SUCCESS results are reused)
+npx tsx evaluation/runner/src/cli.ts validate --run results/automated/<run-id>
+npx tsx evaluation/runner/src/cli.ts report --run results/automated/<run-id> --reviews results/automated/<run-id>/reviews.json
+npm test; npm run typecheck       # unit tests and type check
+```
+
+Useful options: `--tests T001,T005`, `--skip T003`, `--timeout 120` (seconds per turn), `--retries 1`, `--locale en-US`, `--out DIR`, `--label candidate-v1`. The held-out suite is refused unless `--suite heldout --allow-heldout` is passed.
+
+### How it works
+
+| Module | Responsibility |
+|---|---|
+| `scenarios.ts` | load and validate the unchanged scenario JSON |
+| `browser.ts` | start a normal browser with a local profile; attach over CDP (reuses the signed-in session, avoids Google SSO automation blocks) |
+| `previewUi.ts` | all Preview DOM knowledge: new tab per conversation, send, wait, capture |
+| `completion.ts` | pure completion logic: turn registered, composer idle, no busy region, new text stable |
+| `runner.ts` | orchestration, retries (each attempt recorded), resume, isolation checks |
+| `results.ts`, `baseline.ts` | result files, validation, read-only access to the manual baseline/v1 scores |
+| `report.ts` | Markdown tables for the report template |
+
+- **Isolation:** every attempt opens a new browser tab, which yields a new Preview session (`sessionStorage.agentplace_session_id`). The runner requires a welcome-only history at start, an unseen session id (stored only as a SHA-256 prefix), and an unchanged session id between turns.
+- **Completion:** no fixed sleeps. A turn is complete when the user turn is listed in the history rail, the composer reports `data-pending="false"`, no `aria-busy="true"` region exists, and the visible response is new and unchanged for `--stable-ms`.
+- **Locale:** the Preview forwards the browser language to the agent, and a `hu-HU` browser produced Hungarian answers to English prompts. The runner therefore pins `en-US` (recorded in `run.json`).
+- **Output** (`results/automated/<run-id>/`): `T0xx.json` per scenario (transcript, links, timings, attempts, execution state, evaluation stub), `run.json`, `events.jsonl`; failure screenshots go to a git-ignored `screenshots/` folder. Existing manual results in `results/` are never modified.
+- **Execution state is not correctness:** `SUCCESS`, `ERROR`, `INCOMPLETE`, `SKIPPED` describe the run. Judgments live in an optional `reviews.json` (`HUMAN` or `AI_ASSISTED`, with justification) and are reported separately.
+- **Authentication:** `.auth/` (browser profile) is git-ignored; nothing credential-like is written to results.

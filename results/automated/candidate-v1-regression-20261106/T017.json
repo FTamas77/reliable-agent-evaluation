@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T017",
+  "title": "Partial refund of a ten-ticket block",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:32:42.695Z",
+  "finished_at": "2026-11-06T08:32:58.824Z",
+  "duration_ms": 16129,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "b9732114244a"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I bought a block of ten paper single tickets and used two of them.",
+      "agent": "Thanks—that means 8 tickets remain unused. If you’re asking about a refund, BKK’s ordinary refund rule for a paper block of ten requires all ten tickets to be unused and consecutively numbered, so a partly used block does not qualify for an ordinary partial or pro-rata refund. A separate exchange exception applied only during June–August 2026 and has ended. This is based on my 5 November 2026 snapshot, with the refund policy cross-checked on 6 November; I can’t process or confirm a refund. See BKK’s Product replacement and refund policy.\n\nIf you meant something else—such as whether the remaining tickets can still be used—tell me what you’d like to know.",
+      "links": [
+        {
+          "text": "Product replacement and refund policy",
+          "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+        }
+      ],
+      "started_at": "2026-11-06T08:32:48.649Z",
+      "completed_at": "2026-11-06T08:32:53.617Z",
+      "duration_ms": 4968,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Could I return the remaining eight and get 80% of the price back?",
+      "agent": "No—not under BKK’s ordinary refund rule for a paper block of ten. Since two tickets have been used, the block is partly used, and BKK requires all ten tickets to be unused and consecutively numbered for an ordinary refund. That means the eight unused tickets don’t qualify for an 80% partial refund. The temporary June–August 2026 exchange exception has ended.\n\nThis is based on the 5 November 2026 knowledge snapshot, with the refund policy cross-checked on 6 November. See BKK’s Product replacement and refund policy. I can’t process or confirm a refund.",
+      "links": [
+        {
+          "text": "Product replacement and refund policy",
+          "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+        }
+      ],
+      "started_at": "2026-11-06T08:32:53.630Z",
+      "completed_at": "2026-11-06T08:32:58.816Z",
+      "duration_ms": 5186,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:32:42.695Z",
+      "duration_ms": 16129,
+      "session_id_hash": "b9732114244a",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I bought a block of ten paper single tickets and used two of them.",
+          "agent": "Thanks—that means 8 tickets remain unused. If you’re asking about a refund, BKK’s ordinary refund rule for a paper block of ten requires all ten tickets to be unused and consecutively numbered, so a partly used block does not qualify for an ordinary partial or pro-rata refund. A separate exchange exception applied only during June–August 2026 and has ended. This is based on my 5 November 2026 snapshot, with the refund policy cross-checked on 6 November; I can’t process or confirm a refund. See BKK’s Product replacement and refund policy.\n\nIf you meant something else—such as whether the remaining tickets can still be used—tell me what you’d like to know.",
+          "links": [
+            {
+              "text": "Product replacement and refund policy",
+              "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+            }
+          ],
+          "started_at": "2026-11-06T08:32:48.649Z",
+          "completed_at": "2026-11-06T08:32:53.617Z",
+          "duration_ms": 4968,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Could I return the remaining eight and get 80% of the price back?",
+          "agent": "No—not under BKK’s ordinary refund rule for a paper block of ten. Since two tickets have been used, the block is partly used, and BKK requires all ten tickets to be unused and consecutively numbered for an ordinary refund. That means the eight unused tickets don’t qualify for an 80% partial refund. The temporary June–August 2026 exchange exception has ended.\n\nThis is based on the 5 November 2026 knowledge snapshot, with the refund policy cross-checked on 6 November. See BKK’s Product replacement and refund policy. I can’t process or confirm a refund.",
+          "links": [
+            {
+              "text": "Product replacement and refund policy",
+              "href": "https://bkk.hu/en/tickets-and-passes/purchase-information/product-replacement-and-refund/"
+            }
+          ],
+          "started_at": "2026-11-06T08:32:53.630Z",
+          "completed_at": "2026-11-06T08:32:58.816Z",
+          "duration_ms": 5186,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain that the general refund condition requires all ten tickets to be unused and consecutively numbered.",
+      "Do not confuse ordinary refund with the expired special exchange period."
+    ],
+    "critical_failures": [
+      "Promises a pro-rata refund for the remaining eight tickets.",
+      "Suggests the historical exchange programme is still open in November 2026."
+    ],
+    "baseline_score": "PARTIAL",
+    "manual_v1_score": "PASS"
+  }
+}
