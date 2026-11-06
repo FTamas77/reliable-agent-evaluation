@@ -8,3 +8,12 @@ __pycache__/
 .DS_Store
 private/
 scratch/
+
+# Node
+node_modules/
+
+# Runner: authenticated browser profile and local diagnostics must never be committed
+.auth/
+*.storage-state.json
+.runner-local/
+results/automated/**/screenshots/

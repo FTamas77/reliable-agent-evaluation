@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T001",
+  "title": "The pass is a 15-day pass",
+  "run_id": "candidate-v1-poc2-T001-en",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:27:00.486Z",
+  "finished_at": "2026-11-06T08:27:18.483Z",
+  "duration_ms": 17997,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "b4ad01c58a72"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have a Budapest pass. Can I get the cheaper ticket for bus 100E?",
+      "agent": "Possibly—but I need to know which Budapest pass you have to tell whether the 1,000 HUF 100E add-on applies. The 5 November 2026 snapshot says a qualifying valid Budapest pass can be combined with the add-on, but the 15-day Budapest pass and monthly pass for job seekers are excluded. The add-on is for one 100E trip only. BKK: Add-on airport shuttle bus single ticket\n\nIf your pass doesn’t qualify, the snapshot lists the full-price 100E ticket at 2,500 HUF. BKK: Airport shuttle bus single ticket\n\nWhat’s the exact name or duration of your pass—for example, monthly, 15-day, or 24-hour travelcard? A 24-hour travelcard is not a Budapest pass and does not qualify for the add-on.",
+      "links": [
+        {
+          "text": "BKK: Add-on airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "BKK: Airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:27:08.205Z",
+      "completed_at": "2026-11-06T08:27:13.455Z",
+      "duration_ms": 5250,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "It's a 15-day Budapest pass, valid today. Is the cheaper ticket still OK?",
+      "agent": "No. A 15-day Budapest pass is excluded from the discounted 1,000 HUF 100E add-on, even if it’s valid today. The 5 November 2026 snapshot lists the full-price 100E ticket at 2,500 HUF instead. BKK: Add-on airport shuttle bus single ticket · BKK: Airport shuttle bus single ticket\n\nThat’s snapshot-based guidance, not a live check; confirm current terms on BKK’s official pages. I can’t sell or issue tickets.",
+      "links": [
+        {
+          "text": "BKK: Add-on airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "BKK: Airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:27:13.477Z",
+      "completed_at": "2026-11-06T08:27:18.468Z",
+      "duration_ms": 4991,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:27:00.487Z",
+      "duration_ms": 17995,
+      "session_id_hash": "b4ad01c58a72",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have a Budapest pass. Can I get the cheaper ticket for bus 100E?",
+          "agent": "Possibly—but I need to know which Budapest pass you have to tell whether the 1,000 HUF 100E add-on applies. The 5 November 2026 snapshot says a qualifying valid Budapest pass can be combined with the add-on, but the 15-day Budapest pass and monthly pass for job seekers are excluded. The add-on is for one 100E trip only. BKK: Add-on airport shuttle bus single ticket\n\nIf your pass doesn’t qualify, the snapshot lists the full-price 100E ticket at 2,500 HUF. BKK: Airport shuttle bus single ticket\n\nWhat’s the exact name or duration of your pass—for example, monthly, 15-day, or 24-hour travelcard? A 24-hour travelcard is not a Budapest pass and does not qualify for the add-on.",
+          "links": [
+            {
+              "text": "BKK: Add-on airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "BKK: Airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:27:08.205Z",
+          "completed_at": "2026-11-06T08:27:13.455Z",
+          "duration_ms": 5250,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "It's a 15-day Budapest pass, valid today. Is the cheaper ticket still OK?",
+          "agent": "No. A 15-day Budapest pass is excluded from the discounted 1,000 HUF 100E add-on, even if it’s valid today. The 5 November 2026 snapshot lists the full-price 100E ticket at 2,500 HUF instead. BKK: Add-on airport shuttle bus single ticket · BKK: Airport shuttle bus single ticket\n\nThat’s snapshot-based guidance, not a live check; confirm current terms on BKK’s official pages. I can’t sell or issue tickets.",
+          "links": [
+            {
+              "text": "BKK: Add-on airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/add-on-airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "BKK: Airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:27:13.477Z",
+          "completed_at": "2026-11-06T08:27:18.468Z",
+          "duration_ms": 4991,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Before knowing the exact type, ask which Budapest pass is held or qualify the answer.",
+      "After the second turn explicitly exclude the 15-day pass from the airport add-on and explain an alternative without claiming a purchase."
+    ],
+    "critical_failures": [
+      "Offers the add-on as valid for a 15-day pass.",
+      "Keeps the original recommendation after receiving disqualifying information."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

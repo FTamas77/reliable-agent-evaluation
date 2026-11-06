@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T004",
+  "title": "Airport route changes from 100E to 200E",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:28:34.221Z",
+  "finished_at": "2026-11-06T08:28:52.285Z",
+  "duration_ms": 18064,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "285e952b681b"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I'm taking a bus to the airport; does my ordinary single ticket work?",
+      "agent": "It depends which airport bus you mean. An ordinary single ticket does not work on the 100E Airport Express. On the 200E, ordinary ticket and pass rules apply. Airport shuttle bus single ticket\n\nThe 5 November 2026 snapshot lists an ordinary single ticket at 500 HUF and a full-price 100E ticket at 2,500 HUF; those are snapshot prices, not live-verified fares. For current details, check BKK’s official pages. Which bus are you planning to take—100E or 200E?",
+      "links": [
+        {
+          "text": "Airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:28:41.328Z",
+      "completed_at": "2026-11-06T08:28:46.782Z",
+      "duration_ms": 5454,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Actually, I mean bus 200E, not 100E.",
+      "agent": "Yes. An ordinary single ticket is valid on bus 200E under the ordinary ticket rules; it is not valid on 100E. The 5 November 2026 snapshot lists the ordinary single at 500 HUF. Single ticket Airport shuttle bus single ticket\n\nThat covers the 200E ride itself; if you transfer to another line, the ordinary single-ticket transfer rules may require another ticket. This is snapshot-based guidance, not live verification—check BKK’s current information before travel.",
+      "links": [
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        },
+        {
+          "text": "Airport shuttle bus single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:28:46.794Z",
+      "completed_at": "2026-11-06T08:28:52.277Z",
+      "duration_ms": 5483,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:28:34.221Z",
+      "duration_ms": 18064,
+      "session_id_hash": "285e952b681b",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I'm taking a bus to the airport; does my ordinary single ticket work?",
+          "agent": "It depends which airport bus you mean. An ordinary single ticket does not work on the 100E Airport Express. On the 200E, ordinary ticket and pass rules apply. Airport shuttle bus single ticket\n\nThe 5 November 2026 snapshot lists an ordinary single ticket at 500 HUF and a full-price 100E ticket at 2,500 HUF; those are snapshot prices, not live-verified fares. For current details, check BKK’s official pages. Which bus are you planning to take—100E or 200E?",
+          "links": [
+            {
+              "text": "Airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:28:41.328Z",
+          "completed_at": "2026-11-06T08:28:46.782Z",
+          "duration_ms": 5454,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Actually, I mean bus 200E, not 100E.",
+          "agent": "Yes. An ordinary single ticket is valid on bus 200E under the ordinary ticket rules; it is not valid on 100E. The 5 November 2026 snapshot lists the ordinary single at 500 HUF. Single ticket Airport shuttle bus single ticket\n\nThat covers the 200E ride itself; if you transfer to another line, the ordinary single-ticket transfer rules may require another ticket. This is snapshot-based guidance, not live verification—check BKK’s current information before travel.",
+          "links": [
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            },
+            {
+              "text": "Airport shuttle bus single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:28:46.794Z",
+          "completed_at": "2026-11-06T08:28:52.277Z",
+          "duration_ms": 5483,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Do not give a definitive yes/no before clarifying the route.",
+      "Distinguish 200E from 100E: the special airport shuttle ticket restriction applies to 100E, not 200E, subject to normal ticket rules."
+    ],
+    "critical_failures": [
+      "Claims that all airport buses require a 100E special ticket.",
+      "Ignores the route correction."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

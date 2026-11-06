@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T009",
+  "title": "Metro-to-metro versus tram revalidation",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:45:14.187Z",
+  "finished_at": "2026-11-06T09:45:33.962Z",
+  "duration_ms": 19775,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "81a69eae13f1"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I use a 30-minute ticket and change from metro M2 to metro M3.",
+      "agent": "Yes—the 30-minute mobile ticket allows transfers between covered lines during its 30-minute window, and a transfer between metro lines is an exception to the usual requirement to validate again when changing lines. So your M2-to-M3 transfer is covered, provided it’s within the ticket’s validity window. If M3 is your final ride, you may finish that ride after the window expires as long as you made the final transfer before it ended. The ticket requires an internet-connected phone and has no paper equivalent.\n\nThis reflects the 5 November 2026 snapshot, not a live check. See BKK’s 30-minute ticket page for current rules.",
+      "links": [
+        {
+          "text": "30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:24.253Z",
+      "completed_at": "2026-11-06T09:45:28.702Z",
+      "duration_ms": 4449,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "After that I board tram 4. Do I need to validate again?",
+      "agent": "Yes. The 30-minute mobile ticket allows transfers within its time window, but you must validate it again when changing to another line—except for transfers between metro lines. So after M2 → M3, boarding tram 4 requires another validation, and the tram transfer must be within the ticket’s 30-minute window. If tram 4 is your final ride, you may finish it after the window ends, provided you made that final transfer before expiry.\n\nThis is based on the 5 November 2026 snapshot; check BKK’s 30-minute ticket page for the current rule.",
+      "links": [
+        {
+          "text": "30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:28.710Z",
+      "completed_at": "2026-11-06T09:45:33.955Z",
+      "duration_ms": 5245,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:45:14.187Z",
+      "duration_ms": 19775,
+      "session_id_hash": "81a69eae13f1",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I use a 30-minute ticket and change from metro M2 to metro M3.",
+          "agent": "Yes—the 30-minute mobile ticket allows transfers between covered lines during its 30-minute window, and a transfer between metro lines is an exception to the usual requirement to validate again when changing lines. So your M2-to-M3 transfer is covered, provided it’s within the ticket’s validity window. If M3 is your final ride, you may finish that ride after the window expires as long as you made the final transfer before it ended. The ticket requires an internet-connected phone and has no paper equivalent.\n\nThis reflects the 5 November 2026 snapshot, not a live check. See BKK’s 30-minute ticket page for current rules.",
+          "links": [
+            {
+              "text": "30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:24.253Z",
+          "completed_at": "2026-11-06T09:45:28.702Z",
+          "duration_ms": 4449,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "After that I board tram 4. Do I need to validate again?",
+          "agent": "Yes. The 30-minute mobile ticket allows transfers within its time window, but you must validate it again when changing to another line—except for transfers between metro lines. So after M2 → M3, boarding tram 4 requires another validation, and the tram transfer must be within the ticket’s 30-minute window. If tram 4 is your final ride, you may finish it after the window ends, provided you made that final transfer before expiry.\n\nThis is based on the 5 November 2026 snapshot; check BKK’s 30-minute ticket page for the current rule.",
+          "links": [
+            {
+              "text": "30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:28.710Z",
+          "completed_at": "2026-11-06T09:45:33.955Z",
+          "duration_ms": 5245,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Distinguish the metro-to-metro exception from boarding a surface line.",
+      "Explain revalidation on boarding the tram within the ticket's transfer window."
+    ],
+    "critical_failures": [
+      "Says the first validation alone covers all surface transfers.",
+      "Requires revalidation solely for the metro-to-metro transfer."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

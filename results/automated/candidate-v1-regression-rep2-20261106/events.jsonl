@@ -1,0 +1,21 @@
+{"at":"2026-11-06T09:36:01.388Z","type":"attempt","test_id":"T001","attempt":1,"state":"SUCCESS","duration_ms":19200,"error":null}
+{"at":"2026-11-06T09:37:01.673Z","type":"attempt","test_id":"T002","attempt":1,"state":"ERROR","duration_ms":60283,"error":"locator.waitFor: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('textbox') to be visible\u001b[22m\n"}
+{"at":"2026-11-06T09:37:21.033Z","type":"attempt","test_id":"T002","attempt":2,"state":"SUCCESS","duration_ms":19359,"error":null}
+{"at":"2026-11-06T09:37:39.642Z","type":"attempt","test_id":"T003","attempt":1,"state":"SUCCESS","duration_ms":18608,"error":null}
+{"at":"2026-11-06T09:37:56.369Z","type":"attempt","test_id":"T004","attempt":1,"state":"SUCCESS","duration_ms":16726,"error":null}
+{"at":"2026-11-06T09:38:15.251Z","type":"attempt","test_id":"T005","attempt":1,"state":"SUCCESS","duration_ms":18878,"error":null}
+{"at":"2026-11-06T09:38:33.733Z","type":"attempt","test_id":"T006","attempt":1,"state":"SUCCESS","duration_ms":18480,"error":null}
+{"at":"2026-11-06T09:38:49.464Z","type":"attempt","test_id":"T007","attempt":1,"state":"SUCCESS","duration_ms":15729,"error":null}
+{"at":"2026-11-06T09:39:05.730Z","type":"attempt","test_id":"T008","attempt":1,"state":"SUCCESS","duration_ms":16265,"error":null}
+{"at":"2026-11-06T09:39:23.306Z","type":"attempt","test_id":"T009","attempt":1,"state":"SUCCESS","duration_ms":17575,"error":null}
+{"at":"2026-11-06T09:39:43.662Z","type":"attempt","test_id":"T010","attempt":1,"state":"SUCCESS","duration_ms":20354,"error":null}
+{"at":"2026-11-06T09:40:00.251Z","type":"attempt","test_id":"T011","attempt":1,"state":"SUCCESS","duration_ms":16588,"error":null}
+{"at":"2026-11-06T09:40:19.093Z","type":"attempt","test_id":"T012","attempt":1,"state":"SUCCESS","duration_ms":18841,"error":null}
+{"at":"2026-11-06T09:40:38.947Z","type":"attempt","test_id":"T013","attempt":1,"state":"SUCCESS","duration_ms":19853,"error":null}
+{"at":"2026-11-06T09:40:55.660Z","type":"attempt","test_id":"T014","attempt":1,"state":"SUCCESS","duration_ms":16711,"error":null}
+{"at":"2026-11-06T09:41:12.456Z","type":"attempt","test_id":"T015","attempt":1,"state":"SUCCESS","duration_ms":16795,"error":null}
+{"at":"2026-11-06T09:41:31.846Z","type":"attempt","test_id":"T016","attempt":1,"state":"SUCCESS","duration_ms":19389,"error":null}
+{"at":"2026-11-06T09:41:50.790Z","type":"attempt","test_id":"T017","attempt":1,"state":"SUCCESS","duration_ms":18943,"error":null}
+{"at":"2026-11-06T09:42:07.688Z","type":"attempt","test_id":"T018","attempt":1,"state":"SUCCESS","duration_ms":16897,"error":null}
+{"at":"2026-11-06T09:42:23.888Z","type":"attempt","test_id":"T019","attempt":1,"state":"SUCCESS","duration_ms":16199,"error":null}
+{"at":"2026-11-06T09:42:43.135Z","type":"attempt","test_id":"T020","attempt":1,"state":"SUCCESS","duration_ms":19246,"error":null}

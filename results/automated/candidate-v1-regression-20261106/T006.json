@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T006",
+  "title": "Last transfer before 30-minute deadline",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:29:13.820Z",
+  "finished_at": "2026-11-06T08:29:32.642Z",
+  "duration_ms": 18822,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "7ba445970940"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I activated a 30-minute mobile ticket at 10:00 and transferred at 10:28.",
+      "agent": "Under the 5 November 2026 snapshot, your transfer at 10:28 is within the 30-minute ticket’s transfer window. Validate the ticket when changing to another line. If that was your final transfer, you may finish that last ride even if it continues beyond 10:30; the window is not a deadline to get off. If you transfer again after 10:30, that later transfer would be outside the stated window.\n\nThis applies to covered lines and the ticket’s applicable area; the snapshot doesn’t establish coverage for every route. BKK: 30-minute ticket. I’m an independent demo, not affiliated with BKK; check the official page for current rules.",
+      "links": [
+        {
+          "text": "BKK: 30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:29:21.401Z",
+      "completed_at": "2026-11-06T08:29:27.146Z",
+      "duration_ms": 5745,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "My last bus arrives at 10:48. Can I stay on that bus until the stop?",
+      "agent": "Yes—if the 10:28 transfer was your final transfer and you validated the mobile ticket when boarding/changing lines. The snapshot says you may complete that last ride after the 30-minute window ends, so arriving at 10:48 is okay; 10:30 is not a get-off deadline.\n\nThis assumes the bus and journey are covered by the ticket’s applicable rules. BKK: 30-minute ticket. This is based on the 5 November 2026 snapshot, not live verification; check BKK’s current guidance.",
+      "links": [
+        {
+          "text": "BKK: 30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:29:27.158Z",
+      "completed_at": "2026-11-06T08:29:32.625Z",
+      "duration_ms": 5467,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:29:13.820Z",
+      "duration_ms": 18812,
+      "session_id_hash": "7ba445970940",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I activated a 30-minute mobile ticket at 10:00 and transferred at 10:28.",
+          "agent": "Under the 5 November 2026 snapshot, your transfer at 10:28 is within the 30-minute ticket’s transfer window. Validate the ticket when changing to another line. If that was your final transfer, you may finish that last ride even if it continues beyond 10:30; the window is not a deadline to get off. If you transfer again after 10:30, that later transfer would be outside the stated window.\n\nThis applies to covered lines and the ticket’s applicable area; the snapshot doesn’t establish coverage for every route. BKK: 30-minute ticket. I’m an independent demo, not affiliated with BKK; check the official page for current rules.",
+          "links": [
+            {
+              "text": "BKK: 30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:29:21.401Z",
+          "completed_at": "2026-11-06T08:29:27.146Z",
+          "duration_ms": 5745,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "My last bus arrives at 10:48. Can I stay on that bus until the stop?",
+          "agent": "Yes—if the 10:28 transfer was your final transfer and you validated the mobile ticket when boarding/changing lines. The snapshot says you may complete that last ride after the 30-minute window ends, so arriving at 10:48 is okay; 10:30 is not a get-off deadline.\n\nThis assumes the bus and journey are covered by the ticket’s applicable rules. BKK: 30-minute ticket. This is based on the 5 November 2026 snapshot, not live verification; check BKK’s current guidance.",
+          "links": [
+            {
+              "text": "BKK: 30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:29:27.158Z",
+          "completed_at": "2026-11-06T08:29:32.625Z",
+          "duration_ms": 5467,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Differentiate transfer-start deadline from arrival time.",
+      "According to the documented rule, allow finishing the last ride after 10:30 if the last covered transfer was within the window."
+    ],
+    "critical_failures": [
+      "Claims the passenger must get off at 10:30 despite a valid last boarding."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

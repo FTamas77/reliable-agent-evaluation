@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T005",
+  "title": "24-hour travelcard excludes 100E",
+  "run_id": "candidate-v1-regression-rep2-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:37:56.373Z",
+  "finished_at": "2026-11-06T09:38:15.252Z",
+  "duration_ms": 18879,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "102b774b25e4"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "My 24-hour Budapest travelcard is valid until tonight. Can I use it on any bus?",
+      "agent": "For ordinary Budapest bus services, generally yes—within your travelcard’s validity period and applicable area. But not on airport express 100E. A 24-hour Budapest travelcard is not a Budapest pass, and by itself it doesn’t qualify for the discounted 100E add-on. For 100E, the snapshot lists a separate full-price ticket at 2,500 HUF; the 200E follows ordinary ticket/pass rules. 24-hour Budapest travelcard · Airport shuttle tickets and add-on · Airport express\n\nThis is based on the limited 5 November 2026 fare snapshot, not a live check. If you mean a particular bus route, tell me its number and I can help distinguish it; check BKK’s current rules for your travel date.",
+      "links": [
+        {
+          "text": "24-hour Budapest travelcard",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/"
+        },
+        {
+          "text": "Airport shuttle tickets and add-on",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "Airport express",
+          "href": "https://bkk.hu/en/travel-information/airport-express/"
+        }
+      ],
+      "started_at": "2026-11-06T09:38:04.040Z",
+      "completed_at": "2026-11-06T09:38:09.525Z",
+      "duration_ms": 5485,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Specifically, I need to go by 100E.",
+      "agent": "Your 24-hour Budapest travelcard alone doesn’t cover 100E and doesn’t qualify for its discounted add-on. Based on the 5 November 2026 snapshot, you’ll need a separate 100E full-price airport shuttle ticket (2,500 HUF), unless you have an independently applicable free-travel entitlement. 100E airport shuttle ticket · 24-hour Budapest travelcard\n\nI can explain the fare choice, but I can’t buy or issue the ticket. Check BKK’s current information before travelling; I haven’t live-verified the fare.",
+      "links": [
+        {
+          "text": "100E airport shuttle ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "24-hour Budapest travelcard",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/"
+        }
+      ],
+      "started_at": "2026-11-06T09:38:09.535Z",
+      "completed_at": "2026-11-06T09:38:15.245Z",
+      "duration_ms": 5710,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:37:56.373Z",
+      "duration_ms": 18878,
+      "session_id_hash": "102b774b25e4",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "My 24-hour Budapest travelcard is valid until tonight. Can I use it on any bus?",
+          "agent": "For ordinary Budapest bus services, generally yes—within your travelcard’s validity period and applicable area. But not on airport express 100E. A 24-hour Budapest travelcard is not a Budapest pass, and by itself it doesn’t qualify for the discounted 100E add-on. For 100E, the snapshot lists a separate full-price ticket at 2,500 HUF; the 200E follows ordinary ticket/pass rules. 24-hour Budapest travelcard · Airport shuttle tickets and add-on · Airport express\n\nThis is based on the limited 5 November 2026 fare snapshot, not a live check. If you mean a particular bus route, tell me its number and I can help distinguish it; check BKK’s current rules for your travel date.",
+          "links": [
+            {
+              "text": "24-hour Budapest travelcard",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/"
+            },
+            {
+              "text": "Airport shuttle tickets and add-on",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "Airport express",
+              "href": "https://bkk.hu/en/travel-information/airport-express/"
+            }
+          ],
+          "started_at": "2026-11-06T09:38:04.040Z",
+          "completed_at": "2026-11-06T09:38:09.525Z",
+          "duration_ms": 5485,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Specifically, I need to go by 100E.",
+          "agent": "Your 24-hour Budapest travelcard alone doesn’t cover 100E and doesn’t qualify for its discounted add-on. Based on the 5 November 2026 snapshot, you’ll need a separate 100E full-price airport shuttle ticket (2,500 HUF), unless you have an independently applicable free-travel entitlement. 100E airport shuttle ticket · 24-hour Budapest travelcard\n\nI can explain the fare choice, but I can’t buy or issue the ticket. Check BKK’s current information before travelling; I haven’t live-verified the fare.",
+          "links": [
+            {
+              "text": "100E airport shuttle ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "24-hour Budapest travelcard",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/"
+            }
+          ],
+          "started_at": "2026-11-06T09:38:09.535Z",
+          "completed_at": "2026-11-06T09:38:15.245Z",
+          "duration_ms": 5710,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain relevant normal-route coverage without claiming every special service is included.",
+      "Clarify that the 24-hour travelcard alone does not permit 100E travel."
+    ],
+    "critical_failures": [
+      "Tells the user to board 100E with only the travelcard."
+    ],
+    "baseline_score": "PARTIAL",
+    "manual_v1_score": "PASS"
+  }
+}

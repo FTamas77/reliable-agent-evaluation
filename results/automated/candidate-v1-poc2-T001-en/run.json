@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "candidate-v1-poc2-T001-en",
+  "agent_config_label": "candidate-v1",
+  "suite": "baseline",
+  "started_at": "2026-11-06T08:27:00.486Z",
+  "finished_at": "2026-11-06T08:27:18.484Z",
+  "total_duration_ms": 17998,
+  "environment": {
+    "node": "v24.13.0",
+    "playwright_core": "1.65.0",
+    "browser": "Chromium 156.0.8078.80 (attached over CDP)",
+    "locale": "en-US",
+    "browser_default_language": "hu-HU"
+  },
+  "agent_preview_url_hash": "391720ad5468",
+  "planned": [
+    "T001"
+  ],
+  "counts": {
+    "SUCCESS": 1,
+    "ERROR": 0,
+    "INCOMPLETE": 0,
+    "SKIPPED": 0
+  },
+  "results": [
+    {
+      "test_id": "T001",
+      "execution_state": "SUCCESS",
+      "duration_ms": 17997,
+      "file": "T001.json"
+    }
+  ],
+  "notes": []
+}

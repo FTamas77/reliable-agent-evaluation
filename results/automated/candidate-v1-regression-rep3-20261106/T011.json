@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T011",
+  "title": "One ticket on bus then tram",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:45:51.262Z",
+  "finished_at": "2026-11-06T09:46:07.028Z",
+  "duration_ms": 15766,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "41dcce465d0e"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have one ordinary BKK single ticket. I'll ride a bus for 10 minutes.",
+      "agent": "Your ordinary single ticket generally covers one continuous one-way ride on an ordinary bus within the applicable area, so a 10-minute bus ride should fit that use. Validate it as required for the ticket format before starting. It does not cover the 100E airport shuttle, and a voluntary transfer to another street-level service normally needs another ticket. BKK: Single ticket\n\nThat’s based on the 5 November 2026 snapshot, not a live check. Is this an ordinary bus (not 100E), and will you stay on the same bus for the ride?",
+      "links": [
+        {
+          "text": "BKK: Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:45:57.346Z",
+      "completed_at": "2026-11-06T09:46:02.320Z",
+      "duration_ms": 4974,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Then I want to board a tram to finish the trip. Can I reuse that same single ticket?",
+      "agent": "No. For a bus-to-tram transfer, an ordinary single ticket generally does not cover both street-level rides; you’ll need another single ticket for the tram. That’s different from a permitted transfer between metro lines in the same direction. BKK: Single ticket\n\nThis is based on the 5 November 2026 snapshot, not a live check. I can’t verify your ticket or validate it for you.",
+      "links": [
+        {
+          "text": "BKK: Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:46:02.330Z",
+      "completed_at": "2026-11-06T09:46:07.018Z",
+      "duration_ms": 4688,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:45:51.262Z",
+      "duration_ms": 15766,
+      "session_id_hash": "41dcce465d0e",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have one ordinary BKK single ticket. I'll ride a bus for 10 minutes.",
+          "agent": "Your ordinary single ticket generally covers one continuous one-way ride on an ordinary bus within the applicable area, so a 10-minute bus ride should fit that use. Validate it as required for the ticket format before starting. It does not cover the 100E airport shuttle, and a voluntary transfer to another street-level service normally needs another ticket. BKK: Single ticket\n\nThat’s based on the 5 November 2026 snapshot, not a live check. Is this an ordinary bus (not 100E), and will you stay on the same bus for the ride?",
+          "links": [
+            {
+              "text": "BKK: Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:45:57.346Z",
+          "completed_at": "2026-11-06T09:46:02.320Z",
+          "duration_ms": 4974,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Then I want to board a tram to finish the trip. Can I reuse that same single ticket?",
+          "agent": "No. For a bus-to-tram transfer, an ordinary single ticket generally does not cover both street-level rides; you’ll need another single ticket for the tram. That’s different from a permitted transfer between metro lines in the same direction. BKK: Single ticket\n\nThis is based on the 5 November 2026 snapshot, not a live check. I can’t verify your ticket or validate it for you.",
+          "links": [
+            {
+              "text": "BKK: Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:46:02.330Z",
+          "completed_at": "2026-11-06T09:46:07.018Z",
+          "duration_ms": 4688,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain that a voluntary surface-to-surface transfer generally needs another ordinary ticket or a different valid product.",
+      "Do not confuse a regular single ticket with a 30-minute ticket."
+    ],
+    "critical_failures": [
+      "Treats the ordinary ticket like a transfer-enabled time ticket."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

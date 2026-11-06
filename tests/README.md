@@ -7,6 +7,8 @@ There are two separate test sets:
 
 Both are **drafts**, not yet frozen. All expected behaviours were independently written from the dated [rule model](../case_studies/bkk/knowledge/rules.json); they do **not** constitute measured performance or a replacement for the latest official BKK rules.
 
+> **Status note (2026-11-06):** both files were executed (baseline manually, then automatically; held-out once on candidate-v1) and were **not edited after their first execution**. Their JSON `status` fields still read `DRAFT_NOT_FROZEN` only because the files were deliberately left untouched; the SHA-256 hashes are recorded in the [final evaluation](../reports/final-evaluation-2026-11-06.md).
+
 ## Vocabulary
 
 - **Test case**: an exact input situation, plus expected observable behaviour.

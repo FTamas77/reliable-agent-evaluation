@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T012",
+  "title": "Metro lines, then reversing direction",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:46:07.029Z",
+  "finished_at": "2026-11-06T09:46:22.797Z",
+  "duration_ms": 15768,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "b1bfae9becab"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I validated an ordinary single ticket and transfer from metro M2 to M3, staying in the metro network and continuing forward.",
+      "agent": "That transfer is permitted with an ordinary single ticket: changing between metro lines in the same direction is allowed. The ticket is validated once for the journey; you don’t need another ordinary single just for the M2-to-M3 metro transfer. This matches your description of staying in the metro network and continuing forward.\n\nThat rule is in my 5 November 2026 snapshot; check BKK’s Single ticket page for current information. I can explain how the rule differs for a transfer to a bus or tram if that’s relevant.\n\nYour described transfer is covered by the ordinary single-ticket rule.\nM2 → M3 metro transfer\nPermitted on one ordinary single ticket when changing between metro lines in the same direction.\nOne ticket",
+      "links": [
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:46:12.579Z",
+      "completed_at": "2026-11-06T09:46:18.092Z",
+      "duration_ms": 5513,
+      "warnings": [
+        "response does not end with terminal punctuation (possible truncation)"
+      ]
+    },
+    {
+      "turn": 2,
+      "user": "Now I want to take M3 back in the opposite direction. Can I keep using that ticket?",
+      "agent": "No—not if you mean reversing direction and starting a return ride. The ordinary single ticket covers one continuous one-way journey; the permitted M2-to-M3 change is specifically between metro lines in the same direction. So the earlier transfer allowance doesn’t cover taking M3 back the opposite way. You’d need another valid ticket for that ride.\n\nThat’s based on the 5 November 2026 snapshot, not a live check. See BKK’s Single ticket page for the current rule.",
+      "links": [
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:46:18.101Z",
+      "completed_at": "2026-11-06T09:46:22.788Z",
+      "duration_ms": 4687,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:46:07.029Z",
+      "duration_ms": 15768,
+      "session_id_hash": "b1bfae9becab",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I validated an ordinary single ticket and transfer from metro M2 to M3, staying in the metro network and continuing forward.",
+          "agent": "That transfer is permitted with an ordinary single ticket: changing between metro lines in the same direction is allowed. The ticket is validated once for the journey; you don’t need another ordinary single just for the M2-to-M3 metro transfer. This matches your description of staying in the metro network and continuing forward.\n\nThat rule is in my 5 November 2026 snapshot; check BKK’s Single ticket page for current information. I can explain how the rule differs for a transfer to a bus or tram if that’s relevant.\n\nYour described transfer is covered by the ordinary single-ticket rule.\nM2 → M3 metro transfer\nPermitted on one ordinary single ticket when changing between metro lines in the same direction.\nOne ticket",
+          "links": [
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:46:12.579Z",
+          "completed_at": "2026-11-06T09:46:18.092Z",
+          "duration_ms": 5513,
+          "warnings": [
+            "response does not end with terminal punctuation (possible truncation)"
+          ]
+        },
+        {
+          "turn": 2,
+          "user": "Now I want to take M3 back in the opposite direction. Can I keep using that ticket?",
+          "agent": "No—not if you mean reversing direction and starting a return ride. The ordinary single ticket covers one continuous one-way journey; the permitted M2-to-M3 change is specifically between metro lines in the same direction. So the earlier transfer allowance doesn’t cover taking M3 back the opposite way. You’d need another valid ticket for that ride.\n\nThat’s based on the 5 November 2026 snapshot, not a live check. See BKK’s Single ticket page for the current rule.",
+          "links": [
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:46:18.101Z",
+          "completed_at": "2026-11-06T09:46:22.788Z",
+          "duration_ms": 4687,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Permit the continuous metro-line transfer under the documented conditions.",
+      "Do not permit an arbitrary reversal/return journey on the same ordinary ticket."
+    ],
+    "critical_failures": [
+      "Claims all metro transfers require a new ticket.",
+      "Approves a return trip solely because the traveller stays underground."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

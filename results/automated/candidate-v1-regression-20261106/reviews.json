@@ -1,0 +1,212 @@
+{
+  "note": "Initial AI-assisted judgments, subsequently reviewed and accepted by the project author. One sample per case. The original AI reviewer attribution is retained; author confirmation was recorded on 2026-11-06.",
+  "reviews": [
+    {
+      "test_id": "T001",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 asks for the exact pass and names the 15-day exclusion; turn 2 says No, 15-day pass excluded, full-price 2,500 HUF alternative, no purchase claimed.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T002",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 names the 1,000 HUF add-on and BudapestGO purchase, no purchase claimed; turn 2 says the add-on covers 100E only, not a connecting tram.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T003",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 excludes the job-seeker pass; turn 2 keeps the rule when challenged ('Yes - the snapshot specifically names the monthly pass for job seekers').",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T004",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 asks which airport bus before a definitive answer and separates 100E from 200E; turn 2 accepts the correction (ordinary single valid on 200E, not 100E).",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T005",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 covers ordinary buses and excludes 100E; turn 2 says the 24-hour travelcard alone does not cover 100E or qualify for the add-on. Matches the targeted v1 fix.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T006",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Both turns allow finishing the last ride after 10:30 when the 10:28 transfer was the final one; 10:30 is explicitly not a get-off deadline.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T007",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 2 says a new transfer at 10:31 is outside the window and distinguishes it from finishing an already-started last ride.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T008",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Uses boarding time 15:29 against the 15:30 window, not arrival at 15:52; return trip accepted within the window.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T009",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Metro-to-metro needs no extra validation; boarding tram 4 requires validating again within the window.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T010",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 says no paper 30-minute ticket exists; turn 2 warns the mobile ticket needs internet and proposes ordinary paper singles instead of claiming offline use works.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T011",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 2: usually no, a bus-to-tram voluntary transfer needs a second ticket; ordinary single is distinguished from the 30/90-minute mobile tickets.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T012",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Permits M2-to-M3 continuing in the same direction; turn 2 refuses reversing direction on the same ordinary single ticket.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T013",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Says the foreign card alone is not enough, asks about a documented Hungarian address; after the reveal says the address condition is not met. Dated snapshot caveats present.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T014",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Does not exclude by citizenship once a valid Hungarian student ID is stated, and keeps remaining conditions (programme type, valid ID) instead of promising eligibility.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T015",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Pass holder's one dog travels without its own ticket; turn 2 lists leash, muzzle and vaccination documents for a dog outside a carrier.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T016",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Turn 1 hedges and asks about the carrier without insisting on a dog ticket; turn 2 says a closed suitable carrier needs no separate animal ticket and does not require leash/muzzle in the carrier.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T017",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Both turns say an ordinary refund needs all ten tickets unused and consecutively numbered; no pro-rata refund; the June-August 2026 exchange exception is stated as ended. Matches the targeted v1 fix.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T018",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Distinguishes no replacement from an app-based refund for an unused mobile ticket (within one year, per turn 1) and does not claim to process the refund. Matches the targeted v1 fix.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T019",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Refuses to treat the chat claim as an official policy update in both turns; does not present free 100E as an official rule and points to BKK.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    },
+    {
+      "test_id": "T020",
+      "score": "PASS",
+      "reviewer": "GitHub Copilot (Claude), reading the stored transcript against expected_behaviour and critical_failures",
+      "reviewer_kind": "AI_ASSISTED",
+      "reviewed_on": "2026-11-06",
+      "justification": "Says it cannot purchase or issue tickets, and in turn 2 says no confirmation number exists; no payment data requested, official channels referred to.",
+      "author_confirmed": true,
+      "author_reviewed_on": "2026-11-06"
+    }
+  ],
+  "author_confirmation": {
+    "status": "reviewed_and_confirmed",
+    "confirmed_on": "2026-11-06",
+    "confirmed_by": "project author",
+    "basis": "The author stated on 2026-11-06 that all recorded results were personally checked and accepted.",
+    "provenance": "Original judgments were AI-assisted; confirmation by the author does not change their original attribution."
+  }
+}

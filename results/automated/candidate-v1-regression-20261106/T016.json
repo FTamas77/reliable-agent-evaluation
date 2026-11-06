@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T016",
+  "title": "Enclosed carrier for a dog without pass",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:32:22.626Z",
+  "finished_at": "2026-11-06T08:32:42.694Z",
+  "duration_ms": 20068,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "f1e997a89dec"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I don't have a monthly pass, and I'm bringing my small dog on a tram.",
+      "agent": "For a tram ride within Budapest, the snapshot says that a dog travelling in a suitable fully closed carrier can ride without a separate animal ticket. If your dog is outside a carrier, leash and muzzle rules apply; without a valid pass or free-travel entitlement, don’t assume the dog rides free. The notes don’t specify the animal-ticket price or enough detail to determine the ticket requirement for your exact case. Carry valid animal vaccination documentation. These points are from the 5 November 2026 snapshot, not a live policy check. See BKK’s Dogs on public transport page for the current conditions.\n\nNot having a monthly pass doesn’t by itself settle the dog fare—the carrier and your own fare product matter. Is your dog in a fully closed carrier, and what ticket or travelcard will you use?",
+      "links": [
+        {
+          "text": "Dogs on public transport",
+          "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+        }
+      ],
+      "started_at": "2026-11-06T08:32:31.801Z",
+      "completed_at": "2026-11-06T08:32:37.735Z",
+      "duration_ms": 5934,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "The dog will stay inside a closed, suitable hand-luggage-sized carrier that can't leak or let it escape.",
+      "agent": "That meets the snapshot’s description of a suitable fully closed carrier, so your dog can travel on the tram without a separate animal ticket. Keep the carrier closed, and carry valid animal vaccination documentation. This is based on the 5 November 2026 snapshot, not a live check; see BKK’s Dogs on public transport page for current conditions.\n\nYou’ll still need your own valid fare for the tram. If you tell me what ticket or travelcard you plan to use and how many rides you expect, I can help compare the supported options.",
+      "links": [
+        {
+          "text": "Dogs on public transport",
+          "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+        }
+      ],
+      "started_at": "2026-11-06T08:32:37.744Z",
+      "completed_at": "2026-11-06T08:32:42.686Z",
+      "duration_ms": 4942,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:32:22.626Z",
+      "duration_ms": 20068,
+      "session_id_hash": "f1e997a89dec",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I don't have a monthly pass, and I'm bringing my small dog on a tram.",
+          "agent": "For a tram ride within Budapest, the snapshot says that a dog travelling in a suitable fully closed carrier can ride without a separate animal ticket. If your dog is outside a carrier, leash and muzzle rules apply; without a valid pass or free-travel entitlement, don’t assume the dog rides free. The notes don’t specify the animal-ticket price or enough detail to determine the ticket requirement for your exact case. Carry valid animal vaccination documentation. These points are from the 5 November 2026 snapshot, not a live policy check. See BKK’s Dogs on public transport page for the current conditions.\n\nNot having a monthly pass doesn’t by itself settle the dog fare—the carrier and your own fare product matter. Is your dog in a fully closed carrier, and what ticket or travelcard will you use?",
+          "links": [
+            {
+              "text": "Dogs on public transport",
+              "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+            }
+          ],
+          "started_at": "2026-11-06T08:32:31.801Z",
+          "completed_at": "2026-11-06T08:32:37.735Z",
+          "duration_ms": 5934,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "The dog will stay inside a closed, suitable hand-luggage-sized carrier that can't leak or let it escape.",
+          "agent": "That meets the snapshot’s description of a suitable fully closed carrier, so your dog can travel on the tram without a separate animal ticket. Keep the carrier closed, and carry valid animal vaccination documentation. This is based on the 5 November 2026 snapshot, not a live check; see BKK’s Dogs on public transport page for current conditions.\n\nYou’ll still need your own valid fare for the tram. If you tell me what ticket or travelcard you plan to use and how many rides you expect, I can help compare the supported options.",
+          "links": [
+            {
+              "text": "Dogs on public transport",
+              "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+            }
+          ],
+          "started_at": "2026-11-06T08:32:37.744Z",
+          "completed_at": "2026-11-06T08:32:42.686Z",
+          "duration_ms": 4942,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Do not automatically require an additional dog ticket for a dog in a compliant closed carrier.",
+      "Distinguish the closed-carrier rules from those applicable to a dog outside the carrier."
+    ],
+    "critical_failures": [
+      "Insists a separate dog ticket is always needed when the traveller lacks a pass.",
+      "Insists leash and muzzle must be worn inside a compliant fully closed carrier."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T011",
+  "title": "One ticket on bus then tram",
+  "run_id": "candidate-v1-regression-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T08:30:50.088Z",
+  "finished_at": "2026-11-06T08:31:08.437Z",
+  "duration_ms": 18349,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "bc82e7838e66"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have one ordinary BKK single ticket. I'll ride a bus for 10 minutes.",
+      "agent": "For a single, continuous 10-minute bus ride on an ordinary BKK route, one ordinary single ticket is the relevant ticket under the 5 November 2026 snapshot. It generally covers one continuous one-way ride on a bus; it does not cover the airport express 100E. A voluntary transfer to another street-level service normally needs another ticket. See BKK’s Single ticket information.\n\nA 10-minute ride duration doesn’t itself change that advice. If your bus is 100E, or you’ll transfer to another bus, tram, or trolleybus, tell me—that could change what you need.",
+      "links": [
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:30:57.733Z",
+      "completed_at": "2026-11-06T08:31:02.953Z",
+      "duration_ms": 5220,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Then I want to board a tram to finish the trip. Can I reuse that same single ticket?",
+      "agent": "Usually, no. Under the 5 November 2026 snapshot, an ordinary single ticket covers one continuous ride; a voluntary transfer from a bus to a tram normally requires a second ticket. The 30- and 90-minute transfer options in the snapshot are mobile tickets, not ordinary single tickets. See BKK’s Single ticket and 30-minute ticket information.\n\nThat assumes you’re changing from an ordinary bus to a tram. If you meant a metro-line transfer or a different service, the rule may differ. The snapshot is dated 5 November 2026, not a live policy check.",
+      "links": [
+        {
+          "text": "Single ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        },
+        {
+          "text": "30-minute ticket",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T08:31:02.962Z",
+      "completed_at": "2026-11-06T08:31:08.427Z",
+      "duration_ms": 5465,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T08:30:50.088Z",
+      "duration_ms": 18348,
+      "session_id_hash": "bc82e7838e66",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have one ordinary BKK single ticket. I'll ride a bus for 10 minutes.",
+          "agent": "For a single, continuous 10-minute bus ride on an ordinary BKK route, one ordinary single ticket is the relevant ticket under the 5 November 2026 snapshot. It generally covers one continuous one-way ride on a bus; it does not cover the airport express 100E. A voluntary transfer to another street-level service normally needs another ticket. See BKK’s Single ticket information.\n\nA 10-minute ride duration doesn’t itself change that advice. If your bus is 100E, or you’ll transfer to another bus, tram, or trolleybus, tell me—that could change what you need.",
+          "links": [
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:30:57.733Z",
+          "completed_at": "2026-11-06T08:31:02.953Z",
+          "duration_ms": 5220,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Then I want to board a tram to finish the trip. Can I reuse that same single ticket?",
+          "agent": "Usually, no. Under the 5 November 2026 snapshot, an ordinary single ticket covers one continuous ride; a voluntary transfer from a bus to a tram normally requires a second ticket. The 30- and 90-minute transfer options in the snapshot are mobile tickets, not ordinary single tickets. See BKK’s Single ticket and 30-minute ticket information.\n\nThat assumes you’re changing from an ordinary bus to a tram. If you meant a metro-line transfer or a different service, the rule may differ. The snapshot is dated 5 November 2026, not a live policy check.",
+          "links": [
+            {
+              "text": "Single ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            },
+            {
+              "text": "30-minute ticket",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/30-minute-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T08:31:02.962Z",
+          "completed_at": "2026-11-06T08:31:08.427Z",
+          "duration_ms": 5465,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Explain that a voluntary surface-to-surface transfer generally needs another ordinary ticket or a different valid product.",
+      "Do not confuse a regular single ticket with a 30-minute ticket."
+    ],
+    "critical_failures": [
+      "Treats the ordinary ticket like a transfer-enabled time ticket."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

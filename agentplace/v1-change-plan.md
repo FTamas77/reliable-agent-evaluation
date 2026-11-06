@@ -2,6 +2,7 @@
 
 **Prepared:** 2026-11-06  
 **State:** Prepared in GitHub, **not yet deployed to Agentplace**.  
+**Status update (2026-11-06, later the same day):** the Builder reported replacing the knowledge file with this v1 content (see [v1-deployment-record.json](v1-deployment-record.json)); the deployment was not independently inspected and no platform version ID exists. The text below is the original plan and is kept unchanged. Results: [final evaluation](../reports/final-evaluation-2026-11-06.md).  
 **Baseline:** [v0 agent knowledge](knowledge-v0.md), [20-case results](../results/baseline-v0.run.json), [baseline report](../reports/baseline-v0-2026-11-06.md).  
 **Candidate knowledge:** [v1 agent knowledge](knowledge-v1.md).
 

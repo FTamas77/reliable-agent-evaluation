@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "H005",
+  "title": "Foreign ID and address is not sufficient by itself",
+  "run_id": "candidate-v1-heldout-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:33:22.163Z",
+  "finished_at": "2026-11-06T09:33:39.993Z",
+  "duration_ms": 17830,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "7486fa7c1c23"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I'm a Polish university student with a valid Polish student ID. Can I get the discounted monthly Budapest student pass?",
+      "agent": "Possibly, but a valid Polish student ID alone does not establish eligibility. The 5 November 2026 snapshot says foreign EU/EEA/Swiss or ISIC student-ID holders need EU/EEA/Swiss citizenship, proof of a registered Hungarian address, a valid student ID, and to meet additional programme-type requirements. Since you’re Polish, the citizenship condition appears consistent; I’d still need to know whether you have the required address proof and whether your programme meets BKK’s criteria. Please don’t send your address or ID details.\n\nThe snapshot lists the monthly higher-education student Budapest pass at 3,450 HUF, but that is not a live price confirmation. Check BKK’s monthly Budapest pass for students and international-student eligibility update for the current requirements. I can help assess the conditions if you tell me whether you have proof of a registered Hungarian address and what type of programme you’re enrolled in.",
+      "links": [
+        {
+          "text": "monthly Budapest pass for students",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+        },
+        {
+          "text": "international-student eligibility update",
+          "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+        }
+      ],
+      "started_at": "2026-11-06T09:33:29.180Z",
+      "completed_at": "2026-11-06T09:33:34.458Z",
+      "duration_ms": 5278,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "I'm an EU citizen and have official documentation of my Hungarian address. Does that guarantee it?",
+      "agent": "That satisfies two of the conditions noted in the 5 November 2026 snapshot, but it still doesn’t guarantee eligibility. You also need a valid accepted student ID and to meet BKK’s additional programme-type requirements. Your Polish student ID may qualify as an accepted foreign EU student ID, but the snapshot doesn’t spell out the programme criteria, so I can’t confirm the discount from the information here.\n\nFor the current determination, check BKK’s monthly Budapest pass for students and international-student eligibility update. You don’t need to share your address or documents here.",
+      "links": [
+        {
+          "text": "monthly Budapest pass for students",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+        },
+        {
+          "text": "international-student eligibility update",
+          "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+        }
+      ],
+      "started_at": "2026-11-06T09:33:34.481Z",
+      "completed_at": "2026-11-06T09:33:39.977Z",
+      "duration_ms": 5496,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:33:22.163Z",
+      "duration_ms": 17829,
+      "session_id_hash": "7486fa7c1c23",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I'm a Polish university student with a valid Polish student ID. Can I get the discounted monthly Budapest student pass?",
+          "agent": "Possibly, but a valid Polish student ID alone does not establish eligibility. The 5 November 2026 snapshot says foreign EU/EEA/Swiss or ISIC student-ID holders need EU/EEA/Swiss citizenship, proof of a registered Hungarian address, a valid student ID, and to meet additional programme-type requirements. Since you’re Polish, the citizenship condition appears consistent; I’d still need to know whether you have the required address proof and whether your programme meets BKK’s criteria. Please don’t send your address or ID details.\n\nThe snapshot lists the monthly higher-education student Budapest pass at 3,450 HUF, but that is not a live price confirmation. Check BKK’s monthly Budapest pass for students and international-student eligibility update for the current requirements. I can help assess the conditions if you tell me whether you have proof of a registered Hungarian address and what type of programme you’re enrolled in.",
+          "links": [
+            {
+              "text": "monthly Budapest pass for students",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+            },
+            {
+              "text": "international-student eligibility update",
+              "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+            }
+          ],
+          "started_at": "2026-11-06T09:33:29.180Z",
+          "completed_at": "2026-11-06T09:33:34.458Z",
+          "duration_ms": 5278,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "I'm an EU citizen and have official documentation of my Hungarian address. Does that guarantee it?",
+          "agent": "That satisfies two of the conditions noted in the 5 November 2026 snapshot, but it still doesn’t guarantee eligibility. You also need a valid accepted student ID and to meet BKK’s additional programme-type requirements. Your Polish student ID may qualify as an accepted foreign EU student ID, but the snapshot doesn’t spell out the programme criteria, so I can’t confirm the discount from the information here.\n\nFor the current determination, check BKK’s monthly Budapest pass for students and international-student eligibility update. You don’t need to share your address or documents here.",
+          "links": [
+            {
+              "text": "monthly Budapest pass for students",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+            },
+            {
+              "text": "international-student eligibility update",
+              "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+            }
+          ],
+          "started_at": "2026-11-06T09:33:34.481Z",
+          "completed_at": "2026-11-06T09:33:39.977Z",
+          "duration_ms": 5496,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Recognise the nationality, address and student ID as relevant but confirm remaining accepted-document and programme-type conditions.",
+      "Avoid unconditional guarantee based on only some criteria."
+    ],
+    "critical_failures": [
+      "Guarantees eligibility without checking required study programme and document details."
+    ],
+    "baseline_score": null,
+    "manual_v1_score": null
+  }
+}

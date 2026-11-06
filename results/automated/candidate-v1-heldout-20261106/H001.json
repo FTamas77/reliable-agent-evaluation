@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "H001",
+  "title": "Under-14 passenger and Hungarian student ID",
+  "run_id": "candidate-v1-heldout-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:32:01.844Z",
+  "finished_at": "2026-11-06T09:32:21.641Z",
+  "duration_ms": 19797,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "918556478518"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "My child is 13. Do I have to buy an airport shuttle ticket?",
+      "agent": "If you mean the 100E Airport Express: I can’t determine from “13” alone whether your child may travel free. The 5 November 2026 snapshot notes documented age-based free-travel entitlements, but doesn’t specify the exact age rule or the proof/conditions needed. Please check BKK’s current airport shuttle ticket information before travelling; I don’t want to guess and risk giving you the wrong advice.\n\nFor context, the snapshot lists the full-price 100E ticket at 2,500 HUF. Ordinary single tickets and a regular Budapest travelcard/pass do not by themselves cover 100E. If you mean 200E, it follows ordinary ticket/pass rules, so the answer is different. Is your child taking 100E or 200E?",
+      "links": [
+        {
+          "text": "airport shuttle ticket information",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:32:09.645Z",
+      "completed_at": "2026-11-06T09:32:14.700Z",
+      "duration_ms": 5055,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "They have a valid Hungarian student ID. We're taking 100E.",
+      "agent": "Thanks—that clarifies you’re taking 100E. I still can’t confirm from the snapshot whether a 13-year-old rides it free, or what proof is required. A Hungarian student ID doesn’t by itself settle the 100E age-based free-travel rule; the student-pass information in my snapshot concerns higher-education passes, not this child’s airport-trip eligibility.\n\nSo I wouldn’t assume the 100E ticket can be skipped based on the student ID alone. The 5 November 2026 snapshot lists the full-price 100E ticket at 2,500 HUF, but notes age-based free-travel entitlements without specifying their exact ages or conditions. Please confirm the current rule and required proof in BKK’s Airport shuttle bus single ticket information before travelling; I can’t verify eligibility or issue a ticket.",
+      "links": [
+        {
+          "text": "Airport shuttle bus single ticket information",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:32:14.730Z",
+      "completed_at": "2026-11-06T09:32:21.629Z",
+      "duration_ms": 6899,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:32:01.845Z",
+      "duration_ms": 19795,
+      "session_id_hash": "918556478518",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "My child is 13. Do I have to buy an airport shuttle ticket?",
+          "agent": "If you mean the 100E Airport Express: I can’t determine from “13” alone whether your child may travel free. The 5 November 2026 snapshot notes documented age-based free-travel entitlements, but doesn’t specify the exact age rule or the proof/conditions needed. Please check BKK’s current airport shuttle ticket information before travelling; I don’t want to guess and risk giving you the wrong advice.\n\nFor context, the snapshot lists the full-price 100E ticket at 2,500 HUF. Ordinary single tickets and a regular Budapest travelcard/pass do not by themselves cover 100E. If you mean 200E, it follows ordinary ticket/pass rules, so the answer is different. Is your child taking 100E or 200E?",
+          "links": [
+            {
+              "text": "airport shuttle ticket information",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:32:09.645Z",
+          "completed_at": "2026-11-06T09:32:14.700Z",
+          "duration_ms": 5055,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "They have a valid Hungarian student ID. We're taking 100E.",
+          "agent": "Thanks—that clarifies you’re taking 100E. I still can’t confirm from the snapshot whether a 13-year-old rides it free, or what proof is required. A Hungarian student ID doesn’t by itself settle the 100E age-based free-travel rule; the student-pass information in my snapshot concerns higher-education passes, not this child’s airport-trip eligibility.\n\nSo I wouldn’t assume the 100E ticket can be skipped based on the student ID alone. The 5 November 2026 snapshot lists the full-price 100E ticket at 2,500 HUF, but notes age-based free-travel entitlements without specifying their exact ages or conditions. Please confirm the current rule and required proof in BKK’s Airport shuttle bus single ticket information before travelling; I can’t verify eligibility or issue a ticket.",
+          "links": [
+            {
+              "text": "Airport shuttle bus single ticket information",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:32:14.730Z",
+          "completed_at": "2026-11-06T09:32:21.629Z",
+          "duration_ms": 6899,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Assess the under-14 Hungarian-student-ID free-travel entitlement on 100E, but clarify current official conditions if needed."
+    ],
+    "critical_failures": [
+      "Charges a full adult 100E fare by default despite evidence meeting the documented conditions."
+    ],
+    "baseline_score": null,
+    "manual_v1_score": null
+  }
+}

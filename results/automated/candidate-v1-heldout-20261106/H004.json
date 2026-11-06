@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "H004",
+  "title": "Night bus and ticket duration",
+  "run_id": "candidate-v1-heldout-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:33:02.961Z",
+  "finished_at": "2026-11-06T09:33:22.162Z",
+  "duration_ms": 19201,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "0b352ee9597c"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "My ordinary single ticket has been validated for 85 minutes. Does that automatically make it invalid?",
+      "agent": "No—not just because 85 minutes have passed. An ordinary single ticket is generally for one continuous one-way ride; the 30- and 90-minute time windows apply to separate mobile-ticket products, not ordinary singles. For an ordinary ticket, the key issue is whether you’re still on the same continuous ride or have made a transfer: a voluntary change between street-level services normally needs another ticket, while a change between metro lines in the same direction is permitted. Ordinary singles are not valid on 100E.\n\nThat’s based on the 5 November 2026 snapshot, not a live check. See BKK’s single-ticket rules. I’m an independent demo, not affiliated with BKK.",
+      "links": [
+        {
+          "text": "single-ticket rules",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:33:08.707Z",
+      "completed_at": "2026-11-06T09:33:15.526Z",
+      "duration_ms": 6819,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "I'm on a night service, still on the same continuous ride.",
+      "agent": "If you’re still on the same continuous ride on an ordinary night-service bus, the 85 minutes alone don’t automatically invalidate your single ticket. The snapshot describes an ordinary single as generally valid for one continuous one-way ride; it doesn’t give a separate night-service time limit. This assumes you haven’t transferred and your route is within the ticket’s applicable area. For the precise rule, see BKK’s single-ticket information.\n\nThis is based on the 5 November 2026 snapshot, not a live verification. I’m an independent demo, not affiliated with BKK.",
+      "links": [
+        {
+          "text": "single-ticket information",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+        }
+      ],
+      "started_at": "2026-11-06T09:33:15.544Z",
+      "completed_at": "2026-11-06T09:33:22.146Z",
+      "duration_ms": 6602,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:33:02.961Z",
+      "duration_ms": 19201,
+      "session_id_hash": "0b352ee9597c",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "My ordinary single ticket has been validated for 85 minutes. Does that automatically make it invalid?",
+          "agent": "No—not just because 85 minutes have passed. An ordinary single ticket is generally for one continuous one-way ride; the 30- and 90-minute time windows apply to separate mobile-ticket products, not ordinary singles. For an ordinary ticket, the key issue is whether you’re still on the same continuous ride or have made a transfer: a voluntary change between street-level services normally needs another ticket, while a change between metro lines in the same direction is permitted. Ordinary singles are not valid on 100E.\n\nThat’s based on the 5 November 2026 snapshot, not a live check. See BKK’s single-ticket rules. I’m an independent demo, not affiliated with BKK.",
+          "links": [
+            {
+              "text": "single-ticket rules",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:33:08.707Z",
+          "completed_at": "2026-11-06T09:33:15.526Z",
+          "duration_ms": 6819,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "I'm on a night service, still on the same continuous ride.",
+          "agent": "If you’re still on the same continuous ride on an ordinary night-service bus, the 85 minutes alone don’t automatically invalidate your single ticket. The snapshot describes an ordinary single as generally valid for one continuous one-way ride; it doesn’t give a separate night-service time limit. This assumes you haven’t transferred and your route is within the ticket’s applicable area. For the precise rule, see BKK’s single-ticket information.\n\nThis is based on the 5 November 2026 snapshot, not a live verification. I’m an independent demo, not affiliated with BKK.",
+          "links": [
+            {
+              "text": "single-ticket information",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/single-ticket/"
+            }
+          ],
+          "started_at": "2026-11-06T09:33:15.544Z",
+          "completed_at": "2026-11-06T09:33:22.146Z",
+          "duration_ms": 6602,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Clarify whether this is a day or night service before deciding.",
+      "Use the documented night-service maximum of 120 minutes rather than applying the 80-minute daytime maximum."
+    ],
+    "critical_failures": [
+      "Declares the ticket invalid after 80 minutes regardless of night-service context."
+    ],
+    "baseline_score": null,
+    "manual_v1_score": null
+  }
+}

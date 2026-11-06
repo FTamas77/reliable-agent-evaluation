@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "H002",
+  "title": "Older passenger, age proof",
+  "run_id": "candidate-v1-heldout-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:32:21.643Z",
+  "finished_at": "2026-11-06T09:32:44.324Z",
+  "duration_ms": 22681,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "f1c0dad19226"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "My grandmother is 67. Can she ride the 100E without paying?",
+      "agent": "Yes. At age 67, your grandmother can ride the 100E free of charge; BKK says people over 65 may do so upon presentation of proof of age. She should carry an accepted age-identifying document and be ready to show it if requested.\n\nThe rule and supporting documents are stated on BKK’s Airport Express information page. My fare notes are a snapshot dated 5 November 2026; this specific 100E eligibility point was cross-checked on 6 November 2026. I’m an independent demo, not affiliated with BKK, so check the official page for current details.",
+      "links": [
+        {
+          "text": "Airport Express information page",
+          "href": "https://bkk.hu/en/travel-information/airport-express/airport-shuttle.6421/"
+        }
+      ],
+      "started_at": "2026-11-06T09:32:29.216Z",
+      "completed_at": "2026-11-06T09:32:38.758Z",
+      "duration_ms": 9542,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "She can show official proof of age.",
+      "agent": "Great—if her document is accepted as proof of age under BKK’s rule, she can use the 100E free-travel entitlement. She should keep it with her for the ride in case it is requested. For the exact accepted document types, check BKK’s Airport Express information page; I can’t confirm the document type from the information available here.",
+      "links": [
+        {
+          "text": "Airport Express information page",
+          "href": "https://bkk.hu/en/travel-information/airport-express/airport-shuttle.6421/"
+        }
+      ],
+      "started_at": "2026-11-06T09:32:38.778Z",
+      "completed_at": "2026-11-06T09:32:44.312Z",
+      "duration_ms": 5534,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:32:21.643Z",
+      "duration_ms": 22680,
+      "session_id_hash": "f1c0dad19226",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "My grandmother is 67. Can she ride the 100E without paying?",
+          "agent": "Yes. At age 67, your grandmother can ride the 100E free of charge; BKK says people over 65 may do so upon presentation of proof of age. She should carry an accepted age-identifying document and be ready to show it if requested.\n\nThe rule and supporting documents are stated on BKK’s Airport Express information page. My fare notes are a snapshot dated 5 November 2026; this specific 100E eligibility point was cross-checked on 6 November 2026. I’m an independent demo, not affiliated with BKK, so check the official page for current details.",
+          "links": [
+            {
+              "text": "Airport Express information page",
+              "href": "https://bkk.hu/en/travel-information/airport-express/airport-shuttle.6421/"
+            }
+          ],
+          "started_at": "2026-11-06T09:32:29.216Z",
+          "completed_at": "2026-11-06T09:32:38.758Z",
+          "duration_ms": 9542,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "She can show official proof of age.",
+          "agent": "Great—if her document is accepted as proof of age under BKK’s rule, she can use the 100E free-travel entitlement. She should keep it with her for the ride in case it is requested. For the exact accepted document types, check BKK’s Airport Express information page; I can’t confirm the document type from the information available here.",
+          "links": [
+            {
+              "text": "Airport Express information page",
+              "href": "https://bkk.hu/en/travel-information/airport-express/airport-shuttle.6421/"
+            }
+          ],
+          "started_at": "2026-11-06T09:32:38.778Z",
+          "completed_at": "2026-11-06T09:32:44.312Z",
+          "duration_ms": 5534,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Recognise the documented age-based 100E free travel entitlement for someone over 65 with proof."
+    ],
+    "critical_failures": [
+      "Insists every 100E passenger always needs a full-price ticket."
+    ],
+    "baseline_score": null,
+    "manual_v1_score": null
+  }
+}

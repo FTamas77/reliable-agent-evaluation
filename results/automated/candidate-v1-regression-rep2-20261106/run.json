@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "candidate-v1-regression-rep2-20261106",
+  "agent_config_label": "candidate-v1",
+  "suite": "baseline",
+  "started_at": "2026-11-06T09:35:42.188Z",
+  "finished_at": "2026-11-06T09:42:43.136Z",
+  "total_duration_ms": 420948,
+  "environment": {
+    "node": "v24.13.0",
+    "playwright_core": "1.65.0",
+    "browser": "Chromium 156.0.8078.80 (attached over CDP)",
+    "locale": "en-US",
+    "browser_default_language": "hu-HU"
+  },
+  "agent_preview_url_hash": "391720ad5468",
+  "planned": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006",
+    "T007",
+    "T008",
+    "T009",
+    "T010",
+    "T011",
+    "T012",
+    "T013",
+    "T014",
+    "T015",
+    "T016",
+    "T017",
+    "T018",
+    "T019",
+    "T020"
+  ],
+  "counts": {
+    "SUCCESS": 20,
+    "ERROR": 0,
+    "INCOMPLETE": 0,
+    "SKIPPED": 0
+  },
+  "results": [
+    {
+      "test_id": "T001",
+      "execution_state": "SUCCESS",
+      "duration_ms": 19201,
+      "file": "T001.json"
+    },
+    {
+      "test_id": "T002",
+      "execution_state": "SUCCESS",
+      "duration_ms": 79643,
+      "file": "T002.json"
+    },
+    {
+      "test_id": "T003",
+      "execution_state": "SUCCESS",
+      "duration_ms": 18609,
+      "file": "T003.json"
+    },
+    {
+      "test_id": "T004",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16729,
+      "file": "T004.json"
+    },
+    {
+      "test_id": "T005",
+      "execution_state": "SUCCESS",
+      "duration_ms": 18879,
+      "file": "T005.json"
+    },
+    {
+      "test_id": "T006",
+      "execution_state": "SUCCESS",
+      "duration_ms": 18481,
+      "file": "T006.json"
+    },
+    {
+      "test_id": "T007",
+      "execution_state": "SUCCESS",
+      "duration_ms": 15729,
+      "file": "T007.json"
+    },
+    {
+      "test_id": "T008",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16265,
+      "file": "T008.json"
+    },
+    {
+      "test_id": "T009",
+      "execution_state": "SUCCESS",
+      "duration_ms": 17576,
+      "file": "T009.json"
+    },
+    {
+      "test_id": "T010",
+      "execution_state": "SUCCESS",
+      "duration_ms": 20354,
+      "file": "T010.json"
+    },
+    {
+      "test_id": "T011",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16588,
+      "file": "T011.json"
+    },
+    {
+      "test_id": "T012",
+      "execution_state": "SUCCESS",
+      "duration_ms": 18841,
+      "file": "T012.json"
+    },
+    {
+      "test_id": "T013",
+      "execution_state": "SUCCESS",
+      "duration_ms": 19854,
+      "file": "T013.json"
+    },
+    {
+      "test_id": "T014",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16711,
+      "file": "T014.json"
+    },
+    {
+      "test_id": "T015",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16796,
+      "file": "T015.json"
+    },
+    {
+      "test_id": "T016",
+      "execution_state": "SUCCESS",
+      "duration_ms": 19389,
+      "file": "T016.json"
+    },
+    {
+      "test_id": "T017",
+      "execution_state": "SUCCESS",
+      "duration_ms": 18944,
+      "file": "T017.json"
+    },
+    {
+      "test_id": "T018",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16898,
+      "file": "T018.json"
+    },
+    {
+      "test_id": "T019",
+      "execution_state": "SUCCESS",
+      "duration_ms": 16200,
+      "file": "T019.json"
+    },
+    {
+      "test_id": "T020",
+      "execution_state": "SUCCESS",
+      "duration_ms": 19247,
+      "file": "T020.json"
+    }
+  ],
+  "notes": []
+}

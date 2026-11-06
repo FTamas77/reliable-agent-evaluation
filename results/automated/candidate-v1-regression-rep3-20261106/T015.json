@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T015",
+  "title": "Dog with valid pass, not in carrier",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:46:58.857Z",
+  "finished_at": "2026-11-06T09:47:17.290Z",
+  "duration_ms": 18433,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "434a50f615d8"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I have a valid Budapest pass and want to bring one dog on a tram within Budapest. Does it need its own ticket?",
+      "agent": "No separate dog ticket is needed for one dog on a tram within Budapest, provided your Budapest pass is valid. If the dog is not in a suitable fully closed carrier, keep it leashed and muzzled; carry valid animal vaccination documentation. This is based on the 5 November 2026 snapshot, not a live policy check. See BKK’s Dogs on public transport guidance for current conditions.",
+      "links": [
+        {
+          "text": "Dogs on public transport",
+          "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+        }
+      ],
+      "started_at": "2026-11-06T09:47:06.883Z",
+      "completed_at": "2026-11-06T09:47:12.582Z",
+      "duration_ms": 5699,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "The dog won't be in a carrier. What safety rules should I follow?",
+      "agent": "For a dog travelling outside a carrier, keep it on a leash and muzzled. Also carry its valid vaccination documentation. The 5 November 2026 snapshot supports these conditions for your stated case (one dog on a tram within Budapest with a valid pass); it is not a live policy check. See BKK’s Dogs on public transport page for current rules.",
+      "links": [
+        {
+          "text": "Dogs on public transport",
+          "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+        }
+      ],
+      "started_at": "2026-11-06T09:47:12.591Z",
+      "completed_at": "2026-11-06T09:47:17.281Z",
+      "duration_ms": 4690,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:46:58.857Z",
+      "duration_ms": 18432,
+      "session_id_hash": "434a50f615d8",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I have a valid Budapest pass and want to bring one dog on a tram within Budapest. Does it need its own ticket?",
+          "agent": "No separate dog ticket is needed for one dog on a tram within Budapest, provided your Budapest pass is valid. If the dog is not in a suitable fully closed carrier, keep it leashed and muzzled; carry valid animal vaccination documentation. This is based on the 5 November 2026 snapshot, not a live policy check. See BKK’s Dogs on public transport guidance for current conditions.",
+          "links": [
+            {
+              "text": "Dogs on public transport",
+              "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+            }
+          ],
+          "started_at": "2026-11-06T09:47:06.883Z",
+          "completed_at": "2026-11-06T09:47:12.582Z",
+          "duration_ms": 5699,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "The dog won't be in a carrier. What safety rules should I follow?",
+          "agent": "For a dog travelling outside a carrier, keep it on a leash and muzzled. Also carry its valid vaccination documentation. The 5 November 2026 snapshot supports these conditions for your stated case (one dog on a tram within Budapest with a valid pass); it is not a live policy check. See BKK’s Dogs on public transport page for current rules.",
+          "links": [
+            {
+              "text": "Dogs on public transport",
+              "href": "https://bkk.hu/en/travel-information/dogs-on-public-transport/"
+            }
+          ],
+          "started_at": "2026-11-06T09:47:12.591Z",
+          "completed_at": "2026-11-06T09:47:17.281Z",
+          "duration_ms": 4690,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Under the recorded conditions, recognise the free carriage of one dog with a qualifying valid pass in Budapest.",
+      "Explain leash, muzzle, and valid vaccination-document requirements for a dog outside a closed carrier."
+    ],
+    "critical_failures": [
+      "Automatically charges for the dog despite pass-based entitlement.",
+      "Forgets leash/muzzle requirements."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

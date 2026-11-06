@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T004",
+  "title": "Airport route changes from 100E to 200E",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:43:40.301Z",
+  "finished_at": "2026-11-06T09:43:57.607Z",
+  "duration_ms": 17306,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "dfaf8fbe4be8"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I'm taking a bus to the airport; does my ordinary single ticket work?",
+      "agent": "It depends which airport bus you mean:\n\n100E Airport Express: No. An ordinary single ticket is not valid on 100E. The snapshot lists a full-price 100E ticket at 2,500 HUF. Some qualifying passes can use a 1,000 HUF add-on, but eligibility depends on the exact pass.\n200E: Yes, it follows ordinary ticket and pass rules, so an ordinary single ticket applies.\n\nThese details come from the 5 November 2026 snapshot; I haven’t live-checked today’s fare rules. See BKK’s airport shuttle ticket and add-on rules and airport express information. Which bus route—100E or 200E—are you taking?",
+      "links": [
+        {
+          "text": "airport shuttle ticket and add-on rules",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+        },
+        {
+          "text": "airport express information",
+          "href": "https://bkk.hu/en/travel-information/airport-express/"
+        }
+      ],
+      "started_at": "2026-11-06T09:43:46.057Z",
+      "completed_at": "2026-11-06T09:43:52.361Z",
+      "duration_ms": 6304,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "Actually, I mean bus 200E, not 100E.",
+      "agent": "Yes—an ordinary single ticket works on bus 200E; it follows ordinary ticket rules. That’s based on the 5 November 2026 snapshot, not a live check. BKK airport express information.",
+      "links": [
+        {
+          "text": "BKK airport express information",
+          "href": "https://bkk.hu/en/travel-information/airport-express/"
+        }
+      ],
+      "started_at": "2026-11-06T09:43:52.369Z",
+      "completed_at": "2026-11-06T09:43:57.597Z",
+      "duration_ms": 5228,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:43:40.301Z",
+      "duration_ms": 17305,
+      "session_id_hash": "dfaf8fbe4be8",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I'm taking a bus to the airport; does my ordinary single ticket work?",
+          "agent": "It depends which airport bus you mean:\n\n100E Airport Express: No. An ordinary single ticket is not valid on 100E. The snapshot lists a full-price 100E ticket at 2,500 HUF. Some qualifying passes can use a 1,000 HUF add-on, but eligibility depends on the exact pass.\n200E: Yes, it follows ordinary ticket and pass rules, so an ordinary single ticket applies.\n\nThese details come from the 5 November 2026 snapshot; I haven’t live-checked today’s fare rules. See BKK’s airport shuttle ticket and add-on rules and airport express information. Which bus route—100E or 200E—are you taking?",
+          "links": [
+            {
+              "text": "airport shuttle ticket and add-on rules",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/"
+            },
+            {
+              "text": "airport express information",
+              "href": "https://bkk.hu/en/travel-information/airport-express/"
+            }
+          ],
+          "started_at": "2026-11-06T09:43:46.057Z",
+          "completed_at": "2026-11-06T09:43:52.361Z",
+          "duration_ms": 6304,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "Actually, I mean bus 200E, not 100E.",
+          "agent": "Yes—an ordinary single ticket works on bus 200E; it follows ordinary ticket rules. That’s based on the 5 November 2026 snapshot, not a live check. BKK airport express information.",
+          "links": [
+            {
+              "text": "BKK airport express information",
+              "href": "https://bkk.hu/en/travel-information/airport-express/"
+            }
+          ],
+          "started_at": "2026-11-06T09:43:52.369Z",
+          "completed_at": "2026-11-06T09:43:57.597Z",
+          "duration_ms": 5228,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Do not give a definitive yes/no before clarifying the route.",
+      "Distinguish 200E from 100E: the special airport shuttle ticket restriction applies to 100E, not 200E, subject to normal ticket rules."
+    ],
+    "critical_failures": [
+      "Claims that all airport buses require a 100E special ticket.",
+      "Ignores the route correction."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

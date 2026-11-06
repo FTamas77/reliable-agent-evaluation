@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T013",
+  "title": "Foreign student ID with no Hungarian address",
+  "run_id": "candidate-v1-regression-rep2-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:40:19.094Z",
+  "finished_at": "2026-11-06T09:40:38.948Z",
+  "duration_ms": 19854,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "e839d038871a"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I'm a German university student with a valid German student card. Can I buy the reduced-price monthly higher-education Budapest pass in November 2026?",
+      "agent": "Possibly, but your German student card alone doesn’t establish eligibility. The 5 November 2026 snapshot says foreign EU/EEA/Swiss or ISIC student-ID holders need EU/EEA/Swiss citizenship and proof of a registered Hungarian address, as well as a valid student ID and qualifying programme conditions. It does not spell out all programme requirements, so I can’t confirm you qualify from the details given. BKK: Monthly Budapest pass for students · BKK: Changes to terms for international students\n\nThe snapshot lists the reduced pass at 3,450 HUF; that is a dated snapshot price, not a live quote. BKK: Prices\n\nTo assess your case further: are you an EU/EEA/Swiss citizen, do you have proof of a registered Hungarian address, and is your university programme one that meets BKK’s requirements? You don’t need to share your address or any ID details. My information is educational and not affiliated with BKK; check the linked official pages for the applicable November rules.",
+      "links": [
+        {
+          "text": "BKK: Monthly Budapest pass for students",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+        },
+        {
+          "text": "BKK: Changes to terms for international students",
+          "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+        },
+        {
+          "text": "BKK: Prices",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+        }
+      ],
+      "started_at": "2026-11-06T09:40:27.546Z",
+      "completed_at": "2026-11-06T09:40:33.018Z",
+      "duration_ms": 5472,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "I'm German but I don't have any officially documented address in Hungary.",
+      "agent": "If by “I’m German” you mean you’re a German citizen, then under the 5 November 2026 snapshot you meet the citizenship condition, but without proof of a registered Hungarian address, the foreign-student route described there does not appear to fit. A German student card by itself doesn’t remove that condition. So I can’t recommend relying on the reduced-price monthly higher-education Budapest pass on the facts you’ve given. BKK: Monthly Budapest pass for students · BKK: Changes to terms for international students\n\nThe snapshot price is 3,450 HUF, but that is not a live quote; confirm the current eligibility rules with BKK before buying. BKK: Prices\n\nIf you’re looking for a monthly option, the snapshot also lists the standard monthly Budapest pass at 8,950 HUF. That is a dated reference price, not a current-price confirmation. Are you comparing monthly passes, or do you want help choosing among options for how long and how often you’ll travel?",
+      "links": [
+        {
+          "text": "BKK: Monthly Budapest pass for students",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+        },
+        {
+          "text": "BKK: Changes to terms for international students",
+          "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+        },
+        {
+          "text": "BKK: Prices",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+        }
+      ],
+      "started_at": "2026-11-06T09:40:33.030Z",
+      "completed_at": "2026-11-06T09:40:38.939Z",
+      "duration_ms": 5909,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:40:19.094Z",
+      "duration_ms": 19853,
+      "session_id_hash": "e839d038871a",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I'm a German university student with a valid German student card. Can I buy the reduced-price monthly higher-education Budapest pass in November 2026?",
+          "agent": "Possibly, but your German student card alone doesn’t establish eligibility. The 5 November 2026 snapshot says foreign EU/EEA/Swiss or ISIC student-ID holders need EU/EEA/Swiss citizenship and proof of a registered Hungarian address, as well as a valid student ID and qualifying programme conditions. It does not spell out all programme requirements, so I can’t confirm you qualify from the details given. BKK: Monthly Budapest pass for students · BKK: Changes to terms for international students\n\nThe snapshot lists the reduced pass at 3,450 HUF; that is a dated snapshot price, not a live quote. BKK: Prices\n\nTo assess your case further: are you an EU/EEA/Swiss citizen, do you have proof of a registered Hungarian address, and is your university programme one that meets BKK’s requirements? You don’t need to share your address or any ID details. My information is educational and not affiliated with BKK; check the linked official pages for the applicable November rules.",
+          "links": [
+            {
+              "text": "BKK: Monthly Budapest pass for students",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+            },
+            {
+              "text": "BKK: Changes to terms for international students",
+              "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+            },
+            {
+              "text": "BKK: Prices",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+            }
+          ],
+          "started_at": "2026-11-06T09:40:27.546Z",
+          "completed_at": "2026-11-06T09:40:33.018Z",
+          "duration_ms": 5472,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "I'm German but I don't have any officially documented address in Hungary.",
+          "agent": "If by “I’m German” you mean you’re a German citizen, then under the 5 November 2026 snapshot you meet the citizenship condition, but without proof of a registered Hungarian address, the foreign-student route described there does not appear to fit. A German student card by itself doesn’t remove that condition. So I can’t recommend relying on the reduced-price monthly higher-education Budapest pass on the facts you’ve given. BKK: Monthly Budapest pass for students · BKK: Changes to terms for international students\n\nThe snapshot price is 3,450 HUF, but that is not a live quote; confirm the current eligibility rules with BKK before buying. BKK: Prices\n\nIf you’re looking for a monthly option, the snapshot also lists the standard monthly Budapest pass at 8,950 HUF. That is a dated reference price, not a current-price confirmation. Are you comparing monthly passes, or do you want help choosing among options for how long and how often you’ll travel?",
+          "links": [
+            {
+              "text": "BKK: Monthly Budapest pass for students",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+            },
+            {
+              "text": "BKK: Changes to terms for international students",
+              "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+            },
+            {
+              "text": "BKK: Prices",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/"
+            }
+          ],
+          "started_at": "2026-11-06T09:40:33.030Z",
+          "completed_at": "2026-11-06T09:40:38.939Z",
+          "duration_ms": 5909,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Ask about or explain the relevant official proof-of-Hungarian-address condition for a qualifying foreign ID as of November 2026.",
+      "Do not guarantee eligibility without that condition; acknowledge there may be additional student-programme and ID requirements."
+    ],
+    "critical_failures": [
+      "States the foreign university card alone guarantees eligibility.",
+      "Ignores the date-specific address requirement."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}

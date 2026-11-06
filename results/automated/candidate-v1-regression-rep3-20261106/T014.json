@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "test_id": "T014",
+  "title": "Non-EU citizen with Hungarian student card",
+  "run_id": "candidate-v1-regression-rep3-20261106",
+  "agent_config_label": "candidate-v1",
+  "execution_state": "SUCCESS",
+  "started_at": "2026-11-06T09:46:40.793Z",
+  "finished_at": "2026-11-06T09:46:58.857Z",
+  "duration_ms": 18064,
+  "isolation": {
+    "fresh_session_verified": true,
+    "session_id_hash": "06f6a233262a"
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "I'm a non-EU citizen attending university in Budapest. Am I automatically excluded from the student pass?",
+      "agent": "Not necessarily—but the answer depends on your student-ID category. The 5 November 2026 snapshot says a valid Hungarian higher-education student ID can meet the ID-type requirement without a citizenship restriction. So being a non-EU citizen does not automatically exclude you if you have that Hungarian ID. Monthly Budapest pass for students\n\nIf you rely instead on an accepted foreign EU/EEA/Swiss or ISIC student ID, the snapshot says EU/EEA/Swiss citizenship and proof of a registered Hungarian address are relevant conditions; a non-EU citizen would not meet that citizenship condition for this route. Other requirements, including valid ID and programme type, may also apply, so I can’t confirm eligibility from citizenship and university attendance alone. BKK’s international-student conditions\n\nWhich student ID do you have: a Hungarian higher-education student ID, or a foreign/ISIC ID? I don’t need any ID number or personal documents.",
+      "links": [
+        {
+          "text": "Monthly Budapest pass for students",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+        },
+        {
+          "text": "BKK’s international-student conditions",
+          "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+        }
+      ],
+      "started_at": "2026-11-06T09:46:48.186Z",
+      "completed_at": "2026-11-06T09:46:53.624Z",
+      "duration_ms": 5438,
+      "warnings": []
+    },
+    {
+      "turn": 2,
+      "user": "I have a valid Hungarian student ID for my university studies.",
+      "agent": "That’s encouraging: if your document is a valid Hungarian higher-education student ID, your non-EU citizenship does not by itself exclude you from the student-pass ID requirement, according to the 5 November 2026 snapshot. Monthly Budapest pass for students\n\nIt still isn’t an automatic confirmation of full eligibility: the applicable programme and other pass conditions must also be met. Check BKK’s current student-pass terms before buying; I can help interpret the conditions if you share the programme type (no personal or ID details needed).",
+      "links": [
+        {
+          "text": "Monthly Budapest pass for students",
+          "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+        }
+      ],
+      "started_at": "2026-11-06T09:46:53.633Z",
+      "completed_at": "2026-11-06T09:46:58.849Z",
+      "duration_ms": 5216,
+      "warnings": []
+    }
+  ],
+  "error": null,
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "SUCCESS",
+      "started_at": "2026-11-06T09:46:40.793Z",
+      "duration_ms": 18063,
+      "session_id_hash": "06f6a233262a",
+      "turns": [
+        {
+          "turn": 1,
+          "user": "I'm a non-EU citizen attending university in Budapest. Am I automatically excluded from the student pass?",
+          "agent": "Not necessarily—but the answer depends on your student-ID category. The 5 November 2026 snapshot says a valid Hungarian higher-education student ID can meet the ID-type requirement without a citizenship restriction. So being a non-EU citizen does not automatically exclude you if you have that Hungarian ID. Monthly Budapest pass for students\n\nIf you rely instead on an accepted foreign EU/EEA/Swiss or ISIC student ID, the snapshot says EU/EEA/Swiss citizenship and proof of a registered Hungarian address are relevant conditions; a non-EU citizen would not meet that citizenship condition for this route. Other requirements, including valid ID and programme type, may also apply, so I can’t confirm eligibility from citizenship and university attendance alone. BKK’s international-student conditions\n\nWhich student ID do you have: a Hungarian higher-education student ID, or a foreign/ISIC ID? I don’t need any ID number or personal documents.",
+          "links": [
+            {
+              "text": "Monthly Budapest pass for students",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+            },
+            {
+              "text": "BKK’s international-student conditions",
+              "href": "https://bkk.hu/en/news/2026/06/changes-to-the-terms-and-conditions-of-passes-available-to-international-students-on-bkk-lines.16751/"
+            }
+          ],
+          "started_at": "2026-11-06T09:46:48.186Z",
+          "completed_at": "2026-11-06T09:46:53.624Z",
+          "duration_ms": 5438,
+          "warnings": []
+        },
+        {
+          "turn": 2,
+          "user": "I have a valid Hungarian student ID for my university studies.",
+          "agent": "That’s encouraging: if your document is a valid Hungarian higher-education student ID, your non-EU citizenship does not by itself exclude you from the student-pass ID requirement, according to the 5 November 2026 snapshot. Monthly Budapest pass for students\n\nIt still isn’t an automatic confirmation of full eligibility: the applicable programme and other pass conditions must also be met. Check BKK’s current student-pass terms before buying; I can help interpret the conditions if you share the programme type (no personal or ID details needed).",
+          "links": [
+            {
+              "text": "Monthly Budapest pass for students",
+              "href": "https://bkk.hu/en/tickets-and-passes/prices/monthly-budapest-pass-for-students"
+            }
+          ],
+          "started_at": "2026-11-06T09:46:53.633Z",
+          "completed_at": "2026-11-06T09:46:58.849Z",
+          "duration_ms": 5216,
+          "warnings": []
+        }
+      ],
+      "error": null,
+      "screenshot": null
+    }
+  ],
+  "evaluation": {
+    "correctness": "PENDING_REVIEW",
+    "note": "Execution state is not a correctness score. Assess the transcript against expected_behaviour and critical_failures.",
+    "expected_behaviour": [
+      "Do not reject the traveller solely on citizenship grounds once a qualifying Hungarian student ID is established.",
+      "Clarify any remaining conditions instead of promising unconditional eligibility."
+    ],
+    "critical_failures": [
+      "Automatically excludes all non-EU citizens despite a Hungarian ID.",
+      "Promises eligibility without considering whether the card or programme is valid."
+    ],
+    "baseline_score": "PASS",
+    "manual_v1_score": null
+  }
+}
