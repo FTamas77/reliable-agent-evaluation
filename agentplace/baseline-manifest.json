@@ -1,6 +1,6 @@
 {
   "id": "baseline-v0",
-  "status": "BUILT_UNPUBLISHED_BASELINE_LABEL_DOCUMENTED_PLATFORM_SNAPSHOT_UNCONFIRMED",
+  "status": "BASELINE_COMPLETE_UNPUBLISHED_UNPINNED",
   "agent_name": "Budapest Fare Advisor — Unofficial Demo",
   "platform": "Agentplace",
   "model": "Luna",
@@ -13,7 +13,7 @@
   "agent_preview_url": null,
   "published_url": null,
   "test_suite_frozen": false,
-  "independent_evaluation_started": false,
+  "independent_evaluation_started": true,
   "builder_reported_checks": [
     "Fare recommendations and price arithmetic",
     "Mobile-ticket transfers and finishing last ride after time window",
@@ -43,5 +43,14 @@
     "finding": "No Versions or saved-version menu was visible in these views; available menus showed Rename, Delete, and New chat.",
     "platform_version_id": null,
     "notes": "Do not claim platform snapshot exists. Keep agent configuration unchanged during first evaluation. The Git repository captures known inputs but not complete internal Agentplace state."
+  },
+  "baseline_results": {
+    "date": "2026-11-06",
+    "completed": 20,
+    "pass": 17,
+    "partial": 3,
+    "fail": 0,
+    "summary": "results/baseline-v0.run.json",
+    "report": "reports/baseline-v0-2026-11-06.md"
   }
 }
