@@ -13,7 +13,7 @@ A public, evidence-based case study of evaluating an AI agent against structured
 
 - **Agent:** [Budapest Fare Advisor — Unofficial Demo](https://sudk3zosa1zp.run.agentplace.io/), Luna model per the project record, **public Agentplace demo** (public URL provided at publication on 2026-11-06). No immutable platform version ID exists: `baseline-v0` and `candidate-v1` are research labels, and the v1 deployment is Builder-reported (not independently inspected).
 - **Main reading:** the targeted fix worked and no regression was observed, but the held-out set exposed knowledge-coverage gaps and one materially wrong answer (H004). One sample per case is not a reliability rate, and nothing was verified against live BKK pages.
-- **Try the public demo:** [Open the Budapest Fare Advisor](https://sudk3zosa1zp.run.agentplace.io/). It is a dated, unofficial demonstration, not a live BKK fare or ticketing service. The public link was provided after the recorded candidate-v1 evaluation; accessibility has not been independently verified here.
+- **Try the public demo:** [Open the Budapest Fare Advisor](https://sudk3zosa1zp.run.agentplace.io/). It is a dated, unofficial demonstration, not a live BKK fare or ticketing service. The public link was provided after the candidate-v1 evaluation, and the project author confirmed on 2026-11-06 that the published agent opens and works. The archived evaluation still applies to the Preview, not a new public-run test.
 - **Start here:** [final evaluation](reports/final-evaluation-2026-11-06.md) (full analysis) and [submission summary](reports/submission-summary.md) (one page).
 
 ## Where things are
