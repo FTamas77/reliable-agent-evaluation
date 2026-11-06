@@ -1,0 +1,20 @@
+{
+  "test_id": "T009",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "IN_PROGRESS",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview screenshot",
+  "rule_ids": [
+    "BKK-R005"
+  ],
+  "turns": [
+    {
+      "user": "I use a 30-minute ticket and change from metro M2 to metro M3.",
+      "agent": "For an M2 → M3 metro change, the 30-minute mobile ticket’s transfer rule allows changing lines within its 30-minute window, and the reference notes an exception to validating again for transfers between metro lines. So you generally validate the mobile ticket at the start, then change from M2 to M3 without a second validation. The ticket’s 30-minute window still matters for when you make the transfer; the snapshot says that if your final transfer is within the window, you may finish that last ride after it ends.\n\nThat’s based on my 5 November 2026 snapshot, not a live check. See BKK’s 30-minute ticket guidance for the current instructions. Independent demo; not affiliated with BKK.",
+      "turn_assessment": "Preliminary: correctly applies no revalidation on metro-to-metro transfer and retains time window constraint."
+    }
+  ],
+  "overall_score": null,
+  "notes": "First turn captured from screenshot. Second tram transfer and overall score pending."
+}
