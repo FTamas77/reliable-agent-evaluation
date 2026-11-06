@@ -1,0 +1,32 @@
+{
+  "test_id": "T006",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (platform version not pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided screenshot of Agentplace Preview",
+  "rule_ids": [
+    "BKK-R004"
+  ],
+  "turns": [
+    {
+      "user": "I activated a 30-minute mobile ticket at 10:00 and transferred at 10:28.",
+      "agent": "Based on the 5 November 2026 snapshot, your transfer at 10:28 is within the 30-minute window that began at 10:00. For a covered line, the ticket allows transfers within that window; if that was your final transfer, you may finish the last ride after 10:30. Validate at the beginning and when changing to another line, except between metro lines. 30-minute ticket.\n\nIf you're now on the last leg, the key point is that the window applies to when you make the final transfer—not a requirement to finish the ride by 10:30. This is snapshot-based guidance, not live verification; check BKK's current rule for your exact service.",
+      "turn_assessment": "Provisional: correctly distinguishes transfer deadline from journey completion, conditional on covered service and final transfer."
+    },
+    {
+      "user": "My last bus arrives at 10:48. Can I stay on that bus until the stop?",
+      "agent": "Yes—if the transfer onto that bus at 10:28 was your final transfer. The 30-minute mobile ticket’s window governs when you make the final transfer; the 5 November 2026 snapshot says you may complete that last ride after the window ends. So arriving at 10:48 is okay under that condition.\n\nThat assumes the bus is a covered line and you validated as required when boarding/changing lines. This is snapshot-based guidance, not live verification.",
+      "turn_assessment": "Correctly applies transfer-time cutoff rather than journey-end time; includes validation and service-scope caveats."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Both actual responses captured from user-provided screenshots on 2026-11-06. Exact platform snapshot unavailable.",
+  "expected_criteria_met": {
+    "transfer_1028_inside_window": true,
+    "arrival_1048_allowed_if_final_leg": true,
+    "qualification_on_covered_bus_and_validation": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "PASS for a single observed two-turn T006 scenario against the dated model. No implication about current fare validity or repeated-run performance."
+}
