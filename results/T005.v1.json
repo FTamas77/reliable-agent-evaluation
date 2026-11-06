@@ -1,0 +1,36 @@
+{
+  "test_id": "T005",
+  "suite": "v1-retest",
+  "agent_version_label": "candidate-v1 (Agentplace platform version not pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "Tester-provided Agentplace Preview response text",
+  "knowledge_file": "agentplace/knowledge-v1.md",
+  "baseline_result": "results/T005.baseline.json",
+  "rule_ids": [
+    "BKK-R014",
+    "BKK-R008"
+  ],
+  "turns": [
+    {
+      "user": "My 24-hour Budapest travelcard is valid until tonight. Can I use it on any bus?",
+      "agent": "For ordinary covered bus services in Budapest, generally yes—but not airport express 100E. Your 24-hour Budapest travelcard covers eligible ordinary services during its validity; it does not cover 100E. If you’re asking about 200E, that follows ordinary ticket/pass rules, so the travelcard applies there under those rules. 24-hour Budapest-travelcard (https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/) · Airport express bus (https://bkk.hu/en/travel-information/airport-express/)\n\nThese details are from the 5 November 2026 snapshot, not a live check. BKK’s current pages are authoritative. If you mean a particular bus route, tell me its number and I can help assess it.",
+      "turn_assessment": "Provisional: correctly distinguishes ordinary buses and 200E from 100E, and correctly states travelcard alone excludes 100E. The add-on eligibility weakness is not yet challenged."
+    },
+    {
+      "user": "Specifically, I need to go by 100E.",
+      "agent": "No—your 24-hour Budapest travelcard alone is not valid on 100E, even while it is still within its validity period. The snapshot lists the full-price 100E airport shuttle ticket at 2,500 HUF. The 1,000 HUF add-on is for qualifying passes, and a 24-hour travelcard is not one; only consider that add-on if you also hold a separately qualifying pass. 100E airport shuttle ticket (https://bkk.hu/en/tickets-and-passes/prices/airport-shuttle-bus-single-ticket/) · 24-hour Budapest-travelcard (https://bkk.hu/en/tickets-and-passes/prices/24-hour-budapest-travelcard/)\n\nThose prices and rules are from the 5 November 2026 snapshot, not a live verification. BKK’s current pages are authoritative. I can explain the fare options, but I can’t sell or issue a ticket. Do you also have a separate Budapest pass, Pest County Pass, or Hungary Pass?",
+      "turn_assessment": "PASS: correctly says a 24-hour Budapest-travelcard alone does not cover 100E or qualify for the 1,000 HUF add-on; points to full-fare option, allows separately qualifying pass or entitlement and preserves snapshot caveat."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Two tester-supplied Agentplace responses after builder-reported v1 knowledge change. One-run comparison only; no live BKK verification.",
+  "baseline_score": "PARTIAL",
+  "expected_criteria_met": {
+    "regular_buses_scope_and_100E_exclusion": true,
+    "travelcard_not_eligible_for_addon": true,
+    "appropriate_full_fare_or_separately_qualifying_pass": true
+  },
+  "critical_failures_observed": [],
+  "assessment": "Observed improvement T005 from PARTIAL to PASS in one two-turn sample after knowledge-v1 update. No immutable Agentplace version ID; dated 2026-11-05 fare snapshot."
+}
