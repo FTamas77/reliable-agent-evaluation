@@ -21,7 +21,7 @@ function scoreFor(result: ScenarioResult, review: Review | undefined): string {
 export function correctnessTable(results: ScenarioResult[], reviews: Map<string, Review>): string {
   const rows = results.map((r) => {
     const review = reviews.get(r.test_id);
-    const kind = review ? (review.reviewer_kind === "HUMAN" ? "human" : "AI-assisted (provisional)") : "-";
+    const kind = review ? (review.reviewer_kind === "HUMAN" ? "human" : review.author_confirmed ? "AI-assisted, author-confirmed" : "AI-assisted (provisional)") : "-";
     return `| ${r.test_id} | ${scoreFor(r, review)} | ${kind} | ${r.evaluation.baseline_score ?? "-"} | ${r.evaluation.manual_v1_score ?? "-"} | ${cell(review?.justification ?? "-")} |`;
   });
   return ["| Test | Automated-run correctness | Judged by | Baseline v0 (manual) | v1 (manual, if run) | Evidence-based justification |", "|---|---|---|---|---|---|", ...rows].join("\n");
