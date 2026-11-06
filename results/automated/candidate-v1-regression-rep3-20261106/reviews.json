@@ -1,5 +1,5 @@
 {
-  "note": "AI-assisted first-pass judgments of the third independent repetition of the 20 baseline scenarios (candidate-v1 unchanged). Same reviewer model family as the other reviews; not human-confirmed. Oracle: tests/baseline-cases.json. All 20 scenarios succeeded on the first attempt. Author confirmation (2026-11-06): all results were personally reviewed and accepted by the project author. Original reviewer attribution is retained.",
+  "note": "AI-assisted first-pass judgments of the third independent repetition of the 20 baseline scenarios (candidate-v1 unchanged). Same reviewer model family as the other reviews; subsequently confirmed by the project author. Oracle: tests/baseline-cases.json. All 20 scenarios succeeded on the first attempt. The original AI reviewer attribution is retained; author confirmation was recorded on 2026-11-06.",
   "reviews": [
     {
       "test_id": "T001",
