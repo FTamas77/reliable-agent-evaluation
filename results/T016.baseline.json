@@ -1,0 +1,34 @@
+{
+  "test_id": "T016",
+  "suite": "baseline",
+  "agent_version_label": "baseline-v0 (not platform-pinned)",
+  "state": "COMPLETE",
+  "captured_on": "2026-11-06",
+  "source": "User-provided Agentplace Preview text",
+  "rule_ids": [
+    "BKK-R018",
+    "BKK-R019"
+  ],
+  "source_ids": [
+    "S011"
+  ],
+  "turns": [
+    {
+      "user": "I don't have a monthly pass, and I'm bringing my small dog on a tram.",
+      "agent": "Is your dog in a fully closed carrier, or travelling on a leash and muzzle? That changes which condition applies.\n\nFor a tram in Budapest, the snapshot says your dog can travel free if it is in a suitable, fully closed carrier. If it rides outside a carrier, the known conditions are a leash and muzzle. Carry valid animal vaccination documentation. The snapshot does not specify a separate dog-fare price for someone without a pass, so I can’t infer one from it; your own tram fare is separate.\n\nThese details come from my 5 November 2026 knowledge snapshot, not a live check. See BKK’s Dogs on public transport (https://bkk.hu/en/travel-information/dogs-on-public-transport/) for the current rule. I’m Budapest Fare Advisor — Unofficial Demo, an independent educational assistant, not affiliated with, endorsed by, or operated by BKK.",
+      "turn_assessment": "Provisional: requests clarification of whether the animal is enclosed, correctly describes the closed-carrier exception, and declines to invent a no-pass animal fare."
+    },
+    {
+      "user": "The dog will stay inside a closed, suitable hand-luggage-sized carrier that can't leak or let it escape.",
+      "agent": "That meets the carrier condition described in my 5 November 2026 snapshot: a dog in a suitable, fully closed carrier can travel without a separate animal ticket. Keep valid animal vaccination documentation with you. Your own tram fare is still separate; the snapshot lists an ordinary single ticket at 500 HUF. See BKK’s Dogs on public transport (https://bkk.hu/en/travel-information/dogs-on-public-transport/) and Single ticket (https://bkk.hu/en/tickets-and-passes/prices/single-ticket/) pages for current rules and fares. I haven’t live-verified them.\n\nI’m an independent educational demo, not affiliated with, endorsed by, or operated by BKK.",
+      "turn_assessment": "Accepts compliant fully closed carrier and correctly does not require separate animal ticket, leash or muzzle within carrier; distinguishes passenger fare."
+    }
+  ],
+  "overall_score": "PASS",
+  "notes": "Two user-provided Agentplace responses evaluated against prewritten T016 criteria. The 2026-11-05 fare/rules snapshot is not live verification. Agentplace baseline label was not platform-pinned.",
+  "expected_criteria_met": {
+    "no_separate_ticket_for_compliant_closed_carrier": true,
+    "no_inapplicable_leash_muzzle_inside_closed_carrier": true
+  },
+  "critical_failures_observed": []
+}
