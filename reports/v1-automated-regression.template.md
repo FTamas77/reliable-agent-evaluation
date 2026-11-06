@@ -43,7 +43,7 @@ The runner types the exact scenario text, verifies the input field content, pres
 
 Counts: {{CORRECTNESS_COUNTS}}
 
-`PENDING_REVIEW` means no judgment exists. `AI-assisted (provisional)` judgments were produced by reading the stored transcripts against each scenario's `expected_behaviour` and `critical_failures`; they have **not** been confirmed by a human reviewer and are not independent of the tooling that produced this report.
+`PENDING_REVIEW` means no judgment exists. Original AI-assisted judgments were produced by comparing stored transcripts with each scenario's `expected_behaviour` and `critical_failures`. The project author subsequently reviewed and confirmed these judgments on 2026-11-06. Original AI attribution remains recorded; this was not an independent third-party audit.
 
 {{CORRECTNESS_TABLE}}
 
@@ -53,12 +53,12 @@ The v0 baseline (manual) was 17 PASS, 3 PARTIAL, 0 FAIL. Only cases with a corre
 
 {{COMPARISON}}
 
-**Interpretation limit:** these judgments are provisional and AI-assisted (single sample per case, no human second review). They support "no regression was observed in this sample", not a verified 20/20 PASS. The three targeted cases (T005, T017, T018) were also PASS in the earlier manual v1 retest, and the automated transcripts agree with those observations.
+**Interpretation limit:** these outcomes were AI-assisted and subsequently confirmed by the author (single sample per case, no independent external audit). They support "no regression was observed in this sample", not a statistical reliability claim. The three targeted cases (T005, T017, T018) were also PASS in the earlier manual v1 retest, and the automated transcripts agree with those observations.
 
 ## 11. Errors, limitations and unresolved issues
 
 - Browser locale: the Preview forwards the browser language to the agent. A first proof-of-concept run with the browser default `hu-HU` returned Hungarian answers to the English prompts (run `candidate-v1-poc-T001`); the runner now pins `en-US`, which produced English answers consistent with the manual baseline. The manual baseline's locale was not recorded, so this remains a possible confounder.
-- This report covers one run per case. Two further repetitions and a critical second-pass review of these 20 transcripts were done later and are reported in `final-evaluation-2026-11-06.md`; all judgments remain AI-assisted unless marked HUMAN.
+- This report covers one run per case. Two further repetitions and a critical second-pass review of these 20 transcripts were done later and are reported in `final-evaluation-2026-11-06.md`; initial AI reviewer provenance remains unchanged and author confirmation is documented separately.
 - Selectors (`.stage-composer[data-pending]`, `data-rail-turn`, `.stage-canvas-page`) were verified on 2026-11-06 and may change when Agentplace updates its UI. They are isolated in `previewUi.ts`.
 - Headless mode (`npm run browser -- --headless`) exists but was not exercised.
 - The Preview agent was not pinned; results apply to whatever state it was in on the run date.
@@ -69,7 +69,7 @@ See the "Automated Agentplace regression runner" section of the repository READM
 
 ## 13. Suggested future improvements
 
-- Human review of every transcript (or a second independent reviewer / LLM judge with recorded configuration) and confirmation of the provisional judgments.
+- Optional independent external audit or second-model comparison, while retaining the project author's completed manual review.
 - Repeated trials per scenario to estimate variance; run the five held-out scenarios once after the candidate is frozen.
 - Record a platform version identifier if Agentplace exposes one.
 - Optionally run the same suite with `--locale hu-HU` as a separate, labelled experiment.
